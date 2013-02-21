@@ -8,13 +8,15 @@
   <template>
     <group name="auth">
       <setting name="method">oauth2</setting>
-      <setting name="mechanism">HMAC_SHA1</setting>
+      <setting name="mechanism">HMAC-SHA1</setting>
       <group name="oauth2">
-        <group name="HMAC_SHA1">
+          <group name="HMAC-SHA1">
+          <setting name="ConsumerKey">anonymous</setting>
+          <setting name="ConsumerSecret">anonymous</setting>
           <setting name="RequestEndpoint">https://identi.ca/api/oauth/request_token</setting>
           <setting name="TokenEndpoint">https://identi.ca/api/oauth/access_token</setting>
           <setting name="AuthorizationEndpoint">https://identi.ca/api/oauth/authorize</setting>
-          <setting name="Callback">https://wiki.ubuntu.com/</setting>
+          <setting name="Callback">http://localhost.com/twitter_login.php</setting>
           <setting name="Source">Ubuntu</setting>
           <setting name="Mode">desktop</setting>
         </group>
