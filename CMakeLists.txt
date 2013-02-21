@@ -8,6 +8,6 @@ find_package(AccountsFileDir REQUIRED)
 
 include(KDE4Defaults)
 
-# add_subdirectory(icons)
+add_subdirectory(icons)
 add_subdirectory(services)
 add_subdirectory(providers)
