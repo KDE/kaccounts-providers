@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="identica">
   <name>identi.ca</name>
-  <icon>identica</icon>
+  <icon>laconica_microblog</icon>
   <translations>kde-account-plugins</translations>
   <domains>.*identi\.ca</domains>
 
