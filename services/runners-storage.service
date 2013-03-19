@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="runnersid-storage">
+  <type>storage</type>
+  <name>Storage</name>
+  <icon>runnersid-storage</icon>
+  <provider>runnersid</provider>
+  <translations>kde-account-plugins</translations>
+  
+  <template>
+    <group name="dav">
+      <setting name="path">/remote.php/webdav/</setting>
+    </group>
+  </template>
+</service>

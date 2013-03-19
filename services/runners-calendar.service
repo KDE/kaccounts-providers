@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="runnersid-calendar">
+  <type>calendar</type>
+  <name>Calendar</name>
+  <icon>runnersid-calendar</icon>
+  <provider>runnersid</provider>
+  <translations>kde-account-plugins</translations>
+  
+   <template>
+     <group name="dav">
+       <setting name="path">/remote.php/caldav/</setting>
+     </group>
+  </template>
+</service>

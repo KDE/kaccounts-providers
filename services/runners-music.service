@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="runnersid-music">
+  <type>music</type>
+  <name>Music</name>
+  <icon>runnersid-music</icon>
+  <provider>runnersid</provider>
+  <translations>kde-account-plugins</translations>
+</service>

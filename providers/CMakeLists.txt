@@ -1,3 +1,4 @@
 install(FILES twitter.provider DESTINATION ${ACCOUNTS_PROVIDERS_DIR})
 install(FILES identica.provider DESTINATION ${ACCOUNTS_PROVIDERS_DIR})
 install(FILES makeplaylive.provider DESTINATION ${ACCOUNTS_PROVIDERS_DIR})
+install(FILES runnersid.provider DESTINATION ${ACCOUNTS_PROVIDERS_DIR})

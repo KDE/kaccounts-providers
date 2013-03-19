@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="runnersid">
+  <name>Runners ID</name>
+  <icon>netrunnerid</icon>
+  <translations>kde-account-plugins</translations>
+  <domains>.*identi\.ca</domains>
+
+    <template>
+        <group name="auth">
+            <setting name="method">password</setting>
+            <setting name="mechanism">password</setting>
+        </group>
+        <group name="server">
+            <setting name="url">http://myowncloud.com/</setting>
+        </group>
+    </template>
+</provider>
