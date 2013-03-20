@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="runnersid-contacts">
-  <type>contacts</type>
+  <type>dav-contacts</type>
   <name>Contacts</name>
   <icon>runnersid-contacts</icon>
   <provider>runnersid</provider>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="runnersid-calendar">
-  <type>calendar</type>
+  <type>dav-calendar</type>
   <name>Calendar</name>
   <icon>runnersid-calendar</icon>
   <provider>runnersid</provider>

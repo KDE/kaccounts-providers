@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="runnersid-storage">
-  <type>storage</type>
+  <type>dav-storage</type>
   <name>Storage</name>
   <icon>runnersid-storage</icon>
   <provider>runnersid</provider>
