@@ -13,7 +13,6 @@
         <group name="user_agent">
           <setting name="Host">www.facebook.com</setting>
           <setting name="ClientId">175243235841602</setting>
-          <setting name="AccessToken">9c41511dae89d7dfb4cde6be07365475</setting>
           <setting name="AuthPath">/dialog/oauth</setting>
           <setting name="RedirectUri">https://www.facebook.com/connect/login_success.html</setting>
           <setting name="Display">popup</setting>
