@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-notes">
+  <type>facebook-notes</type>
+  <name>Notes</name>
+  <icon>facebook-notes</icon>
+  <provider>facebook</provider>
+  <translations>kde-account-plugins</translations>
+</service>

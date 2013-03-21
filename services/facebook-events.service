@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-events">
+  <type>facebook-events</type>
+  <name>Events</name>
+  <icon>facebook-events</icon>
+  <provider>facebook</provider>
+  <translations>kde-account-plugins</translations>
+</service>
