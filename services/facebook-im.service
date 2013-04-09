@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-im">
+  <type>IM</type>
+  <name>Chat</name>
+  <icon>facebook-im</icon>
+  <provider>facebook</provider>
+  <translations>kde-account-plugins</translations>
+
+    <!-- default settings (account settings have precedence over these) -->
+  <template>
+    <group name="telepathy">
+      <setting name="mc-readonly-params" type="b">true</setting>
+      <setting name="manager">gabble</setting>
+      <setting name="protocol">jabber</setting>
+
+      <setting name="param-account">chat.facebook.com</setting>
+      <setting name="param-server">chat.facebook.com</setting>
+      <setting name="param-fallback-servers">chat.facebook.com:443</setting>
+    </group>
+  </template>
+
+
+</service>
