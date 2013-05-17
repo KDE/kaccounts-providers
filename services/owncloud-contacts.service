@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="owncloud-contacts">
+  <type>dav-contacts</type>
+  <name>Contacts</name>
+  <icon>owncloud-contacts</icon>
+  <provider>owncloud</provider>
+  <translations>kde-account-plugins</translations>
+
+  <template>
+    <group name="dav">
+      <setting name="path">/remote.php/carddav/</setting>
+    </group>
+  </template>
+</service>

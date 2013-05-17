@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="owncloud-calendar">
+  <type>dav-calendar</type>
+  <name>Calendar</name>
+  <icon>owncloud-calendar</icon>
+  <provider>owncloud</provider>
+  <translations>kde-account-plugins</translations>
+
+   <template>
+     <group name="dav">
+       <setting name="path">/remote.php/caldav/</setting>
+     </group>
+  </template>
+</service>

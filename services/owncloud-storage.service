@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="owncloud-storage">
+  <type>dav-storage</type>
+  <name>Storage</name>
+  <icon>owncloud-storage</icon>
+  <provider>owncloud</provider>
+  <translations>kde-account-plugins</translations>
+
+  <template>
+    <group name="dav">
+      <setting name="path">/remote.php/webdav/</setting>
+    </group>
+  </template>
+</service>
