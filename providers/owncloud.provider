@@ -9,7 +9,7 @@
             <setting name="mechanism">password</setting>
         </group>
         <group name="dav">
-            <setting name="url"></setting>
+            <setting name="host"></setting>
         </group>
     </template>
 </provider>

@@ -11,7 +11,7 @@
             <setting name="mechanism">password</setting>
         </group>
         <group name="dav">
-            <setting name="url">http://myowncloud.com</setting>
+            <setting name="host">myowncloud.com</setting>
         </group>
     </template>
 </provider>
