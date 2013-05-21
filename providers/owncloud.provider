@@ -8,7 +8,7 @@
             <setting name="method">password</setting>
             <setting name="mechanism">password</setting>
         </group>
-        <group name="server">
+        <group name="dav">
             <setting name="url"></setting>
         </group>
     </template>
