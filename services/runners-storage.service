@@ -8,7 +8,6 @@
   
   <template>
     <group name="dav">
-        <setting name="host">myowncloud.com</setting>
       <setting name="path">/remote.php/webdav/</setting>
     </group>
   </template>
