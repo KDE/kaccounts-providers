@@ -1,0 +1,1 @@
+install(FILES www.facebook.com.conf DESTINATION /etc/signon-ui/webkit-options.d/)
