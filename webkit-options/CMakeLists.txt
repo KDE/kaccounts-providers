@@ -1,1 +1,5 @@
-install(FILES www.facebook.com.conf DESTINATION /etc/signon-ui/webkit-options.d/)
+set(WEBKIT_CONFIG_DESTINATION /etc/signon-ui/webkit-options.d/)
+install(FILES www.facebook.com.conf DESTINATION ${WEBKIT_CONFIG_DESTINATION})
+install(FILES accounts.google.com.conf DESTINATION ${WEBKIT_CONFIG_DESTINATION})
+install(FILES api.twitter.com.conf DESTINATION ${WEBKIT_CONFIG_DESTINATION})
+install(FILES identi.ca.conf DESTINATION ${WEBKIT_CONFIG_DESTINATION})
