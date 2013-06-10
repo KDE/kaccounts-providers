@@ -13,16 +13,16 @@
       <group name="oauth2">
         <group name="web_server">
           <setting name="Host">accounts.google.com</setting>
-          <setting name="AuthPath">o/oauth2/auth</setting>
+          <setting name="AuthPath">o/oauth2/auth?access_type=offline&amp;approval_prompt=force</setting>
           <setting name="TokenPath">o/oauth2/token</setting>
-          <setting name="RedirectUri">http://localhost</setting>
+          <setting name="RedirectUri">http://localhost/oauth2callback</setting>
           <!-- HACK: access_type is non standard, but Google requires it in
                order to return a refresh token -->
-          <setting name="ResponseType">code&amp;access_type=offline</setting>
+          <setting name="ResponseType">code</setting>
           <setting name="Scope" type="as">['https://docs.google.com/feeds/','https://www.googleapis.com/auth/googletalk','https://www.googleapis.com/auth/userinfo.email','https://www.googleapis.com/auth/userinfo.profile','https://picasaweb.google.com/data/']</setting>
           <setting name="AllowedSchemes" type="as">['https','http']</setting>
-          <setting name="ClientId">351514088913.apps.googleusercontent.com</setting>
-          <setting name="ClientSecret">jztIYCV-E-LOWdGFgqoxFR5a</setting>
+          <setting name="ClientId">244335415041-nfkvuavsrkid3qee7ro21kf9mfks1u0g.apps.googleusercontent.com</setting>
+          <setting name="ClientSecret">-R2DubmS7LzMyMhlTsFFFZ2T</setting>
         </group>
       </group>
     </group>
