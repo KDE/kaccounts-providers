@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="google-todo">
+  <type>google-todo</type>
+  <name>Tasks</name>
+  <icon>google-todos</icon>
+  <provider>google</provider>
+  <translations>kde-account-plugins</translations>
+</service>
