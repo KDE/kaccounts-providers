@@ -17,6 +17,7 @@
           <setting name="RedirectUri">https://www.facebook.com/connect/login_success.html</setting>
           <setting name="Display">popup</setting>
           <setting type="as" name="Scope">['offline_access','friends_birthday' ,'friends_website' ,'friends_location' ,'friends_work_history' ,'friends_relationships' ,'manage_notifications' ,'publish_actions' ,'read_stream','user_events','user_notes', 'xmpp_login']</setting>
+          <setting name="AllowedSchemes" type="as">['https','http']</setting>
         </group>
       </group>
     </group>
