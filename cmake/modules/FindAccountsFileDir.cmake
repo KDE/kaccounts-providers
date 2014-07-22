@@ -1,5 +1,3 @@
-find_package(PkgConfig)
-
 find_package(PkgConfig REQUIRED)
 
 execute_process(
@@ -27,3 +25,6 @@ else()
         string(REGEX REPLACE " +$"                     ""  _pkgconfig_invoke_result "${_pkgconfig_invoke_result}")
         set(ACCOUNTS_SERVICES_DIR ${_pkgconfig_invoke_result})
 endif()
+
+find_package_handle_standard_args(AccountsFileDir DEFAULT_MSG
+                                  ACCOUNTS_SERVICES_DIR ACCOUNTS_PROVIDERS_DIR)
