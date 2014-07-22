@@ -1,1 +1,4 @@
-ecm_install_icons(${ICON_INSTALL_DIR})
+file(GLOB _icons *.png)
+
+ecm_install_icons(ICONS ${_icons}
+                  DESTINATION ${ICON_INSTALL_DIR})
