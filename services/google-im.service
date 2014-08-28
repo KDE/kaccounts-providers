@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <service id="google-im">
   <type>IM</type>
-  <name>GoogleTalk</name>
+  <name>Google Hangouts</name>
   <icon>im-google-talk</icon>
   <provider>google</provider>
   <translations>account-plugins</translations>
