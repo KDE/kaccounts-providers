@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-events">
+  <type>facebook-events</type>
+  <!-- "Events" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+       Would be nice to use the localized name of this service if it exists/makes sense -->
+  <_name>Events</_name>
+  <icon>facebook-events</icon>
+  <provider>facebook</provider>
+  <translations>kaccounts-providers</translations>
+</service>

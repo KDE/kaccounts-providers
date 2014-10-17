@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <provider id="google">
-  <name>Google</name>
-  <_description>Includes Gmail, Google Docs, Google+, YouTube and Picasa</_description>
+  <_name>Google</_name>
+  <!-- Tooltip text appearing over the button to create this type of account -->
+  <description>Includes GMail, Hangouts, Google Docs, Google+, YouTube and Picasa</description>
   <icon>gmail</icon>
-  <translations>account-plugins</translations>
+  <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
 
   <template>

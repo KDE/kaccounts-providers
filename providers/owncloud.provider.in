@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="owncloud">
-  <name>ownCloud</name>
+  <_name>ownCloud</_name>
   <icon>owncloud</icon>
-  <translations>kde-account-plugins</translations>
+  <!-- Tooltip text appearing over the button to create this type of account -->
+  <_description>ownCloud account</_description>
+  <translations>kaccounts-providers</translations>
+
     <template>
         <group name="auth">
             <setting name="method">password</setting>

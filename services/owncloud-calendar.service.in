@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="owncloud-calendar">
   <type>dav-calendar</type>
-  <name>Calendar</name>
+  <!-- ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
+       Would be nice to use the localized name of this service if it exists/makes sense -->
+  <_name>Calendar</_name>
   <icon>owncloud-calendar</icon>
   <provider>owncloud</provider>
-  <translations>kde-account-plugins</translations>
+  <translations>kaccounts-providers</translations>
 
    <template>
      <group name="dav">

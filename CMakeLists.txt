@@ -6,6 +6,7 @@ find_package(ECM 1.0.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(AccountsFileDir REQUIRED)
+find_package(Intltool REQUIRED)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)

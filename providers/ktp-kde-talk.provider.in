@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="ktp-kde-talk">
+    <!-- This is KDE's own IM network based on jabber, it's an estabilished name and probably shouldn't be translated -->
+    <_name>KDE Talk</_name>
+    <icon>kde</icon>
+    <!-- Tooltip text appearing over the button to create this type of account -->
+    <_description>KDE Talk chat account</_description>
+    <translations>kaccounts-providers</translations>
+
+    <template>
+        <group name="auth">
+            <setting name="method">password</setting>
+            <setting name="mechanism">password</setting>
+        </group>
+    </template>
+</provider>

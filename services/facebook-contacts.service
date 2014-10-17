@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="facebook-contacts">
-  <type>facebook-contacts</type>
-  <name>Contacts</name>
-  <icon>facebook-contacts</icon>
-  <provider>facebook</provider>
-  <translations>kde-account-plugins</translations>
-</service>

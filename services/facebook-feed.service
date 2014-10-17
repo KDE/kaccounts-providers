@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="facebook-feed">
-  <type>facebook-feed</type>
-  <name>Social Feed</name>
-  <icon>facebook-feed</icon>
-  <provider>facebook</provider>
-  <translations>kde-account-plugins</translations>
-</service>

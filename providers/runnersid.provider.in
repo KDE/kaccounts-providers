@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="runnersid">
-  <name>Runners ID</name>
+  <!-- Runners ID is a service similar to ownCloud/DropBox etc -->
+  <_name>Runners ID</_name>
   <icon>netrunnerid</icon>
-  <translations>kde-account-plugins</translations>
+  <translations>kaccounts-providers</translations>
   <domains>.*identi\.ca</domains>
 
     <template>

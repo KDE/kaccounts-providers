@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<service id="ktp-jabber-im">
+  <type>IM</type>
+  <!-- Jabber/XMPP Chat - Service name being displayed as a checkbox label to enable/disable this service -->
+  <_name>Chat</_name>
+  <icon>im-jabber-talk</icon>
+  <provider>ktp-jabber</provider>
+  <translations>kaccounts-providers</translations>
+</service>

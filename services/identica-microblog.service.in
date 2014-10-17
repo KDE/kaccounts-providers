@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="identica-microblog">
+  <type>twitter-microblog</type>
+  <!-- identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
+       Would be nice to use the localized name of this service if it exists/makes sense -->
+  <_name>identi.ca</_name>
+  <icon>identica</icon>
+  <provider>identica</provider>
+  <translations>kaccounts-providers</translations>
+</service>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="identica-microblog">
-  <type>twitter-microblog</type>
-  <name>identi.ca</name>
-  <icon>identica</icon>
-  <provider>identica</provider>
-  <translations>kde-account-plugins</translations>
-</service>

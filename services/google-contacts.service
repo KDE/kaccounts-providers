@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="google-contacts">
-  <type>google-contacts</type>
-  <name>Contacts</name>
-  <icon>google-contacts</icon>
-  <provider>google</provider>
-  <translations>kde-account-plugins</translations>
-</service>
