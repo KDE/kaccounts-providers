@@ -24,6 +24,7 @@
           <setting name="AllowedSchemes" type="as">['https','http']</setting>
           <setting name="ClientId">244335415041-nfkvuavsrkid3qee7ro21kf9mfks1u0g.apps.googleusercontent.com</setting>
           <setting name="ClientSecret">-R2DubmS7LzMyMhlTsFFFZ2T</setting>
+          <setting name="ForceClientAuthViaRequestBody" type="b">true</setting>
         </group>
       </group>
     </group>
