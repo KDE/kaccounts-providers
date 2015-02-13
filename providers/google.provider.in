@@ -3,7 +3,7 @@
   <_name>Google</_name>
   <!-- Tooltip text appearing over the button to create this type of account -->
   <_description>Includes GMail, Hangouts, Google Docs, Google+, YouTube and Picasa</_description>
-  <icon>gmail</icon>
+  <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
 

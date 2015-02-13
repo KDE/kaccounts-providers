@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="twitter">
   <_name>Twitter</_name>
-  <icon>twitter_microblog</icon>
+  <icon>im-twitter</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
   <_description>Includes your Timeline and Mentions</_description>
   <translations>kaccounts-providers</translations>
