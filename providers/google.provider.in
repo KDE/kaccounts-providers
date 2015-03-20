@@ -22,8 +22,8 @@
           <setting name="ResponseType">code</setting>
           <setting name="Scope" type="as">['https://docs.google.com/feeds/','https://www.googleapis.com/auth/googletalk','https://www.googleapis.com/auth/userinfo.email','https://www.googleapis.com/auth/userinfo.profile','https://picasaweb.google.com/data/','https://www.googleapis.com/auth/calendar','https://www.google.com/m8/feeds/','https://www.googleapis.com/auth/tasks']</setting>
           <setting name="AllowedSchemes" type="as">['https','http']</setting>
-          <setting name="ClientId">244335415041-nfkvuavsrkid3qee7ro21kf9mfks1u0g.apps.googleusercontent.com</setting>
-          <setting name="ClientSecret">-R2DubmS7LzMyMhlTsFFFZ2T</setting>
+          <setting name="ClientId">876209205844-9e3g6ocf6ejv48dap37et84ks35rdre0.apps.googleusercontent.com</setting>
+          <setting name="ClientSecret">LvV-hkunrdMj4Ijr74rT6kH7</setting>
           <setting name="ForceClientAuthViaRequestBody" type="b">true</setting>
         </group>
       </group>
