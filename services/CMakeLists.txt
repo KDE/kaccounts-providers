@@ -1,7 +1,4 @@
 file(GLOB service_files_in *.service.in)
 foreach(service_file_in ${service_files_in})
-    get_filename_component(service_filename ${service_file_in} NAME_WE)
-    set(service_file ${CMAKE_CURRENT_BINARY_DIR}/${service_filename}.service)
-    execute_process(COMMAND intltool-merge -x -u --no-translations ${service_file_in} ${service_file})
-    install(FILES ${service_file} DESTINATION ${ACCOUNTS_SERVICES_DIR})
+    kaccount_add_service(${service_file_in})
 endforeach()

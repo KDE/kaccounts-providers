@@ -7,6 +7,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_P
 
 find_package(AccountsFileDir REQUIRED)
 find_package(Intltool REQUIRED)
+find_package(KAccounts REQUIRED)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)

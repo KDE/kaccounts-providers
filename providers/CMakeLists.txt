@@ -1,7 +1,4 @@
 file(GLOB provider_in_files *.provider.in)
 foreach(provider_in_file ${provider_in_files})
-    get_filename_component(provider_filename ${provider_in_file} NAME_WE)
-    set(provider_file ${CMAKE_CURRENT_BINARY_DIR}/${provider_filename}.provider)
-    execute_process(COMMAND intltool-merge -x -u --no-translations ${provider_in_file} ${provider_file})
-    install(FILES ${provider_file} DESTINATION ${ACCOUNTS_PROVIDERS_DIR})
+    kaccounts_add_provider(${provider_in_file})
 endforeach()
