@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="owncloud">
+  <_name>ownCloud</_name>
+  <icon>owncloud</icon>
+  <!-- Tooltip text appearing over the button to create this type of account -->
+  <_description>ownCloud account</_description>
+  <translations>kaccounts-providers</translations>
+  <plugin>owncloud_plugin_kaccounts</plugin>
+
+    <template>
+        <group name="auth">
+            <setting name="method">password</setting>
+            <setting name="mechanism">password</setting>
+        </group>
+        <group name="dav">
+            <setting name="host"></setting>
+        </group>
+    </template>
+</provider>
