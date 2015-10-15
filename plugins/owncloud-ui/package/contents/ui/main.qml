@@ -20,8 +20,6 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ApplicationWindow {
     id: kaccountsRoot
@@ -33,7 +31,7 @@ ApplicationWindow {
         anchors.fill: parent
         anchors.margins: units.largeSpacing
 
-        PlasmaExtras.Title {
+        Label {
             text: i18n("Add new ownCloud account")
         }
 
@@ -58,7 +56,7 @@ ApplicationWindow {
         }
 
         RowLayout {
-            PlasmaComponents.Button {
+            Button {
                 id: backButton
                 Layout.fillWidth: true
                 text: i18n("Back");
@@ -71,7 +69,7 @@ ApplicationWindow {
                 }
             }
 
-            PlasmaComponents.Button {
+            Button {
                 id: nextButton
                 Layout.fillWidth: true
                 text: i18n("Next")
@@ -85,7 +83,7 @@ ApplicationWindow {
                 }
             }
 
-            PlasmaComponents.Button {
+            Button {
                 id: finishButton
                 Layout.fillWidth: true
                 text: i18n("Finish")

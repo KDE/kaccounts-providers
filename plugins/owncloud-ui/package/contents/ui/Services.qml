@@ -19,8 +19,7 @@
 
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import QtQuick.Controls 1.2
 
 ColumnLayout {
     id: basicInfoLayout
@@ -29,12 +28,11 @@ ColumnLayout {
     //FIXME at some point this should become a list of disabled services
     property alias contactsEnabled: contactsService.checked
 
-    PlasmaExtras.Heading {
-        level: 3
+    Label {
         text: i18n("Choose services to enable");
     }
 
-    PlasmaComponents.CheckBox {
+    CheckBox {
         id: contactsService
         text: i18n("Contacts")
     }

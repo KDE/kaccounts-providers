@@ -21,8 +21,6 @@ import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
     id: basicInfoLayout
@@ -40,10 +38,10 @@ ColumnLayout {
         }
     }
 
-    PlasmaComponents.TextField {
+    TextField {
         id: nameText
         Layout.fillWidth: true
-        clearButtonShown: true
+//         clearButtonShown: true
         placeholderText: "Username"
 
         onTextChanged: {
@@ -53,10 +51,10 @@ ColumnLayout {
         }
     }
 
-    PlasmaComponents.TextField {
+    TextField {
         id: passwordText
         Layout.fillWidth: true
-        clearButtonShown: true
+//         clearButtonShown: true
         placeholderText: "Password"
         echoMode: TextInput.Password
 
@@ -67,10 +65,10 @@ ColumnLayout {
         }
     }
 
-    PlasmaComponents.TextField {
+    TextField {
         id: serverText
         Layout.fillWidth: true
-        clearButtonShown: true
+//         clearButtonShown: true
         placeholderText: "Server"
 
         onTextChanged: {
@@ -80,7 +78,7 @@ ColumnLayout {
         }
     }
 
-    PlasmaComponents.Label {
+    Label {
         id: errorLabel
         Layout.fillWidth: true
         visible: text.length > 0 && !checkServerTimer.running
@@ -92,7 +90,7 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        PlasmaComponents.BusyIndicator {
+        BusyIndicator {
             id: busy
             width: parent.height > parent.width ? Math.round(parent.width/2) : Math.round(parent.height/2)
             height: width
