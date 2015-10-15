@@ -1,4 +1,4 @@
-project (owncloud-plugin-kaccounts)
+project (owncloud-ui-plugin)
 
 include_directories (${CMAKE_CURRENT_BUILD_DIR}
                      ${CMAKE_CURRENT_SOURCE_DIR}
@@ -7,15 +7,6 @@ include_directories (${CMAKE_CURRENT_BUILD_DIR}
 set (owncloud_plugin_kaccounts_SRCS
      owncloud.cpp
      qmlhelper.cpp
-     pages/basicinfo.cpp
-     pages/connecting.cpp
-     pages/oservices.cpp
-)
-
-ki18n_wrap_ui(owncloud_plugin_kaccounts_SRCS
-              pages/basicinfo.ui
-              pages/connecting.ui
-              pages/oservices.ui
 )
 
 add_library (owncloud_plugin_kaccounts MODULE
@@ -24,15 +15,10 @@ add_library (owncloud_plugin_kaccounts MODULE
 
 target_link_libraries (owncloud_plugin_kaccounts
                        Qt5::Core
-                       Qt5::Widgets
                        KF5::KIOCore
-                       KF5::KIOWidgets
-                       KF5::CoreAddons
-                       KF5::WidgetsAddons
-                       KF5::IconThemes
                        KF5::I18n
                        KF5::Declarative
-                       kaccounts
+                       KAccounts
                        ${ACCOUNTSQT_LIBRARIES}
                        ${SIGNONQT_LIBRARIES}
 )

@@ -20,8 +20,7 @@
 #define QMLHELPER_H
 
 #include <QObject>
-
-#include <KIO/AccessManager>
+#include <QStringList>
 
 namespace KIO
 {

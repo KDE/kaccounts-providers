@@ -23,9 +23,7 @@
 #include <QUrl>
 #include <QHash>
 
-#include "../lib/kaccountsuiplugin.h"
-
-class QWizard;
+#include <kaccountsuiplugin.h>
 
 namespace KDeclarative {
     class QmlObject;
@@ -38,7 +36,7 @@ class OwnCloudWizard : public KAccountsUiPlugin
     Q_INTERFACES(KAccountsUiPlugin)
 
 public:
-    explicit OwnCloudWizard(QWidget *parent = 0);
+    explicit OwnCloudWizard(QObject *parent = 0);
     virtual ~OwnCloudWizard();
 
     virtual void init(KAccountsUiPlugin::UiType type) Q_DECL_OVERRIDE;
@@ -47,28 +45,8 @@ public:
     virtual void showConfigureAccountDialog(const quint32 accountId) Q_DECL_OVERRIDE;
     virtual QStringList supportedServicesForConfig() const Q_DECL_OVERRIDE;
 
-    void done();
-
-    void setUsername(const QString &username);
-    void setPassword(const QString &password);
-    void setServer(const QUrl &server);
-
-    const QString username() const;
-    const QString password() const;
-    const QUrl server() const;
-
-    void activateOption(const QString &name, bool checked);
-
-Q_SIGNALS:
-    void newAccount(const QString &type, const QString &name);
-
 private:
-    QWizard *m_wizard;
-    QString m_username;
-    QString m_password;
-    QUrl m_server;
     QString m_providerName;
-
     QHash<QString, int> m_services;
     KDeclarative::QmlObject *m_object;
 };
