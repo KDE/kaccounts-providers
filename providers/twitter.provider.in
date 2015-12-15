@@ -2,8 +2,6 @@
 <provider id="twitter">
   <_name>Twitter</_name>
   <icon>im-twitter</icon>
-  <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Includes your Timeline and Mentions</_description>
   <translations>kaccounts-providers</translations>
   <domains>.*twitter\.com</domains>
 
