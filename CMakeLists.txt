@@ -26,7 +26,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
-include(KDECompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
 add_subdirectory(icons)
 add_subdirectory(services)
