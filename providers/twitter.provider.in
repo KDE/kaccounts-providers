@@ -11,8 +11,8 @@
       <setting name="mechanism">HMAC-SHA1</setting>
       <group name="oauth2">
         <group name="HMAC-SHA1">
-          <setting name="ConsumerKey">xBbiAYBmglxmRKBqimLSSw</setting>
-          <setting name="ConsumerSecret">c7QqEjrOVENhGYGFjcUsx6Nwr9GXPLjUZVY2xObrHw8</setting>
+          <setting name="ConsumerKey">LvNgYPymxgVSfZB17Xfz2FCgZ</setting>
+          <setting name="ConsumerSecret">Eq6mOydSdNcNVxuqTdJzqCyUFSRKQI2aU0U3Jut69a2uXQLHgG</setting>
           <setting name="RequestEndpoint">https://api.twitter.com/oauth/request_token</setting>
           <setting name="TokenEndpoint">https://api.twitter.com/oauth/access_token</setting>
           <setting name="AuthorizationEndpoint">https://api.twitter.com/oauth/authorize</setting>
