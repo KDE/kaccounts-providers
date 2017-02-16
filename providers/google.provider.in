@@ -2,7 +2,7 @@
 <provider id="google">
   <_name>Google</_name>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Includes GMail, Hangouts, Google Docs, Google+, YouTube and Picasa</_description>
+  <_description>Includes GMail, Hangouts, Google Drive and YouTube</_description>
   <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
@@ -30,7 +30,11 @@
               'https://picasaweb.google.com/data/',
               'https://www.googleapis.com/auth/calendar',
               'https://www.google.com/m8/feeds/',
-              'https://www.googleapis.com/auth/tasks'
+              'https://www.googleapis.com/auth/tasks',
+              'https://www.googleapis.com/auth/drive',
+              'https://www.googleapis.com/auth/drive.file',
+              'https://www.googleapis.com/auth/drive.metadata.readonly',
+              'https://www.googleapis.com/auth/drive.readonly'
           ]</setting>
           <setting name="AllowedSchemes" type="as">['https','http']</setting>
           <setting name="ClientId">876209205844-9e3g6ocf6ejv48dap37et84ks35rdre0.apps.googleusercontent.com</setting>
