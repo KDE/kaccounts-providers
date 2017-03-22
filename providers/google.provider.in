@@ -37,8 +37,8 @@
               'https://www.googleapis.com/auth/drive.readonly'
           ]</setting>
           <setting name="AllowedSchemes" type="as">['https','http']</setting>
-          <setting name="ClientId">876209205844-9e3g6ocf6ejv48dap37et84ks35rdre0.apps.googleusercontent.com</setting>
-          <setting name="ClientSecret">LvV-hkunrdMj4Ijr74rT6kH7</setting>
+          <setting name="ClientId">317066460457-pkpkedrvt2ldq6g2hj1egfka2n7vpuoo.apps.googleusercontent.com</setting>
+          <setting name="ClientSecret">Y8eFAaWfcanV3amZdDvtbYUq</setting>
           <setting name="ForceClientAuthViaRequestBody" type="b">true</setting>
         </group>
       </group>
