@@ -36,6 +36,7 @@ Name[x-test]=xxOwnCloud KAccounts QML pluginxx
 Name[zh_CN]=OwnCloud KAccounts QML 插件
 Name[zh_TW]=OwnCloud KAccounts QML 外掛程式
 Comment=Use OwnCloud with KAccounts
+Comment[ast]=Usa OwnCloud con KAccounts
 Comment[ca]=Usa OwnCloud amb KAccounts
 Comment[ca@valencia]=Usa OwnCloud amb KAccounts
 Comment[cs]=Použít ownCloud s KAccounts
