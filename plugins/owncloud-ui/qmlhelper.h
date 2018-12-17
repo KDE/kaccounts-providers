@@ -40,7 +40,7 @@ public:
     ~QmlHelper();
 
     Q_INVOKABLE void checkServer(const QString &username, const QString &password, const QString &server);
-    Q_INVOKABLE void finish(bool contactsEnabled);
+    Q_INVOKABLE void finish(bool contactsEnabled, bool calenderEnabled);
     bool isWorking();
     bool noError();
     QString errorMessage() const;

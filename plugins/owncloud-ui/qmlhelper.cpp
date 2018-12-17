@@ -222,7 +222,7 @@ QString QmlHelper::errorMessage() const
     return m_errorMessage;
 }
 
-void QmlHelper::finish(bool contactsEnabled)
+void QmlHelper::finish(bool contactsEnabled, bool calenderEnabled)
 {
     QVariantMap data;
     data.insert("server", m_server);
@@ -230,11 +230,17 @@ void QmlHelper::finish(bool contactsEnabled)
     if (!contactsEnabled) {
         data.insert("__service/owncloud-contacts", false);
     }
+    if (!calenderEnabled) {
+        data.insert("__service/owncloud-contacts", false);
+    }
 
     QUrl carddavUrl(m_server);
     carddavUrl.setPath(carddavUrl.path() + QString("/remote.php/carddav/addressbooks/%1").arg(m_username));
-
     data.insert("carddavUrl", carddavUrl);
+
+    QUrl caldavUrl(m_server);
+    caldavUrl.setPath(caldavUrl.path() + QString("/remote.php/dav/principals/users/%1/").arg(m_username));
+    data.insert("caldavUrl", carddavUrl);
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }

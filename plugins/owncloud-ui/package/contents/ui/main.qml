@@ -90,7 +90,7 @@ ApplicationWindow {
                 visible: stack.currentItem.objectName == "servicesPage"
 
                 onClicked: {
-                    helper.finish(stack.currentItem.contactsEnabled);
+                    helper.finish(stack.currentItem.contactsEnabled, stack.currentItem.calenderEnabled);
                 }
             }
         }
