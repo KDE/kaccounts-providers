@@ -16,7 +16,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_P
 find_package(Intltool REQUIRED)
 find_package(KAccounts REQUIRED)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml WebEngineWidgets)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED KIO
                                                   I18n
                                                   Declarative
