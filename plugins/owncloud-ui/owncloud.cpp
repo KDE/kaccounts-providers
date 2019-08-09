@@ -25,6 +25,7 @@
 
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QWindow>
 
 OwnCloudWizard::OwnCloudWizard(QObject *parent)
     : KAccountsUiPlugin(parent)
