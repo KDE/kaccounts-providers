@@ -3,7 +3,7 @@
   <type>dav-contacts</type>
   <!-- Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Contacts</_name>
+  <_name msgctxt="Runners-ID Contacts">Contacts</_name>
   <icon>runnersid-contacts</icon>
   <provider>runnersid</provider>
   <translations>kaccounts-providers</translations>
