@@ -29,9 +29,9 @@
 
 QmlHelper::QmlHelper(QObject *parent)
     : QObject(parent),
+      m_errorMessage(QString()),
       m_isWorking(false),
-      m_noError(false),
-      m_errorMessage(QString())
+      m_noError(false)
 {
 }
 
