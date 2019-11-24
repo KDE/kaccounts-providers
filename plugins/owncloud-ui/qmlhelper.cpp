@@ -48,7 +48,7 @@ void QmlHelper::checkServer(const QString &username, const QString &password, co
     m_password = password;
 
     QString fixedUrl;
-    if (!path.startsWith("http://") && !path.startsWith("https://")) {
+    if (!path.startsWith(QLatin1String("http://")) && !path.startsWith(QLatin1String("https://"))) {
         fixedUrl.append("https://");
         fixedUrl.append(path);
     } else {

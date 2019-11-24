@@ -36,7 +36,7 @@ class QmlHelper : public QObject
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
 
 public:
-    QmlHelper(QObject *parent = 0);
+    explicit QmlHelper(QObject *parent = 0);
     ~QmlHelper();
 
     Q_INVOKABLE void checkServer(const QString &username, const QString &password, const QString &server);
