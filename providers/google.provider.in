@@ -27,7 +27,7 @@
               'https://www.googleapis.com/auth/tasks',
               'https://www.google.com/m8/feeds/',
               'https://www.googleapis.com/auth/drive',
-              'https://www.googleapis.com/auth/youtube.upload',
+              'https://www.googleapis.com/auth/youtube.upload'
           ]</setting>
           <setting name="AllowedSchemes" type="as">['https']</setting>
           <setting name="ClientId">317066460457-pkpkedrvt2ldq6g2hj1egfka2n7vpuoo.apps.googleusercontent.com</setting>
