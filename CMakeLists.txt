@@ -32,7 +32,6 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
 endif()
 
-add_subdirectory(icons)
 add_subdirectory(services)
 add_subdirectory(providers)
 add_subdirectory(webkit-options)
