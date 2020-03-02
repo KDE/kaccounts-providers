@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Nextcloud
+Comment=Use Nextcloud with KAccounts
+Encoding=UTF-8
+Type=Service
+Icon=applications-internet
+X-KDE-PluginInfo-Author=Rituka Patwal
+X-KDE-PluginInfo-Email=ritukapatwal21@gmail.com
+X-KDE-PluginInfo-Name=nextcloud_kaccounts_ui
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://kde.org
+X-KDE-PluginInfo-Category=Network
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=handset,tablet,mediacenter
+X-Plasma-MainScript=ui/main.qml
