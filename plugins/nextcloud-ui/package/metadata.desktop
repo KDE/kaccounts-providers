@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=Nextcloud
+Name[ca]=Nextcloud
+Name[nl]=Nextcloud
+Name[pt]=Nextcloud
+Name[pt_BR]=Nextcloud
+Name[sv]=Nextcloud
+Name[uk]=Nextcloud
+Name[x-test]=xxNextcloudxx
 Comment=Use Nextcloud with KAccounts
+Comment[ca]=Usa Nextcloud amb KAccounts
+Comment[nl]=Nextcloud met KAccounts gebruiken
+Comment[pt]=Usar a Nextcloud com o KAccounts
+Comment[pt_BR]=Usar Nextcloud com o KAccounts
+Comment[sv]=Använd Nextcloud med Kaccounts
+Comment[uk]=Використання Nextcloud з KAccounts
+Comment[x-test]=xxUse Nextcloud with KAccountsxx
 Encoding=UTF-8
 Type=Service
 Icon=applications-internet
