@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Nextcloud
 Name[ca]=Nextcloud
+Name[ca@valencia]=Nextcloud
 Name[es]=Nextcloud
 Name[et]=Nextcloud
 Name[fr]=Nextcloud
@@ -14,6 +15,7 @@ Name[x-test]=xxNextcloudxx
 Name[zh_TW]=Nextcloud
 Comment=Use Nextcloud with KAccounts
 Comment[ca]=Usa Nextcloud amb KAccounts
+Comment[ca@valencia]=Usa Nextcloud amb KAccounts
 Comment[es]=Usar Nextcloud con KAccounts
 Comment[et]=Nextcloudi kasutamine KAccountsiga
 Comment[fr]=Utiliser Nextcloud avec KAccounts
