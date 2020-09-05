@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=OwnCloud KAccounts QML plugin
+Name[az]=OwnCloud KAccounts QML qoşması
 Name[ca]=Connector OwnCloud en QML per a KAccounts
 Name[ca@valencia]=Connector OwnCloud en QML per a KAccounts
 Name[cs]=QML modul KAccounts pro OwnCloud
@@ -38,6 +39,7 @@ Name[x-test]=xxOwnCloud KAccounts QML pluginxx
 Name[zh_CN]=OwnCloud KAccounts QML 插件
 Name[zh_TW]=OwnCloud KAccounts QML 外掛程式
 Comment=Use OwnCloud with KAccounts
+Comment[az]=OwnCloud'u KAccounts ilə istifadə etmək
 Comment[ca]=Usa OwnCloud amb KAccounts
 Comment[ca@valencia]=Usa OwnCloud amb KAccounts
 Comment[cs]=Použít ownCloud s KAccounts
