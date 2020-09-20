@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Nextcloud
+Name[az]=Nextcloud
 Name[ca]=Nextcloud
 Name[ca@valencia]=Nextcloud
 Name[cs]=NextCloud
@@ -29,6 +30,7 @@ Name[x-test]=xxNextcloudxx
 Name[zh_CN]=Nextcloud
 Name[zh_TW]=Nextcloud
 Comment=Use Nextcloud with KAccounts
+Comment[az]=Nextcloud'u KAccounts ilə istifadə etmək
 Comment[ca]=Usa Nextcloud amb KAccounts
 Comment[ca@valencia]=Usa Nextcloud amb KAccounts
 Comment[cs]=Použít NextCloud s KAccounts
