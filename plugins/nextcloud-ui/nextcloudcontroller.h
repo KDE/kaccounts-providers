@@ -26,7 +26,6 @@ class NextcloudController : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool isWorking READ isWorking NOTIFY isWorkingChanged)
-    Q_PROPERTY(bool noError READ noError NOTIFY noErrorChanged)
     Q_PROPERTY(bool isLoginComplete READ isLoginComplete NOTIFY isLoginCompleteChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
 
@@ -37,13 +36,11 @@ public:
     Q_INVOKABLE void checkServer(const QString &server);
     Q_INVOKABLE void finish(bool contactsEnabled);
     bool isWorking();
-    bool noError();
     bool isLoginComplete();
     QString errorMessage() const;
 
 Q_SIGNALS:
     void isWorkingChanged();
-    void noErrorChanged();
     void errorMessageChanged();
     void isLoginCompleteChanged();
     void wizardFinished(const QString &username, const QString &password, const QVariantMap &data);
@@ -71,7 +68,6 @@ private:
     QWebEngineView * m_view = new QWebEngineView;
     QStringList m_disabledServices;
     bool m_isWorking = false;
-    bool m_noError = false;
     bool m_isLoginComplete = false;
 
 };

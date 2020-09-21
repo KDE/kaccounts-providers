@@ -95,8 +95,6 @@ void NextcloudController::fileChecked(KJob* job)
 // When url entered by user is wrong
 void NextcloudController::wrongUrlDetected()
 {
-    m_noError = false;
-    Q_EMIT noErrorChanged();
     m_errorMessage = i18n("Unable to connect to Nextcloud at the given server URL. Please check the server URL.");
     setWorking(false);
     Q_EMIT errorMessageChanged();
@@ -164,8 +162,6 @@ void NextcloudController::setWorking(bool start)
 
 void NextcloudController::serverCheckResult()
 {
-    m_noError = true;
-    Q_EMIT noErrorChanged();
     m_errorMessage.clear();
     m_json.clear();
 
@@ -209,19 +205,12 @@ void NextcloudController::authCheckResult(KJob *job)
 
     Q_EMIT errorMessageChanged();
 
-    m_noError = !kJob->isErrorPage();
-    Q_EMIT noErrorChanged();
     setWorking(false);
 }
 
 bool NextcloudController::isWorking()
 {
     return m_isWorking;
-}
-
-bool NextcloudController::noError()
-{
-    return m_noError;
 }
 
 QString NextcloudController::errorMessage() const
