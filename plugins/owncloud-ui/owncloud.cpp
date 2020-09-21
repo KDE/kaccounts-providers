@@ -76,7 +76,7 @@ void OwnCloudWizard::showNewAccountDialog()
 
 void OwnCloudWizard::showConfigureAccountDialog(const quint32 accountId)
 {
-
+    Q_UNUSED(accountId)
 }
 
 QStringList OwnCloudWizard::supportedServicesForConfig() const

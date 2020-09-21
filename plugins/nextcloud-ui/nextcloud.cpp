@@ -76,7 +76,7 @@ void NextcloudWizard::showNewAccountDialog()
 
 void NextcloudWizard::showConfigureAccountDialog(const quint32 accountId)
 {
-
+    Q_UNUSED(accountId)
 }
 
 QStringList NextcloudWizard::supportedServicesForConfig() const
