@@ -159,8 +159,12 @@ void QmlHelper::serverCheckResult(bool result)
         url.setUserName(m_username);
         url.setPassword(m_password);
 
-        url = url.adjusted(QUrl::StripTrailingSlash);
-        url.setPath(url.path() + '/' + "remote.php/webdav");
+        if (!url.path().endsWith(QLatin1String("/"))) {
+            url.setPath(url.path() + '/');
+        }
+
+        url.setPath(url.path() + "remote.php/webdav");
+
         // Send a basic PROPFIND command to test access
         const QString requestStr = QStringLiteral(
             "<d:propfind xmlns:d=\"DAV:\">"
