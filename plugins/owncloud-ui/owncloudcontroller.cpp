@@ -4,7 +4,7 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "qmlhelper.h"
+#include "owncloudcontroller.h"
 
 #include <KIO/Job>
 #include <KIO/DavJob>
@@ -15,7 +15,7 @@
 #include <QJsonObject>
 #include <QDebug>
 
-QmlHelper::QmlHelper(QObject *parent)
+OwncloudController::OwncloudController(QObject *parent)
     : QObject(parent),
       m_errorMessage(QString()),
       m_isWorking(false),
@@ -23,11 +23,11 @@ QmlHelper::QmlHelper(QObject *parent)
 {
 }
 
-QmlHelper::~QmlHelper()
+OwncloudController::~OwncloudController()
 {
 }
 
-void QmlHelper::checkServer(const QString &username, const QString &password, const QString &path)
+void OwncloudController::checkServer(const QString &username, const QString &password, const QString &path)
 {
     m_errorMessage.clear();
     Q_EMIT errorMessageChanged();
@@ -56,7 +56,7 @@ void QmlHelper::checkServer(const QString &username, const QString &password, co
     checkServer(url);
 }
 
-void QmlHelper::checkServer(const QUrl &url)
+void OwncloudController::checkServer(const QUrl &url)
 {
     qDebug() << "Checking for ownCloud instance at" << url;
     setWorking(true);
@@ -66,7 +66,7 @@ void QmlHelper::checkServer(const QUrl &url)
     connect(job, SIGNAL(finished(KJob*)), this, SLOT(fileChecked(KJob*)));
 }
 
-void QmlHelper::figureOutServer(const QUrl& url)
+void OwncloudController::figureOutServer(const QUrl& url)
 {
     if (/*url == QLatin1String("/") ||*/ url.isEmpty()) {
         serverCheckResult(false);
@@ -88,13 +88,13 @@ void QmlHelper::figureOutServer(const QUrl& url)
     }
 }
 
-void QmlHelper::dataReceived(KIO::Job *job, const QByteArray &data)
+void OwncloudController::dataReceived(KIO::Job *job, const QByteArray &data)
 {
     Q_UNUSED(job);
     m_json.append(data);
 }
 
-void QmlHelper::fileChecked(KJob* job)
+void OwncloudController::fileChecked(KJob* job)
 {
     KIO::TransferJob *kJob = qobject_cast<KIO::TransferJob *>(job);
     if (kJob->error()) {
@@ -117,7 +117,7 @@ void QmlHelper::fileChecked(KJob* job)
     serverCheckResult(true);
 }
 
-void QmlHelper::setWorking(bool start)
+void OwncloudController::setWorking(bool start)
 {
     if (start == m_isWorking) {
         return;
@@ -127,7 +127,7 @@ void QmlHelper::setWorking(bool start)
     Q_EMIT isWorkingChanged();
 }
 
-void QmlHelper::serverCheckResult(bool result)
+void OwncloudController::serverCheckResult(bool result)
 {
     m_noError = result;
     Q_EMIT noErrorChanged();
@@ -176,7 +176,7 @@ void QmlHelper::serverCheckResult(bool result)
 
 }
 
-void QmlHelper::authCheckResult(KJob *job)
+void OwncloudController::authCheckResult(KJob *job)
 {
     if (job->error()) {
         qDebug() << job->errorString();
@@ -199,22 +199,22 @@ void QmlHelper::authCheckResult(KJob *job)
     setWorking(false);
 }
 
-bool QmlHelper::isWorking()
+bool OwncloudController::isWorking()
 {
     return m_isWorking;
 }
 
-bool QmlHelper::noError()
+bool OwncloudController::noError()
 {
     return m_noError;
 }
 
-QString QmlHelper::errorMessage() const
+QString OwncloudController::errorMessage() const
 {
     return m_errorMessage;
 }
 
-void QmlHelper::finish(bool contactsEnabled)
+void OwncloudController::finish(bool contactsEnabled)
 {
     QVariantMap data;
     data.insert("server", m_server);
@@ -230,5 +230,3 @@ void QmlHelper::finish(bool contactsEnabled)
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }
-
-#include "qmlhelper.moc"

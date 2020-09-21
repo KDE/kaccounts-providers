@@ -6,7 +6,7 @@
  */
 
 #include "owncloud.h"
-#include "qmlhelper.h"
+#include "owncloudcontroller.h"
 
 #include <KLocalizedString>
 #include <KDeclarative/QmlObject>
@@ -35,9 +35,9 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
         m_object->setInitializationDelayed(true);
         m_object->loadPackage(packagePath);
 
-        QmlHelper *helper = new QmlHelper(m_object);
-        connect(helper, &QmlHelper::wizardFinished, this, &OwnCloudWizard::success);
-        connect(helper, &QmlHelper::wizardFinished, [=] {
+        OwncloudController *helper = new OwncloudController(m_object);
+        connect(helper, &OwncloudController::wizardFinished, this, &OwnCloudWizard::success);
+        connect(helper, &OwncloudController::wizardFinished, [=] {
             QWindow *window = qobject_cast<QWindow *>(m_object->rootObject());
             if (window) {
                 window->close();

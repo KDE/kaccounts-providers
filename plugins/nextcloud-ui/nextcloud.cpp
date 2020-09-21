@@ -7,7 +7,7 @@
  */
 
 #include "nextcloud.h"
-#include "qmlhelper.h"
+#include "nextcloudcontroller.h"
 
 #include <KLocalizedString>
 #include <KDeclarative/QmlObject>
@@ -35,9 +35,9 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
         m_object->setInitializationDelayed(true);
         m_object->loadPackage(packagePath);
 
-        QmlHelper *helper = new QmlHelper(m_object);
-        connect(helper, &QmlHelper::wizardFinished, this, &NextcloudWizard::success);
-        connect(helper, &QmlHelper::wizardFinished, [=] {
+        NextcloudController *helper = new NextcloudController(m_object);
+        connect(helper, &NextcloudController::wizardFinished, this, &NextcloudWizard::success);
+        connect(helper, &NextcloudController::wizardFinished, [=] {
             QWindow *window = qobject_cast<QWindow *>(m_object->rootObject());
             if (window) {
                 window->close();

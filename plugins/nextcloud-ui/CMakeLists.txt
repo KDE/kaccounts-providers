@@ -1,6 +1,6 @@
 set(nextcloud_plugin_kaccounts_SRCS
      nextcloud.cpp
-     qmlhelper.cpp
+     nextcloudcontroller.cpp
 )
 
 add_library(nextcloud_plugin_kaccounts MODULE

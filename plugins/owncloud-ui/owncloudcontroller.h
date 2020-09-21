@@ -16,7 +16,7 @@ namespace KIO
 };
 class KJob;
 
-class QmlHelper : public QObject
+class OwncloudController : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool isWorking READ isWorking NOTIFY isWorkingChanged)
@@ -24,8 +24,8 @@ class QmlHelper : public QObject
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
 
 public:
-    explicit QmlHelper(QObject *parent = 0);
-    ~QmlHelper();
+    explicit OwncloudController(QObject *parent = 0);
+    ~OwncloudController();
 
     Q_INVOKABLE void checkServer(const QString &username, const QString &password, const QString &server);
     Q_INVOKABLE void finish(bool contactsEnabled);

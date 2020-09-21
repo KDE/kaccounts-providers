@@ -4,7 +4,8 @@
  *
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
-#include "qmlhelper.h"
+
+#include "nextcloudcontroller.h"
 
 #include <KIO/Job>
 #include <KIO/DavJob>
@@ -21,16 +22,16 @@
 #include <QFileSystemWatcher> 
 #include <QDesktopServices>
 
-QmlHelper::QmlHelper(QObject *parent)
+NextcloudController::NextcloudController(QObject *parent)
     : QObject(parent)
 {
 }
 
-QmlHelper::~QmlHelper()
+NextcloudController::~NextcloudController()
 {
 }
 
-void QmlHelper::checkServer(const QString &path)
+void NextcloudController::checkServer(const QString &path)
 {   
     m_errorMessage.clear();
     Q_EMIT errorMessageChanged();
@@ -54,22 +55,22 @@ void QmlHelper::checkServer(const QString &path)
 }
 
 //To check if url is correct
-void QmlHelper::checkServer(const QUrl &url)
+void NextcloudController::checkServer(const QUrl &url)
 {
     setWorking(true);
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
     job->setUiDelegate(0);
-    connect(job, &KIO::DavJob::data, this, &QmlHelper::dataReceived);
-    connect(job, &KIO::DavJob::finished, this, &QmlHelper::fileChecked);
+    connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
+    connect(job, &KIO::DavJob::finished, this, &NextcloudController::fileChecked);
 }
 
-void QmlHelper::dataReceived(KIO::Job *job, const QByteArray &data)
+void NextcloudController::dataReceived(KIO::Job *job, const QByteArray &data)
 {
     Q_UNUSED(job);
     m_json.append(data);
 }
 
-void QmlHelper::fileChecked(KJob* job)
+void NextcloudController::fileChecked(KJob* job)
 {
     KIO::TransferJob *kJob = qobject_cast<KIO::TransferJob *>(job);
     if (kJob->error()) {
@@ -92,7 +93,7 @@ void QmlHelper::fileChecked(KJob* job)
 }
 
 // When url entered by user is wrong
-void QmlHelper::wrongUrlDetected()
+void NextcloudController::wrongUrlDetected()
 {
     m_noError = false;
     Q_EMIT noErrorChanged();
@@ -104,7 +105,7 @@ void QmlHelper::wrongUrlDetected()
 
 // Open Webview for nextcloud login. 
 // Document for login flow :  https://docs.nextcloud.com/server/stable/developer_manual/client_apis/LoginFlow/index.html
-void QmlHelper::openWebView()
+void NextcloudController::openWebView()
 {
     QWebEngineHttpRequest request;
     // set proper headers
@@ -129,7 +130,7 @@ void QmlHelper::openWebView()
     m_view->resize(424, 650);
 }
 
-void QmlHelper::finalUrlHandler(const QUrl &url){
+void NextcloudController::finalUrlHandler(const QUrl &url){
     m_finalUrl = url;
     m_view->close();
     delete m_view;
@@ -151,7 +152,7 @@ void QmlHelper::finalUrlHandler(const QUrl &url){
     serverCheckResult();
 }
 
-void QmlHelper::setWorking(bool start)
+void NextcloudController::setWorking(bool start)
 {
     if (start == m_isWorking) {
         return;
@@ -161,7 +162,7 @@ void QmlHelper::setWorking(bool start)
     Q_EMIT isWorkingChanged();
 }
 
-void QmlHelper::serverCheckResult()
+void NextcloudController::serverCheckResult()
 {
     m_noError = true;
     Q_EMIT noErrorChanged();
@@ -182,8 +183,8 @@ void QmlHelper::serverCheckResult()
             "</d:propfind>");
 
     KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), "1", KIO::HideProgressInfo);
-    connect(job, &KIO::DavJob::finished, this, &QmlHelper::authCheckResult);
-    connect(job, &KIO::DavJob::data, this, &QmlHelper::dataReceived);
+    connect(job, &KIO::DavJob::finished, this, &NextcloudController::authCheckResult);
+    connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
 
     QVariantMap metadata{{"cookies","none"}, {"no-cache",true}};
 
@@ -194,7 +195,7 @@ void QmlHelper::serverCheckResult()
     Q_EMIT errorMessageChanged();
 }
 
-void QmlHelper::authCheckResult(KJob *job)
+void NextcloudController::authCheckResult(KJob *job)
 {
     KIO::DavJob *kJob = qobject_cast<KIO::DavJob*>(job);
 
@@ -213,27 +214,27 @@ void QmlHelper::authCheckResult(KJob *job)
     setWorking(false);
 }
 
-bool QmlHelper::isWorking()
+bool NextcloudController::isWorking()
 {
     return m_isWorking;
 }
 
-bool QmlHelper::noError()
+bool NextcloudController::noError()
 {
     return m_noError;
 }
 
-QString QmlHelper::errorMessage() const
+QString NextcloudController::errorMessage() const
 {
     return m_errorMessage;
 }
 
-bool QmlHelper::isLoginComplete()
+bool NextcloudController::isLoginComplete()
 {
     return m_isLoginComplete;
 }
 
-void QmlHelper::finish(bool contactsEnabled)
+void NextcloudController::finish(bool contactsEnabled)
 {
     QVariantMap data;
     data.insert("server", m_server);

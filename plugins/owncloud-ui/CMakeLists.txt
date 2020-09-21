@@ -4,7 +4,7 @@ include_directories(${CMAKE_CURRENT_BUILD_DIR}
 
 set(owncloud_plugin_kaccounts_SRCS
      owncloud.cpp
-     qmlhelper.cpp
+     owncloudcontroller.cpp
 )
 
 add_library(owncloud_plugin_kaccounts MODULE
