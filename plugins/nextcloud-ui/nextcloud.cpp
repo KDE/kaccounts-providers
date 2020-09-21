@@ -12,8 +12,10 @@
 #include <KLocalizedString>
 #include <KDeclarative/QmlObject>
 
+#include <QIcon>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QWindow>
 
 NextcloudWizard::NextcloudWizard(QObject *parent)
     : KAccountsUiPlugin(parent)
