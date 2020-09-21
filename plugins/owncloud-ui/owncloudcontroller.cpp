@@ -15,6 +15,8 @@
 #include <QJsonObject>
 #include <QDebug>
 
+#include "../cloudurls.h"
+
 OwncloudController::OwncloudController(QObject *parent)
     : QObject(parent),
       m_errorMessage(QString()),
@@ -34,25 +36,7 @@ void OwncloudController::checkServer(const QString &username, const QString &pas
     m_username = username;
     m_password = password;
 
-    QString fixedUrl;
-    if (!path.startsWith(QLatin1String("http://")) && !path.startsWith(QLatin1String("https://"))) {
-        fixedUrl.append("https://");
-        fixedUrl.append(path);
-    } else {
-        fixedUrl = path;
-    }
-
-    m_json.clear();
-
-    QUrl url(fixedUrl);
-    url = url.adjusted(QUrl::StripTrailingSlash);
-    url.setPath(url.path() + '/' + "status.php");
-
-    if (url.host().isEmpty()) {
-        return;
-    }
-
-    checkServer(url);
+    checkServer(createStatusUrl(path));
 }
 
 void OwncloudController::checkServer(const QUrl &url)

@@ -15,6 +15,8 @@
 #include <QJsonObject>
 #include <QDesktopServices>
 
+#include "../cloudurls.h"
+
 // Document for login flow :  https://docs.nextcloud.com/server/stable/developer_manual/client_apis/LoginFlow/index.html
 
 void NextcloudUrlIntercepter::interceptRequest(QWebEngineUrlRequestInfo &info)
@@ -42,21 +44,8 @@ void NextcloudController::checkServer(const QString &path)
     Q_EMIT errorMessageChanged();
 
     m_json.clear();
-    QString urlString = path;
 
-    //To remove "/'s" from the end
-    while(urlString.endsWith("/")) {
-        urlString.remove(urlString.length() - 1, 1);
-    }
-
-    QUrl url = QUrl::fromUserInput(urlString);
-    url.setPath(url.path() + '/' + "status.php");
-
-    if (url.host().isEmpty()) {
-        return;
-    }
-
-    checkServer(url);
+    checkServer(createStatusUrl(path));
 }
 
 //To check if url is correct
