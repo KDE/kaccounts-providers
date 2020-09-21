@@ -35,7 +35,6 @@ public:
     virtual QStringList supportedServicesForConfig() const override;
 
 private:
-    QString m_providerName;
     QHash<QString, int> m_services;
     KDeclarative::QmlObject *m_object;
 };

@@ -59,8 +59,7 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 
 void OwnCloudWizard::setProviderName(const QString &providerName)
 {
-    //TODO: unused?
-    m_providerName = providerName;
+    Q_UNUSED(providerName)
 }
 
 void OwnCloudWizard::showNewAccountDialog()

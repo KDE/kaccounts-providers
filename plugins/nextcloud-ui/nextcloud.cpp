@@ -59,8 +59,7 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 
 void NextcloudWizard::setProviderName(const QString &providerName)
 {
-    //TODO: unused?
-    m_providerName = providerName;
+    Q_UNUSED(providerName)
 }
 
 void NextcloudWizard::showNewAccountDialog()
