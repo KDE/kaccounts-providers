@@ -28,8 +28,17 @@ class NextcloudController : public QObject
     Q_PROPERTY(bool isWorking READ isWorking NOTIFY isWorkingChanged)
     Q_PROPERTY(bool isLoginComplete READ isLoginComplete NOTIFY isLoginCompleteChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
+    Q_PROPERTY(State state MEMBER m_state NOTIFY stateChanged)
 
 public:
+
+    enum State {
+        ServerUrl = 0,
+        WebLogin,
+        Services,
+    };
+    Q_ENUM(State)
+
     NextcloudController(QObject *parent = 0);
     ~NextcloudController();
 
@@ -44,6 +53,7 @@ Q_SIGNALS:
     void errorMessageChanged();
     void isLoginCompleteChanged();
     void wizardFinished(const QString &username, const QString &password, const QVariantMap &data);
+    void stateChanged();
 
 private Q_SLOTS:
     void fileChecked(KJob *job);
@@ -69,6 +79,7 @@ private:
     QStringList m_disabledServices;
     bool m_isWorking = false;
     bool m_isLoginComplete = false;
+    State m_state = ServerUrl;
 
 };
 

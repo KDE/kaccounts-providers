@@ -88,6 +88,8 @@ void NextcloudController::fileChecked(KJob* job)
     QUrl url = KIO::upUrl(kJob->url());
     m_server = url.toString();
 
+    m_state = WebLogin;
+    Q_EMIT stateChanged();
     // Call webview for login
     openWebView();
 }
@@ -200,6 +202,8 @@ void NextcloudController::authCheckResult(KJob *job)
     } else {
         m_errorMessage.clear();
         m_isLoginComplete = true;
+        m_state = Services;
+        Q_EMIT stateChanged();
         Q_EMIT isLoginCompleteChanged();
     }
 
