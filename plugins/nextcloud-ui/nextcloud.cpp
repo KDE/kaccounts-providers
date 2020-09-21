@@ -18,6 +18,7 @@
 NextcloudWizard::NextcloudWizard(QObject *parent)
     : KAccountsUiPlugin(parent)
 {
+    qmlRegisterUncreatableType<NextcloudController>("org.kde.kaccounts.nextcloud", 1, 0, "NextcloudController", QStringLiteral("Only for enums"));
 }
 
 NextcloudWizard::~NextcloudWizard()

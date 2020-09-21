@@ -6,9 +6,11 @@
  */
 
 import QtQuick 2.2
-import org.kde.kirigami 2.5 as Kirigami
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
+
+import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kaccounts.nextcloud 1.0
 
 Kirigami.ApplicationWindow {
     id: ncAccountRoot
@@ -27,7 +29,16 @@ Kirigami.ApplicationWindow {
 
             Loader {
                 anchors.fill: parent
-                source: helper.isLoginComplete ? Qt.resolvedUrl("Services.qml") : Qt.resolvedUrl("Server.qml")
+                source: {
+                    switch (helper.state) {
+                        case NextcloudController.ServerUrl:
+                            return Qt.resolvedUrl("Server.qml");
+                        case NextcloudController.WebLogin:
+                            return ""
+                        case NextcloudController.Services:
+                            return Qt.resolvedUrl("Services.qml")
+                    }
+                }
             }
         }
     }
