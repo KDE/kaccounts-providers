@@ -242,5 +242,3 @@ void QmlHelper::finish(bool contactsEnabled)
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }
-
-#include "qmlhelper.moc"
