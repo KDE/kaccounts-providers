@@ -112,10 +112,8 @@ void NextcloudController::wrongUrlDetected()
 // Open Webview for nextcloud login. 
 
 void NextcloudController::finalUrlHandler(const QUrl &url){
-    m_finalUrl = url;
-
     // To fetch m_username and m_password from final url
-    QString finalURLtoString = m_finalUrl.toString();
+    QString finalURLtoString = url.toString();
     int username_ini_pos = finalURLtoString.indexOf("&user:") + 6;
     int password_ini_pos = finalURLtoString.indexOf("&password:") + 10;
     int username_size = password_ini_pos - username_ini_pos - 10;

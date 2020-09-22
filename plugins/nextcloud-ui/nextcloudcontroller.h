@@ -77,7 +77,6 @@ private:
     QString m_server;
     QString m_username;
     QString m_password;
-    QUrl m_finalUrl;
     QStringList m_disabledServices;
     bool m_isWorking = false;
     State m_state = ServerUrl;
