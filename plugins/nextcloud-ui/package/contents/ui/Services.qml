@@ -10,23 +10,25 @@ import org.kde.kirigami 2.5 as Kirigami
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
 
-ColumnLayout {
+Kirigami.Page {
 
-    Label {
-        text: i18n("Choose services to enable");
-    }
+    title: i18n("Choose services to enable")
 
-    CheckBox {
-        id: contactsService
-        text: i18n("Contacts")
-    }
-    Button {
-        id: finishButton
-        Layout.fillWidth: true
-        text: i18n("Finish")
+    ColumnLayout {
+        anchors.fill: parent
 
-        onClicked: {
-            helper.finish(contactsService.checked);
+        CheckBox {
+            id: contactsService
+            text: i18n("Contacts")
+        }
+        Button {
+            id: finishButton
+            Layout.fillWidth: true
+            text: i18n("Finish")
+
+            onClicked: {
+                helper.finish(contactsService.checked);
+            }
         }
     }
 }

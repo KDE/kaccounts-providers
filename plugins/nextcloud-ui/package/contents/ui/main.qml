@@ -14,31 +14,20 @@ import org.kde.kaccounts.nextcloud 1.0
 
 Kirigami.ApplicationWindow {
     id: ncAccountRoot
-    objectName: "_root"
 
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 15
 
-    pageStack.initialPage: mainPageComponent
+    pageStack.initialPage: Qt.resolvedUrl("Server.qml");
 
-    Component {
-        id: mainPageComponent
+    Connections {
+        target: helper
 
-        Kirigami.Page {
-            title: i18n("Nextcloud Login")
-
-            Loader {
-                anchors.fill: parent
-                source: {
-                    switch (helper.state) {
-                        case NextcloudController.ServerUrl:
-                            return Qt.resolvedUrl("Server.qml");
-                        case NextcloudController.WebLogin:
-                            return Qt.resolvedUrl("WebLogin.qml")
-                        case NextcloudController.Services:
-                            return Qt.resolvedUrl("Services.qml")
-                    }
-                }
+        function onStateChanged() {
+            if (helper.state === NextcloudController.WebLogin) {
+                ncAccountRoot.pageStack.replace(Qt.resolvedUrl("WebLogin.qml"))
+            } else if (helper.state === NextcloudController.Services) {
+                ncAccountRoot.pageStack.replace(Qt.resolvedUrl("Services.qml"))
             }
         }
     }

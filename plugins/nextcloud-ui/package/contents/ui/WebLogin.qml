@@ -12,7 +12,17 @@ import QtWebEngine 1.10
 
 import org.kde.kirigami 2.5 as Kirigami
 
-WebEngineView {
-    url: helper.loginUrl
-    profile: helper.webengineProfile
+Kirigami.Page {
+
+    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: 0
+    bottomPadding: 0
+
+    WebEngineView {
+        anchors.fill: parent
+        url: helper.loginUrl
+        profile: helper.webengineProfile
+    }
 }
