@@ -9,7 +9,6 @@ add_library(nextcloud_plugin_kaccounts MODULE
 
 target_link_libraries(nextcloud_plugin_kaccounts
                        Qt5::Core
-                       Qt5::WebEngineWidgets
                        Qt5::WebEngine
                        KF5::KIOCore
                        KF5::I18n

@@ -10,10 +10,6 @@
 
 #include <QObject>
 #include <QStringList>
-#include <QtWidgets>
-#include <QWebEngineView>
-#include <QWebEnginePage> 
-#include <QWebEngineHttpRequest> 
 #include <QWebEngineUrlRequestInterceptor>
 #include <QQuickWebEngineProfile>
 
@@ -76,7 +72,6 @@ private:
     void figureOutServer(const QUrl &url);
     void setWorking(bool start);
     void serverCheckResult();
-    void openWebView();
     void wrongUrlDetected();
 
     QByteArray m_json;
@@ -85,7 +80,6 @@ private:
     QString m_username;
     QString m_password;
     QUrl m_finalUrl;
-    QWebEngineView * m_view = new QWebEngineView;
     QStringList m_disabledServices;
     bool m_isWorking = false;
     bool m_isLoginComplete = false;

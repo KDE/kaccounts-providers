@@ -13,13 +13,6 @@
 #include <KLocalizedString>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QtWidgets>
-#include <QtNetwork>
-#include <QWebEngineView>
-#include <QWebEnginePage> 
-#include <QWebEngineHttpRequest> 
-#include <QWebEngineProfile>
-#include <QFileSystemWatcher> 
 #include <QDesktopServices>
 
 // Document for login flow :  https://docs.nextcloud.com/server/stable/developer_manual/client_apis/LoginFlow/index.html
@@ -105,8 +98,6 @@ void NextcloudController::fileChecked(KJob* job)
 
     m_state = WebLogin;
     Q_EMIT stateChanged();
-    // Call webview for login
-    openWebView();
 }
 
 // When url entered by user is wrong
@@ -119,36 +110,9 @@ void NextcloudController::wrongUrlDetected()
 
 
 // Open Webview for nextcloud login. 
-// Document for login flow :  https://docs.nextcloud.com/server/stable/developer_manual/client_apis/LoginFlow/index.html
-void NextcloudController::openWebView()
-{
-    QWebEngineHttpRequest request;
-    // set proper headers
-    request.setUrl(QUrl::fromUserInput(m_server + "/index.php/login/flow"));
-    request.setHeader(
-            QByteArray::fromStdString("USER_AGENT"), 
-            QByteArray::fromStdString("Mozilla/5.0 nextcloud-ui-plugin")
-    );
-    request.setHeader(
-            QByteArray::fromStdString("OCS-APIREQUEST"), 
-            QByteArray::fromStdString("true")
-    );
-        
-    m_view->load(request);
-
-    // Delete cookies because it is a one time webview
-    m_view->page()->profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
-    // To catch the url of scheme *nc* on the final login
-    QDesktopServices::setUrlHandler("nc", this, "finalUrlHandler");
-
-    m_view->show();
-    m_view->resize(424, 650);
-}
 
 void NextcloudController::finalUrlHandler(const QUrl &url){
     m_finalUrl = url;
-    m_view->close();
-    delete m_view;
 
     // To fetch m_username and m_password from final url
     QString finalURLtoString = m_finalUrl.toString();
