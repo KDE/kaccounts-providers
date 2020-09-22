@@ -180,10 +180,8 @@ void NextcloudController::authCheckResult(KJob *job)
         m_errorMessage = i18n("Unable to authenticate using the provided username and password");
     } else {
         m_errorMessage.clear();
-        m_isLoginComplete = true;
         m_state = Services;
         Q_EMIT stateChanged();
-        Q_EMIT isLoginCompleteChanged();
     }
 
     Q_EMIT errorMessageChanged();
@@ -199,11 +197,6 @@ bool NextcloudController::isWorking()
 QString NextcloudController::errorMessage() const
 {
     return m_errorMessage;
-}
-
-bool NextcloudController::isLoginComplete()
-{
-    return m_isLoginComplete;
 }
 
 void NextcloudController::finish(bool contactsEnabled)
