@@ -1,8 +1,8 @@
 /*
- *   Copyright 2019 (C) Rituka Patwal <ritukapatwal21@gmail.com>
- *   Copyright 2015 (C) Martin Klapetek <mklapetek@kde.org>
+ *  SPDX-FileCopyrightText: 2019 Rituka Patwal <ritukapatwal21@gmail.com>
+ *  SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
 import QtQuick 2.2
