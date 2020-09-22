@@ -34,7 +34,7 @@ Kirigami.ApplicationWindow {
                         case NextcloudController.ServerUrl:
                             return Qt.resolvedUrl("Server.qml");
                         case NextcloudController.WebLogin:
-                            return ""
+                            return Qt.resolvedUrl("WebLogin.qml")
                         case NextcloudController.Services:
                             return Qt.resolvedUrl("Services.qml")
                     }
