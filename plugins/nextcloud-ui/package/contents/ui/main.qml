@@ -15,8 +15,11 @@ import org.kde.kaccounts.nextcloud 1.0
 Kirigami.ApplicationWindow {
     id: ncAccountRoot
 
-    width: Kirigami.Units.gridUnit * 25
-    height: Kirigami.Units.gridUnit * 15
+    // Minimum size at which the web login UI looks good
+    minimumWidth: Kirigami.Units.gridUnit * 24
+    minimumHeight: Kirigami.Units.gridUnit * 35
+    width: minimumWidth
+    height: minimumHeight
 
     pageStack.initialPage: Qt.resolvedUrl("Server.qml");
 
