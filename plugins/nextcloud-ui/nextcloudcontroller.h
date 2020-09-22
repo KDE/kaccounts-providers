@@ -14,6 +14,8 @@
 #include <QWebEngineView>
 #include <QWebEnginePage> 
 #include <QWebEngineHttpRequest> 
+#include <QWebEngineUrlRequestInterceptor>
+#include <QQuickWebEngineProfile>
 
 namespace KIO
 {
@@ -22,6 +24,11 @@ namespace KIO
 
 class KJob;
 
+class NextcloudUrlIntercepter : public QWebEngineUrlRequestInterceptor
+{
+    void interceptRequest(QWebEngineUrlRequestInfo &info) override;
+};
+
 class NextcloudController : public QObject
 {
     Q_OBJECT
@@ -29,6 +36,8 @@ class NextcloudController : public QObject
     Q_PROPERTY(bool isLoginComplete READ isLoginComplete NOTIFY isLoginCompleteChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
     Q_PROPERTY(State state MEMBER m_state NOTIFY stateChanged)
+    Q_PROPERTY(QQuickWebEngineProfile *webengineProfile MEMBER m_webengineProfile CONSTANT)
+    Q_PROPERTY(QString loginUrl MEMBER m_loginUrl NOTIFY loginUrlChanged)
 
 public:
 
@@ -54,6 +63,7 @@ Q_SIGNALS:
     void isLoginCompleteChanged();
     void wizardFinished(const QString &username, const QString &password, const QVariantMap &data);
     void stateChanged();
+    void loginUrlChanged();
 
 private Q_SLOTS:
     void fileChecked(KJob *job);
@@ -80,6 +90,9 @@ private:
     bool m_isWorking = false;
     bool m_isLoginComplete = false;
     State m_state = ServerUrl;
+    QQuickWebEngineProfile *m_webengineProfile;
+    NextcloudUrlIntercepter m_urlIntercepter;
+    QString m_loginUrl;
 
 };
 

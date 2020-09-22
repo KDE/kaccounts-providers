@@ -16,7 +16,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_P
 find_package(Intltool REQUIRED)
 find_package(KAccounts REQUIRED)
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml WebEngineWidgets)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml WebEngineWidgets WebEngine)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
 
 include(KDEInstallDirs)

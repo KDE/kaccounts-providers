@@ -22,9 +22,21 @@
 #include <QFileSystemWatcher> 
 #include <QDesktopServices>
 
+// Document for login flow :  https://docs.nextcloud.com/server/stable/developer_manual/client_apis/LoginFlow/index.html
+
+void NextcloudUrlIntercepter::interceptRequest(QWebEngineUrlRequestInfo &info)
+{
+    info.setHttpHeader("OCS-APIREQUEST", "true");
+}
+
 NextcloudController::NextcloudController(QObject *parent)
     : QObject(parent)
+    , m_webengineProfile(new QQuickWebEngineProfile(this))
 {
+    m_webengineProfile->setUrlRequestInterceptor(&m_urlIntercepter);
+    m_webengineProfile->setHttpUserAgent(QStringLiteral("Mozilla/5.0 nextcloud-ui-plugin"));
+
+    QDesktopServices::setUrlHandler("nc", this, "finalUrlHandler");
 }
 
 NextcloudController::~NextcloudController()
@@ -87,6 +99,9 @@ void NextcloudController::fileChecked(KJob* job)
     
     QUrl url = KIO::upUrl(kJob->url());
     m_server = url.toString();
+
+    m_loginUrl = m_server + QStringLiteral("/index.php/login/flow");
+    Q_EMIT loginUrlChanged();
 
     m_state = WebLogin;
     Q_EMIT stateChanged();
