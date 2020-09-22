@@ -227,6 +227,8 @@ void OwncloudController::finish(bool contactsEnabled)
     carddavUrl.setPath(carddavUrl.path() + QString("/remote.php/carddav/addressbooks/%1").arg(m_username));
 
     data.insert("carddavUrl", carddavUrl);
+    data.insert("dav/host", carddavUrl.host());
+    data.insert("dav/storagePath", QStringLiteral("/remote.php/webdav"));
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }

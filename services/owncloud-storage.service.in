@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="owncloud-storage">
   <type>dav-storage</type>
-  <!-- ownCloud's Storage - Service name being displayed as a checkbox label to enable/disable this service
-       Would be nice to use the localized name of this service if it exists/makes sense -->
   <_name>Storage</_name>
   <icon>owncloud-storage</icon>
   <provider>owncloud</provider>
@@ -10,7 +8,8 @@
 
   <template>
     <group name="dav">
-      <setting name="path">/remote.php/webdav/</setting>
+        <setting name="host"></setting>
+        <setting name="storagePath"></setting>
     </group>
   </template>
 </service>
