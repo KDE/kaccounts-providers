@@ -20,6 +20,20 @@ namespace KIO
 
 class KJob;
 
+class Service
+{
+    Q_GADGET
+    Q_PROPERTY(QString id MEMBER m_id)
+    Q_PROPERTY(QString name MEMBER m_name)
+    Q_PROPERTY(QString description MEMBER m_description);
+
+public:
+    QString m_id;
+    QString m_name;
+    QString m_description;
+};
+
+
 class NextcloudUrlIntercepter : public QWebEngineUrlRequestInterceptor
 {
     void interceptRequest(QWebEngineUrlRequestInfo &info) override;
@@ -33,6 +47,7 @@ class NextcloudController : public QObject
     Q_PROPERTY(State state MEMBER m_state NOTIFY stateChanged)
     Q_PROPERTY(QQuickWebEngineProfile *webengineProfile MEMBER m_webengineProfile CONSTANT)
     Q_PROPERTY(QString loginUrl MEMBER m_loginUrl NOTIFY loginUrlChanged)
+    Q_PROPERTY(QVariantList availableServices READ availableServices CONSTANT)
 
 public:
 
@@ -47,10 +62,11 @@ public:
     ~NextcloudController();
 
     Q_INVOKABLE void checkServer(const QString &server);
-    Q_INVOKABLE void finish(bool contactsEnabled);
+    Q_INVOKABLE void finish(const QStringList disabledServices);
     bool isWorking();
     bool isLoginComplete();
     QString errorMessage() const;
+    QVariantList availableServices() const;
 
 Q_SIGNALS:
     void isWorkingChanged();

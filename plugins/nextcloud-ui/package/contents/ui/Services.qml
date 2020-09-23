@@ -10,25 +10,77 @@ import org.kde.kirigami 2.5 as Kirigami
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
+    id: root
+    title: i18n("Services")
 
-    title: i18n("Choose services to enable")
+    property var disabledServices: []
 
-    ColumnLayout {
-        anchors.fill: parent
+    ListView {
+        model: helper.availableServices
 
-        CheckBox {
-            id: contactsService
-            text: i18n("Contacts")
-        }
-        Button {
-            id: finishButton
-            Layout.fillWidth: true
-            text: i18n("Finish")
+        clip: true
 
-            onClicked: {
-                helper.finish(contactsService.checked);
+        // Cheap copy of Kirigami.BasicListItem with CheckBox instead of Icon
+        delegate: Kirigami.AbstractListItem {
+            id: listItem
+            highlighted: false
+            onClicked: serviceCheck.toggle()
+
+            RowLayout {
+                CheckBox {
+                    id: serviceCheck
+                    Layout.alignment: Qt.AlignVCenter
+                    checked: true
+                    onCheckedChanged: {
+                        if (serviceCheck.checked) {
+                            const idx = root.disabledServices.indexOf(modelData.id);
+                            if (idx > -1) {
+                                root.disabledServices.splice(idx, 1);
+                            }
+                        } else {
+                            root.disabledServices.push(modelData.id)
+                        }
+                    }
+                }
+
+                ColumnLayout {
+                    spacing: 0
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignVCenter
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: modelData.name
+                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                        elide: Text.ElideRight
+                    }
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: modelData.description
+                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                        elide: Text.ElideRight
+                        font: Kirigami.Theme.smallFont
+                        opacity: 0.7
+                        visible: text.length > 0
+                    }
+                }
             }
         }
+    }
+
+    footer: ToolBar {
+         RowLayout {
+            anchors.fill: parent
+
+            Button {
+                text: i18n("Finish")
+                Layout.alignment: Qt.AlignRight
+                onClicked: {
+                    helper.finish(root.disabledServices)
+                }
+            }
+         }
     }
 }

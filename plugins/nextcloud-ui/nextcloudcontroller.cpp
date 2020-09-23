@@ -197,7 +197,7 @@ QString NextcloudController::errorMessage() const
     return m_errorMessage;
 }
 
-void NextcloudController::finish(bool contactsEnabled)
+void NextcloudController::finish(const QStringList disabledServices)
 {
     QVariantMap data;
     data.insert("server", m_server);
@@ -208,9 +208,17 @@ void NextcloudController::finish(bool contactsEnabled)
     data.insert("dav/storagePath", QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
     data.insert("dav/contactsPath", QStringLiteral("/remote.php/dav/addressbooks/users/%1").arg(m_username));
 
-    if (!contactsEnabled) {
-        data.insert("__service/nextcloud-contacts", false);
+    for (const QString &service : disabledServices) {
+        data.insert("__service/" + service, false);
     }
 
     Q_EMIT wizardFinished(m_username, m_password, data);
+}
+
+QVariantList NextcloudController::availableServices() const
+{
+    // TODO Find a way to not hardcode this
+    return {
+        QVariant::fromValue(Service{QStringLiteral("nextcloud-contacts"), i18n("Contacts"), i18n("Synchronize contacts")})
+    };
 }
