@@ -1,84 +1,35 @@
 /*
- *   Copyright 2015 (C) Martin Klapetek <mklapetek@kde.org>
+ *  SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
+ *  SPDX-FileCopyrightText: 2019 Rituka Patwal <ritukapatwal21@gmail.com>
+ *  SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
 import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.2
+import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.5
 
-ApplicationWindow {
-    id: kaccountsRoot
-    objectName: "_root"
+import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kaccounts.owncloud 1.0
 
-    width: 400; height: 250
+Kirigami.ApplicationWindow {
+    id: ocAccountRoot
 
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: units.largeSpacing
+    // Minimum size at which the web login UI looks good
+    minimumWidth: Kirigami.Units.gridUnit * 24
+    minimumHeight: Kirigami.Units.gridUnit * 35
+    width: minimumWidth
+    height: minimumHeight
 
-        Label {
-            text: i18n("Add new ownCloud account")
-        }
+    pageStack.initialPage: Qt.resolvedUrl("Server.qml");
 
-        StackView {
-            id: stack
+    Connections {
+        target: helper
 
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            initialItem: BasicInfo {
-                id: basicInfoPage
-                objectName: "basicInfoPage"
-            }
-        }
-
-        Component {
-            id: servicesComponent
-
-            Services {
-                objectName: "servicesPage"
-            }
-        }
-
-        RowLayout {
-            Button {
-                id: backButton
-                Layout.fillWidth: true
-                text: i18n("Back");
-                enabled: stack.currentItem.objectName == "servicesPage"
-
-                onClicked: {
-                    if (stack.currentItem.objectName == "servicesPage") {
-                        stack.pop(servicesComponent);
-                    }
-                }
-            }
-
-            Button {
-                id: nextButton
-                Layout.fillWidth: true
-                text: i18n("Next")
-                enabled: basicInfoPage.canContinue //: false
-                visible: stack.currentItem == basicInfoPage
-
-                onClicked: {
-                    if (stack.currentItem == basicInfoPage) {
-                        stack.push(servicesComponent);
-                    }
-                }
-            }
-
-            Button {
-                id: finishButton
-                Layout.fillWidth: true
-                text: i18n("Finish")
-                visible: stack.currentItem.objectName == "servicesPage"
-
-                onClicked: {
-                    helper.finish(stack.currentItem.contactsEnabled);
-                }
+        function onStateChanged() {
+            if (helper.state === OwncloudController.Services) {
+                ocAccountRoot.pageStack.replace(Qt.resolvedUrl("Services.qml"))
             }
         }
     }

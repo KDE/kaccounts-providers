@@ -18,6 +18,7 @@
 OwnCloudWizard::OwnCloudWizard(QObject *parent)
     : KAccountsUiPlugin(parent)
 {
+    qmlRegisterUncreatableType<OwncloudController>("org.kde.kaccounts.owncloud", 1, 0, "OwncloudController", QStringLiteral("Only for enums"));
 }
 
 OwnCloudWizard::~OwnCloudWizard()

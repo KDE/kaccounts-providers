@@ -1,31 +1,87 @@
 /*
- *   Copyright 2015 (C) Martin Klapetek <mklapetek@kde.org>
+ *  SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
+ *  SPDX-FileCopyrightText: 2019 Rituka Patwal <ritukapatwal21@gmail.com>
+ *  SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
  *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
+ *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
 import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.2
+import org.kde.kirigami 2.5 as Kirigami
+import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.5
 
-ColumnLayout {
-    id: basicInfoLayout
-    property bool canContinue: true
+Kirigami.ScrollablePage {
+    id: root
+    title: i18n("Services")
 
-    //FIXME at some point this should become a list of disabled services
-    property alias contactsEnabled: contactsService.checked
+    property var disabledServices: []
 
-    Label {
-        text: i18n("Choose services to enable");
+    ListView {
+        model: helper.availableServices
+
+        clip: true
+
+        // Cheap copy of Kirigami.BasicListItem with CheckBox instead of Icon
+        delegate: Kirigami.AbstractListItem {
+            id: listItem
+            highlighted: false
+            onClicked: serviceCheck.toggle()
+
+            RowLayout {
+                CheckBox {
+                    id: serviceCheck
+                    Layout.alignment: Qt.AlignVCenter
+                    checked: true
+                    onCheckedChanged: {
+                        if (serviceCheck.checked) {
+                            const idx = root.disabledServices.indexOf(modelData.id);
+                            if (idx > -1) {
+                                root.disabledServices.splice(idx, 1);
+                            }
+                        } else {
+                            root.disabledServices.push(modelData.id);
+                        }
+                    }
+                }
+
+                ColumnLayout {
+                    spacing: 0
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignVCenter
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: modelData.name
+                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                        elide: Text.ElideRight
+                    }
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: modelData.description
+                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                        elide: Text.ElideRight
+                        font: Kirigami.Theme.smallFont
+                        opacity: 0.7
+                        visible: text.length > 0
+                    }
+                }
+            }
+        }
     }
 
-    CheckBox {
-        id: contactsService
-        text: i18n("Contacts")
-    }
+    footer: ToolBar {
+         RowLayout {
+            anchors.fill: parent
 
-    // Just an item padder
-    Item {
-        Layout.fillHeight: true
+            Button {
+                text: i18n("Finish")
+                Layout.alignment: Qt.AlignRight
+                onClicked: {
+                    helper.finish(root.disabledServices)
+                }
+            }
+         }
     }
 }

@@ -18,8 +18,7 @@
 OwncloudController::OwncloudController(QObject *parent)
     : QObject(parent),
       m_errorMessage(QString()),
-      m_isWorking(false),
-      m_noError(false)
+      m_isWorking(false)
 {
 }
 
@@ -129,9 +128,6 @@ void OwncloudController::setWorking(bool start)
 
 void OwncloudController::serverCheckResult(bool result)
 {
-    m_noError = result;
-    Q_EMIT noErrorChanged();
-
     if (!result) {
         m_errorMessage = i18n("Unable to connect to ownCloud at the given server URL. Please check the server URL.");
         setWorking(false);
@@ -194,8 +190,11 @@ void OwncloudController::authCheckResult(KJob *job)
 
     Q_EMIT errorMessageChanged();
 
-    m_noError = !kJob->isErrorPage();
-    Q_EMIT noErrorChanged();
+    if (!kJob->isErrorPage()) {
+        m_state = Services;
+        Q_EMIT stateChanged();
+    }
+
     setWorking(false);
 }
 
@@ -204,23 +203,18 @@ bool OwncloudController::isWorking()
     return m_isWorking;
 }
 
-bool OwncloudController::noError()
-{
-    return m_noError;
-}
-
 QString OwncloudController::errorMessage() const
 {
     return m_errorMessage;
 }
 
-void OwncloudController::finish(bool contactsEnabled)
+void OwncloudController::finish(const QStringList &disabledServices)
 {
     QVariantMap data;
     data.insert("server", m_server);
 
-    if (!contactsEnabled) {
-        data.insert("__service/owncloud-contacts", false);
+    for (const QString &service : disabledServices) {
+        data.insert("__service/" + service, false);
     }
 
     QUrl carddavUrl(m_server);
@@ -231,4 +225,12 @@ void OwncloudController::finish(bool contactsEnabled)
     data.insert("dav/storagePath", QStringLiteral("/remote.php/webdav"));
 
     Q_EMIT wizardFinished(m_username, m_password, data);
+}
+
+QVariantList OwncloudController::availableServices() const
+{
+    // TODO Find a way to not hardcode this
+    return {
+        QVariant::fromValue(Service{QStringLiteral("owncloud-storage"), i18n("Storage"), i18n("Storage integration")})
+    };
 }

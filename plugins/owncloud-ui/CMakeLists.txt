@@ -26,3 +26,10 @@ install(TARGETS owncloud_plugin_kaccounts
          DESTINATION ${PLUGIN_INSTALL_DIR}/kaccounts/ui
 )
 kpackage_install_package(package org.kde.kaccounts.owncloud genericqml)
+
+ecm_install_icons(
+ICONS
+    256-apps-kaccounts-owncloud.png
+DESTINATION
+    ${ICON_INSTALL_DIR}
+)
