@@ -42,6 +42,7 @@ Kirigami.Page {
             Button {
                 text: i18n("Next")
                 Layout.alignment: Qt.AlignRight
+                enabled: serverText.text.length > 0 // TODO Do a more thorough validation of the URL
                 onClicked: {
                     helper.checkServer(serverText.text)
                 }
