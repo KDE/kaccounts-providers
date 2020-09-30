@@ -19,7 +19,20 @@ Kirigami.Page {
         visible: text.length > 0
     }
 
+    Kirigami.Icon {
+        source: "kaccounts-nextcloud"
+        width: Kirigami.Units.gridUnit * 6
+        height: width
+
+        anchors {
+            horizontalCenter: form.horizontalCenter
+            bottom: form.top
+            bottomMargin: Kirigami.Units.gridUnit * 3
+        }
+    }
+
     Kirigami.FormLayout {
+        id: form
         anchors.centerIn: parent
         visible: !busy.running
         TextField {
