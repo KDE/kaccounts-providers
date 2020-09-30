@@ -20,3 +20,10 @@ install(TARGETS nextcloud_plugin_kaccounts
          DESTINATION ${PLUGIN_INSTALL_DIR}/kaccounts/ui
 )
 kpackage_install_package(package org.kde.kaccounts.nextcloud genericqml)
+
+ecm_install_icons(
+ICONS
+    sc-apps-kaccounts-nextcloud.svg
+DESTINATION
+    ${ICON_INSTALL_DIR}
+)

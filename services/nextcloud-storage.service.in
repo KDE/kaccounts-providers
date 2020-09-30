@@ -2,7 +2,7 @@
 <service id="nextcloud-storage">
   <type>dav-storage</type>
   <_name>Storage</_name>
-  <icon>Nextcloud</icon>
+  <icon>kaccounts-nextcloud</icon>
   <provider>nextcloud</provider>
   <translations>kaccounts-providers</translations>
 
