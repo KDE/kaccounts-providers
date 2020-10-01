@@ -2,7 +2,7 @@
 <service id="owncloud-storage">
   <type>dav-storage</type>
   <_name>Storage</_name>
-  <icon>owncloud-storage</icon>
+  <icon>kaccounts-owncloud</icon>
   <provider>owncloud</provider>
   <translations>kaccounts-providers</translations>
 
