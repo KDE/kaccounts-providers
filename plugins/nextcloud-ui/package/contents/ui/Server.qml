@@ -19,26 +19,34 @@ Kirigami.Page {
         visible: text.length > 0
     }
 
-    Kirigami.Icon {
-        source: "kaccounts-nextcloud"
-        width: Kirigami.Units.gridUnit * 6
-        height: width
+    Column {
 
-        anchors {
-            horizontalCenter: form.horizontalCenter
-            bottom: form.top
-            bottomMargin: Kirigami.Units.gridUnit * 3
-        }
-    }
-
-    Kirigami.FormLayout {
-        id: form
+        width: parent.width
+        height: childrenRect.height
         anchors.centerIn: parent
-        visible: !busy.running
-        TextField {
-            id: serverText
-            placeholderText: "https://nextcloud.provider.com"
-            Kirigami.FormData.label: i18n("Server address:")
+
+        Kirigami.Icon {
+            source: "kaccounts-nextcloud"
+            width: Kirigami.Units.gridUnit * 6
+            height: width
+            anchors.horizontalCenter: form.horizontalCenter
+        }
+
+        Item {
+            width: 1
+            height: Kirigami.Units.gridUnit
+        }
+
+        Kirigami.FormLayout {
+            id: form
+            visible: !busy.running
+            width: parent.width
+
+            TextField {
+                id: serverText
+                placeholderText: "https://nextcloud.provider.com"
+                Kirigami.FormData.label: i18n("Server address:")
+            }
         }
     }
 
