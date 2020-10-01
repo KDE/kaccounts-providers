@@ -56,7 +56,7 @@ Kirigami.Page {
 
             TextField {
                 id: serverText
-                placeholderText: "https://nextcloud.provider.com"
+                placeholderText: "https://owncloud.provider.com"
                 Kirigami.FormData.label: i18n("Server address:")
             }
         }
