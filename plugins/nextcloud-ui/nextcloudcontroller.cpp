@@ -27,7 +27,7 @@ NextcloudController::NextcloudController(QObject *parent)
     , m_webengineProfile(new QQuickWebEngineProfile(this))
 {
     m_webengineProfile->setUrlRequestInterceptor(&m_urlIntercepter);
-    m_webengineProfile->setHttpUserAgent(QStringLiteral("Mozilla/5.0 nextcloud-ui-plugin"));
+    m_webengineProfile->setHttpUserAgent(QStringLiteral("KAccounts Nextcloud Login"));
 
     QDesktopServices::setUrlHandler("nc", this, "finalUrlHandler");
 }
