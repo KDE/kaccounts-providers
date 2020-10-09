@@ -24,6 +24,7 @@ Kirigami.Page {
         width: parent.width
         height: childrenRect.height
         anchors.centerIn: parent
+        visible: !busy.running
 
         Kirigami.Icon {
             source: "kaccounts-nextcloud"
@@ -39,7 +40,6 @@ Kirigami.Page {
 
         Kirigami.FormLayout {
             id: form
-            visible: !busy.running
             width: parent.width
 
             TextField {
