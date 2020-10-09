@@ -219,6 +219,7 @@ QVariantList NextcloudController::availableServices() const
 {
     // TODO Find a way to not hardcode this
     return {
-        QVariant::fromValue(Service{QStringLiteral("nextcloud-contacts"), i18n("Contacts"), i18n("Synchronize contacts")})
+        QVariant::fromValue(Service{QStringLiteral("nextcloud-contacts"), i18n("Contacts"), i18n("Synchronize contacts")}),
+        QVariant::fromValue(Service{QStringLiteral("nextcloud-storage"), i18n("Storage"), i18n("Integrate into file manager")})
     };
 }
