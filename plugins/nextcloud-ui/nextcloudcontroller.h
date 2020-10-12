@@ -10,6 +10,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QVariant>
 #include <QWebEngineUrlRequestInterceptor>
 #include <QQuickWebEngineProfile>
 

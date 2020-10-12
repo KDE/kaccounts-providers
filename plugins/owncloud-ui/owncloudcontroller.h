@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QVariant>
 
 namespace KIO
 {
