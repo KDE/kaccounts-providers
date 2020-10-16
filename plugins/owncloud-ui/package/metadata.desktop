@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=ownCloud
+Name[az]=ownCloud
 Name[ca]=ownCloud
 Name[ca@valencia]=ownCloud
 Name[cs]=ownCloud
@@ -12,6 +13,7 @@ Name[fr]=ownCloud
 Name[nl]=ownCloud
 Name[pt]=ownCloud
 Name[pt_BR]=ownCloud
+Name[ru]=ownCloud
 Name[sv]=ownCloud
 Name[uk]=ownCloud
 Name[x-test]=xxownCloudxx
@@ -42,7 +44,7 @@ Comment[pl]=Używaj OwnCloud z KAccounts
 Comment[pt]=Usar o OwnCloud com o KAccounts
 Comment[pt_BR]=Usar OwnCloud com o KAccounts
 Comment[ro]=Folosește OwnCloud cu KAccounts
-Comment[ru]=Доступ к OwnCloud посредством KAccounts
+Comment[ru]=Доступ к ownCloud посредством KAccounts
 Comment[sk]=Použije účet OwnCloud s aplikáciou KAccounts
 Comment[sl]=Uporabi OwnCloud s KAccounts
 Comment[sr]=Користите Оунклауд са К‑налозима
