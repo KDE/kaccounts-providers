@@ -1,10 +1,6 @@
-set(nextcloud_plugin_kaccounts_SRCS
-     nextcloud.cpp
-     nextcloudcontroller.cpp
-)
-
 add_library(nextcloud_plugin_kaccounts MODULE
-             ${nextcloud_plugin_kaccounts_SRCS}
+    nextcloud.cpp
+    nextcloudcontroller.cpp
 )
 
 target_link_libraries(nextcloud_plugin_kaccounts
