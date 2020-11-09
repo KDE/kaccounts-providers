@@ -16,10 +16,10 @@ import org.kde.kaccounts.owncloud 1.0
 Kirigami.ApplicationWindow {
     id: ocAccountRoot
 
-    // Minimum size at which the web login UI looks good
-    minimumWidth: Kirigami.Units.gridUnit * 24
+    // Minimum size at which the UI looks okay
+    minimumWidth: Kirigami.Units.gridUnit * 20 // matches the width of the PinePhone
     minimumHeight: Kirigami.Units.gridUnit * 35
-    width: minimumWidth
+    width: Kirigami.Units.gridUnit * 24 // making it a bit larger if available to make it more pleasant
     height: minimumHeight
 
     pageStack.initialPage: Qt.resolvedUrl("Server.qml");
