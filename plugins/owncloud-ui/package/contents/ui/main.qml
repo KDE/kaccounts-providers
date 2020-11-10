@@ -24,6 +24,10 @@ Kirigami.ApplicationWindow {
 
     pageStack.initialPage: Qt.resolvedUrl("Server.qml");
 
+    onClosing: {
+        helper.cancel()
+    }
+
     Connections {
         target: helper
 

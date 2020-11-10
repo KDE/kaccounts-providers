@@ -52,6 +52,7 @@ public:
 
     Q_INVOKABLE void checkServer(const QString &username, const QString &password, const QString &server);
     Q_INVOKABLE void finish(const QStringList &disabledServices);
+    Q_INVOKABLE void cancel();
     bool isWorking();
     QString errorMessage() const;
     State state() const;
@@ -62,6 +63,7 @@ Q_SIGNALS:
     void errorMessageChanged();
     void wizardFinished(const QString &username, const QString &password, const QVariantMap &data);
     void stateChanged();
+    void wizardCancelled();
 
 private Q_SLOTS:
     void fileChecked(KJob *job);

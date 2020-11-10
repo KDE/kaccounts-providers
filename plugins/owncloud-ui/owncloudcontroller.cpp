@@ -211,6 +211,11 @@ void OwncloudController::finish(const QStringList &disabledServices)
     Q_EMIT wizardFinished(m_username, m_password, data);
 }
 
+void OwncloudController::cancel()
+{
+    Q_EMIT wizardCancelled();
+}
+
 QVariantList OwncloudController::availableServices() const
 {
     // TODO Find a way to not hardcode this
