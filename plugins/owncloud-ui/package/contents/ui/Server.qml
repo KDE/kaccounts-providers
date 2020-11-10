@@ -7,7 +7,7 @@
  */
 
 import QtQuick 2.2
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.8 as Kirigami
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
 
@@ -48,10 +48,9 @@ Kirigami.Page {
                 Kirigami.FormData.label: i18n("Username:")
             }
 
-            TextField {
+            Kirigami.PasswordField {
                 id: passwordText
                 Kirigami.FormData.label: i18n("Password:")
-                echoMode: TextInput.Password
             }
 
             TextField {
