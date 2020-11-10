@@ -186,6 +186,11 @@ QString NextcloudController::errorMessage() const
     return m_errorMessage;
 }
 
+void NextcloudController::cancel()
+{
+    Q_EMIT wizardCancelled();
+}
+
 void NextcloudController::finish(const QStringList disabledServices)
 {
     QVariantMap data;
