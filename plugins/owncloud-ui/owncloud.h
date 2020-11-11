@@ -27,11 +27,11 @@ public:
     explicit OwnCloudWizard(QObject *parent = 0);
     virtual ~OwnCloudWizard();
 
-    virtual void init(KAccountsUiPlugin::UiType type) Q_DECL_OVERRIDE;
-    virtual void setProviderName(const QString &providerName) Q_DECL_OVERRIDE;
-    virtual void showNewAccountDialog() Q_DECL_OVERRIDE;
-    virtual void showConfigureAccountDialog(const quint32 accountId) Q_DECL_OVERRIDE;
-    virtual QStringList supportedServicesForConfig() const Q_DECL_OVERRIDE;
+    virtual void init(KAccountsUiPlugin::UiType type) override;
+    virtual void setProviderName(const QString &providerName) override;
+    virtual void showNewAccountDialog() override;
+    virtual void showConfigureAccountDialog(const quint32 accountId) override;
+    virtual QStringList supportedServicesForConfig() const override;
 
 private:
     QHash<QString, int> m_services;
