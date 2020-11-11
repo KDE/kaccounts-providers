@@ -52,7 +52,7 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 
         connect(helper, &OwncloudController::wizardCancelled, this, [this] {
             m_object->deleteLater();
-            Q_EMIT cancelled();
+            Q_EMIT canceled();
         });
 
         m_object->engine()->rootContext()->setContextProperty("helper", helper);
