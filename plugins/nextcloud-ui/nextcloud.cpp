@@ -54,7 +54,7 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 
         connect(helper, &NextcloudController::wizardCancelled, this, [this] {
             m_object->deleteLater();
-            Q_EMIT cancelled();
+            Q_EMIT canceled();
         });
 
         m_object->engine()->rootContext()->setContextProperty("helper", helper);
