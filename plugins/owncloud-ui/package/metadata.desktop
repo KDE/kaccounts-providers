@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=ownCloud
+Name[ast]=ownCloud
 Name[az]=ownCloud
 Name[ca]=ownCloud
 Name[ca@valencia]=ownCloud
@@ -22,6 +23,7 @@ Name[sv]=ownCloud
 Name[uk]=ownCloud
 Name[x-test]=xxownCloudxx
 Comment=Use OwnCloud with KAccounts
+Comment[ast]=Usa ownCloud con KAccounts
 Comment[az]=OwnCloud'u KAccounts ilə istifadə etmək
 Comment[ca]=Usa ownCloud amb KAccounts
 Comment[ca@valencia]=Usa ownCloud amb KAccounts
