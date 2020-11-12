@@ -13,7 +13,7 @@
 
 namespace KIO
 {
-    class Job;
+class Job;
 };
 class KJob;
 
@@ -30,7 +30,6 @@ public:
     QString m_description;
 };
 
-
 class OwncloudController : public QObject
 {
     Q_OBJECT
@@ -40,10 +39,9 @@ class OwncloudController : public QObject
     Q_PROPERTY(QVariantList availableServices READ availableServices CONSTANT)
 
 public:
-
     enum State {
         Server = 0,
-        Services
+        Services,
     };
     Q_ENUM(State)
 
@@ -84,7 +82,6 @@ private:
     QStringList m_disabledServices;
     bool m_isWorking;
     State m_state = Server;
-
 };
 
 #endif // QMLHELPER_H

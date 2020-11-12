@@ -8,11 +8,11 @@
 #include "owncloud.h"
 #include "owncloudcontroller.h"
 
-#include <KLocalizedString>
 #include <KDeclarative/QmlObject>
+#include <KLocalizedString>
 
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QWindow>
 
 OwnCloudWizard::OwnCloudWizard(QObject *parent)
@@ -28,7 +28,6 @@ OwnCloudWizard::~OwnCloudWizard()
 void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
-
         const QString packagePath("org.kde.kaccounts.owncloud");
 
         m_object = new KDeclarative::QmlObject();
@@ -58,7 +57,6 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 
         Q_EMIT uiReady();
     }
-
 }
 
 void OwnCloudWizard::setProviderName(const QString &providerName)

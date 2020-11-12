@@ -9,13 +9,14 @@
 #ifndef NEXTCLOUD_H
 #define NEXTCLOUD_H
 
-#include <QUrl>
 #include <QHash>
+#include <QUrl>
 
 #include <kaccountsuiplugin.h>
 
-namespace KDeclarative {
-    class QmlObject;
+namespace KDeclarative
+{
+class QmlObject;
 }
 
 class NextcloudWizard : public KAccountsUiPlugin
@@ -39,4 +40,4 @@ private:
     KDeclarative::QmlObject *m_object;
 };
 
-#endif //NEXTCLOUD_H
+#endif // NEXTCLOUD_H

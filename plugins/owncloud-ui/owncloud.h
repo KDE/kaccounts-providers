@@ -8,13 +8,14 @@
 #ifndef OWNCLOUD_H
 #define OWNCLOUD_H
 
-#include <QUrl>
 #include <QHash>
+#include <QUrl>
 
 #include <kaccountsuiplugin.h>
 
-namespace KDeclarative {
-    class QmlObject;
+namespace KDeclarative
+{
+class QmlObject;
 }
 
 class OwnCloudWizard : public KAccountsUiPlugin
@@ -38,4 +39,4 @@ private:
     KDeclarative::QmlObject *m_object;
 };
 
-#endif //OWNCLOUD_H
+#endif // OWNCLOUD_H

@@ -6,21 +6,21 @@
 
 #include "owncloudcontroller.h"
 
-#include <KIO/Job>
 #include <KIO/DavJob>
-#include <kio/global.h>
+#include <KIO/Job>
 #include <KLocalizedString>
+#include <kio/global.h>
 
+#include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QDebug>
 
 #include "../cloudurls.h"
 
 OwncloudController::OwncloudController(QObject *parent)
-    : QObject(parent),
-      m_errorMessage(QString()),
-      m_isWorking(false)
+    : QObject(parent)
+    , m_errorMessage(QString())
+    , m_isWorking(false)
 {
 }
 
@@ -45,11 +45,11 @@ void OwncloudController::checkServer(const QUrl &url)
     setWorking(true);
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
     job->setUiDelegate(0);
-    connect(job, SIGNAL(data(KIO::Job*,QByteArray)), SLOT(dataReceived(KIO::Job*,QByteArray)));
-    connect(job, SIGNAL(finished(KJob*)), this, SLOT(fileChecked(KJob*)));
+    connect(job, SIGNAL(data(KIO::Job *, QByteArray)), SLOT(dataReceived(KIO::Job *, QByteArray)));
+    connect(job, SIGNAL(finished(KJob *)), this, SLOT(fileChecked(KJob *)));
 }
 
-void OwncloudController::figureOutServer(const QUrl& url)
+void OwncloudController::figureOutServer(const QUrl &url)
 {
     if (/*url == QLatin1String("/") ||*/ url.isEmpty()) {
         serverCheckResult(false);
@@ -77,7 +77,7 @@ void OwncloudController::dataReceived(KIO::Job *job, const QByteArray &data)
     m_json.append(data);
 }
 
-void OwncloudController::fileChecked(KJob* job)
+void OwncloudController::fileChecked(KJob *job)
 {
     KIO::TransferJob *kJob = qobject_cast<KIO::TransferJob *>(job);
     if (kJob->error()) {
@@ -142,10 +142,10 @@ void OwncloudController::serverCheckResult(bool result)
             "</d:propfind>");
 
         KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), "1", KIO::HideProgressInfo);
-        connect(job, SIGNAL(finished(KJob*)), this, SLOT(authCheckResult(KJob*)));
-        connect(job, SIGNAL(data(KIO::Job*,QByteArray)), SLOT(dataReceived(KIO::Job*,QByteArray)));
+        connect(job, SIGNAL(finished(KJob *)), this, SLOT(authCheckResult(KJob *)));
+        connect(job, SIGNAL(data(KIO::Job *, QByteArray)), SLOT(dataReceived(KIO::Job *, QByteArray)));
 
-        QVariantMap metadata{{"cookies","none"}, {"no-cache",true}};
+        QVariantMap metadata{{"cookies", "none"}, {"no-cache", true}};
 
         job->setMetaData(metadata);
         job->setUiDelegate(0);
@@ -153,7 +153,6 @@ void OwncloudController::serverCheckResult(bool result)
     }
 
     Q_EMIT errorMessageChanged();
-
 }
 
 void OwncloudController::authCheckResult(KJob *job)
@@ -163,7 +162,7 @@ void OwncloudController::authCheckResult(KJob *job)
         qDebug() << job->errorText();
     }
 
-    KIO::DavJob *kJob = qobject_cast<KIO::DavJob*>(job);
+    KIO::DavJob *kJob = qobject_cast<KIO::DavJob *>(job);
     qDebug() << "Auth job finished, received error page:" << kJob->isErrorPage();
 
     if (kJob->isErrorPage()) {
@@ -219,7 +218,5 @@ void OwncloudController::cancel()
 QVariantList OwncloudController::availableServices() const
 {
     // TODO Find a way to not hardcode this
-    return {
-        QVariant::fromValue(Service{QStringLiteral("owncloud-storage"), i18n("Storage"), i18n("Storage integration")})
-    };
+    return {QVariant::fromValue(Service{QStringLiteral("owncloud-storage"), i18n("Storage"), i18n("Storage integration")})};
 }

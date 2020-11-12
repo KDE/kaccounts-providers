@@ -9,12 +9,12 @@
 #include "nextcloud.h"
 #include "nextcloudcontroller.h"
 
-#include <KLocalizedString>
 #include <KDeclarative/QmlObject>
+#include <KLocalizedString>
 
 #include <QIcon>
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QWindow>
 
 NextcloudWizard::NextcloudWizard(QObject *parent)
@@ -30,7 +30,6 @@ NextcloudWizard::~NextcloudWizard()
 void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
-
         const QString packagePath("org.kde.kaccounts.nextcloud");
 
         m_object = new KDeclarative::QmlObject();
@@ -60,7 +59,6 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 
         Q_EMIT uiReady();
     }
-
 }
 
 void NextcloudWizard::setProviderName(const QString &providerName)

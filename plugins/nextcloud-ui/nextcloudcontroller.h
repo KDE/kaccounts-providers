@@ -9,14 +9,14 @@
 #define QMLHELPER_H
 
 #include <QObject>
+#include <QQuickWebEngineProfile>
 #include <QStringList>
 #include <QVariant>
 #include <QWebEngineUrlRequestInterceptor>
-#include <QQuickWebEngineProfile>
 
 namespace KIO
 {
-    class Job;
+class Job;
 };
 
 class KJob;
@@ -34,7 +34,6 @@ public:
     QString m_description;
 };
 
-
 class NextcloudUrlIntercepter : public QWebEngineUrlRequestInterceptor
 {
     void interceptRequest(QWebEngineUrlRequestInfo &info) override;
@@ -51,7 +50,6 @@ class NextcloudController : public QObject
     Q_PROPERTY(QVariantList availableServices READ availableServices CONSTANT)
 
 public:
-
     enum State {
         ServerUrl = 0,
         WebLogin,
@@ -102,7 +100,6 @@ private:
     QQuickWebEngineProfile *m_webengineProfile;
     NextcloudUrlIntercepter m_urlIntercepter;
     QString m_loginUrl;
-
 };
 
 #endif // QMLHELPER_H

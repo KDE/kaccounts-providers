@@ -7,13 +7,13 @@
 
 #include "nextcloudcontroller.h"
 
-#include <KIO/Job>
 #include <KIO/DavJob>
-#include <kio/global.h>
+#include <KIO/Job>
 #include <KLocalizedString>
+#include <QDesktopServices>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QDesktopServices>
+#include <kio/global.h>
 
 #include "../cloudurls.h"
 
@@ -39,7 +39,7 @@ NextcloudController::~NextcloudController()
 }
 
 void NextcloudController::checkServer(const QString &path)
-{   
+{
     m_errorMessage.clear();
     Q_EMIT errorMessageChanged();
 
@@ -48,7 +48,7 @@ void NextcloudController::checkServer(const QString &path)
     checkServer(createStatusUrl(path));
 }
 
-//To check if url is correct
+// To check if url is correct
 void NextcloudController::checkServer(const QUrl &url)
 {
     setWorking(true);
@@ -64,7 +64,7 @@ void NextcloudController::dataReceived(KIO::Job *job, const QByteArray &data)
     m_json.append(data);
 }
 
-void NextcloudController::fileChecked(KJob* job)
+void NextcloudController::fileChecked(KJob *job)
 {
     KIO::TransferJob *kJob = qobject_cast<KIO::TransferJob *>(job);
     if (kJob->error()) {
@@ -78,7 +78,7 @@ void NextcloudController::fileChecked(KJob* job)
         wrongUrlDetected();
         return;
     }
-    
+
     QUrl url = KIO::upUrl(kJob->url());
     m_server = url.toString();
 
@@ -97,10 +97,10 @@ void NextcloudController::wrongUrlDetected()
     Q_EMIT errorMessageChanged();
 }
 
+// Open Webview for nextcloud login.
 
-// Open Webview for nextcloud login. 
-
-void NextcloudController::finalUrlHandler(const QUrl &url){
+void NextcloudController::finalUrlHandler(const QUrl &url)
+{
     // To fetch m_username and m_password from final url
     QString finalURLtoString = url.toString();
     int username_ini_pos = finalURLtoString.indexOf("&user:") + 6;
@@ -113,7 +113,7 @@ void NextcloudController::finalUrlHandler(const QUrl &url){
     username.replace(position, 3, "@");
 
     m_username = username;
-    m_password = password;  
+    m_password = password;
 
     serverCheckResult();
 }
@@ -140,17 +140,17 @@ void NextcloudController::serverCheckResult()
     url.setPath(url.path() + '/' + "remote.php/webdav");
     // Send a basic PROPFIND command to test access
     const QString requestStr = QStringLiteral(
-            "<d:propfind xmlns:d=\"DAV:\">"
-            "<d:prop>"
-            "<d:current-user-principal />"
-            "</d:prop>"
-            "</d:propfind>");
+        "<d:propfind xmlns:d=\"DAV:\">"
+        "<d:prop>"
+        "<d:current-user-principal />"
+        "</d:prop>"
+        "</d:propfind>");
 
     KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), "1", KIO::HideProgressInfo);
     connect(job, &KIO::DavJob::finished, this, &NextcloudController::authCheckResult);
     connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
 
-    QVariantMap metadata{{"cookies","none"}, {"no-cache",true}};
+    QVariantMap metadata{{"cookies", "none"}, {"no-cache", true}};
 
     job->setMetaData(metadata);
     job->setUiDelegate(0);
@@ -161,7 +161,7 @@ void NextcloudController::serverCheckResult()
 
 void NextcloudController::authCheckResult(KJob *job)
 {
-    KIO::DavJob *kJob = qobject_cast<KIO::DavJob*>(job);
+    KIO::DavJob *kJob = qobject_cast<KIO::DavJob *>(job);
 
     if (kJob->isErrorPage()) {
         m_errorMessage = i18n("Unable to authenticate using the provided username and password");
@@ -212,8 +212,6 @@ void NextcloudController::finish(const QStringList disabledServices)
 QVariantList NextcloudController::availableServices() const
 {
     // TODO Find a way to not hardcode this
-    return {
-        QVariant::fromValue(Service{QStringLiteral("nextcloud-contacts"), i18n("Contacts"), i18n("Synchronize contacts")}),
-        QVariant::fromValue(Service{QStringLiteral("nextcloud-storage"), i18n("Storage"), i18n("Integrate into file manager")})
-    };
+    return {QVariant::fromValue(Service{QStringLiteral("nextcloud-contacts"), i18n("Contacts"), i18n("Synchronize contacts")}),
+            QVariant::fromValue(Service{QStringLiteral("nextcloud-storage"), i18n("Storage"), i18n("Integrate into file manager")})};
 }

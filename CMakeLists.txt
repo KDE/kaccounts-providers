@@ -27,10 +27,14 @@ include(KDECMakeSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEClangFormat)
 
 add_subdirectory(services)
 add_subdirectory(providers)
 add_subdirectory(webkit-options)
 add_subdirectory(plugins)
+
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
