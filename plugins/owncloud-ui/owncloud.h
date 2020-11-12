@@ -25,7 +25,7 @@ class OwnCloudWizard : public KAccountsUiPlugin
     Q_INTERFACES(KAccountsUiPlugin)
 
 public:
-    explicit OwnCloudWizard(QObject *parent = 0);
+    explicit OwnCloudWizard(QObject *parent = nullptr);
     virtual ~OwnCloudWizard();
 
     virtual void init(KAccountsUiPlugin::UiType type) override;

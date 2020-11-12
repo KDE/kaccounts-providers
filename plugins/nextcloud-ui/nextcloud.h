@@ -26,7 +26,7 @@ class NextcloudWizard : public KAccountsUiPlugin
     Q_INTERFACES(KAccountsUiPlugin)
 
 public:
-    explicit NextcloudWizard(QObject *parent = 0);
+    explicit NextcloudWizard(QObject *parent = nullptr);
     virtual ~NextcloudWizard();
 
     virtual void init(KAccountsUiPlugin::UiType type) override;

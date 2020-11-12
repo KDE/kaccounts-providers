@@ -17,7 +17,7 @@
 namespace KIO
 {
 class Job;
-};
+}
 
 class KJob;
 
@@ -26,7 +26,7 @@ class Service
     Q_GADGET
     Q_PROPERTY(QString id MEMBER m_id)
     Q_PROPERTY(QString name MEMBER m_name)
-    Q_PROPERTY(QString description MEMBER m_description);
+    Q_PROPERTY(QString description MEMBER m_description)
 
 public:
     QString m_id;
@@ -57,7 +57,7 @@ public:
     };
     Q_ENUM(State)
 
-    NextcloudController(QObject *parent = 0);
+    NextcloudController(QObject *parent = nullptr);
     ~NextcloudController();
 
     Q_INVOKABLE void checkServer(const QString &server);

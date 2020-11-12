@@ -30,7 +30,7 @@ NextcloudWizard::~NextcloudWizard()
 void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
-        const QString packagePath("org.kde.kaccounts.nextcloud");
+        const QString packagePath(QStringLiteral("org.kde.kaccounts.nextcloud"));
 
         m_object = new KDeclarative::QmlObject();
         m_object->setTranslationDomain(packagePath);
@@ -49,7 +49,7 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
             Q_EMIT canceled();
         });
 
-        m_object->engine()->rootContext()->setContextProperty("helper", helper);
+        m_object->engine()->rootContext()->setContextProperty(QStringLiteral("helper"), helper);
 
         m_object->completeInitialization();
 

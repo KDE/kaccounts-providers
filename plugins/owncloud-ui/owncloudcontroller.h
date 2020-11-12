@@ -14,7 +14,7 @@
 namespace KIO
 {
 class Job;
-};
+}
 class KJob;
 
 class Service
@@ -45,7 +45,7 @@ public:
     };
     Q_ENUM(State)
 
-    explicit OwncloudController(QObject *parent = 0);
+    explicit OwncloudController(QObject *parent = nullptr);
     ~OwncloudController();
 
     Q_INVOKABLE void checkServer(const QString &username, const QString &password, const QString &server);

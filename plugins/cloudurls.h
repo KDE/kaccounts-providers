@@ -12,7 +12,7 @@ QUrl createStatusUrl(const QString &input)
 {
     QString fixedUrl;
     if (!input.startsWith(QLatin1String("http://")) && !input.startsWith(QLatin1String("https://"))) {
-        fixedUrl.append("https://");
+        fixedUrl.append(QLatin1String("https://"));
         fixedUrl.append(input);
     } else {
         fixedUrl = input;
@@ -21,10 +21,10 @@ QUrl createStatusUrl(const QString &input)
     QUrl url(fixedUrl);
 
     if (!url.path().endsWith(QLatin1Char('/'))) {
-        url.setPath(url.path() + '/');
+        url.setPath(url.path() + QLatin1Char('/'));
     }
 
-    url.setPath(url.path() + "status.php");
+    url.setPath(url.path() + QLatin1String("status.php"));
 
     return url;
 }

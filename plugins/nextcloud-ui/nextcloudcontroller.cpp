@@ -31,7 +31,7 @@ NextcloudController::NextcloudController(QObject *parent)
     m_webengineProfile->setUrlRequestInterceptor(&m_urlIntercepter);
     m_webengineProfile->setHttpUserAgent(QStringLiteral("KAccounts Nextcloud Login"));
 
-    QDesktopServices::setUrlHandler("nc", this, "finalUrlHandler");
+    QDesktopServices::setUrlHandler(QStringLiteral("nc"), this, "finalUrlHandler");
 }
 
 NextcloudController::~NextcloudController()
@@ -53,7 +53,7 @@ void NextcloudController::checkServer(const QUrl &url)
 {
     setWorking(true);
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
-    job->setUiDelegate(0);
+    job->setUiDelegate(nullptr);
     connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
     connect(job, &KIO::DavJob::finished, this, &NextcloudController::fileChecked);
 }
@@ -74,7 +74,7 @@ void NextcloudController::fileChecked(KJob *job)
 
     QJsonDocument parser = QJsonDocument::fromJson(m_json);
     QJsonObject map = parser.object();
-    if (!map.contains("version")) {
+    if (!map.contains(QStringLiteral("version"))) {
         wrongUrlDetected();
         return;
     }
@@ -103,14 +103,14 @@ void NextcloudController::finalUrlHandler(const QUrl &url)
 {
     // To fetch m_username and m_password from final url
     QString finalURLtoString = url.toString();
-    int username_ini_pos = finalURLtoString.indexOf("&user:") + 6;
-    int password_ini_pos = finalURLtoString.indexOf("&password:") + 10;
+    int username_ini_pos = finalURLtoString.indexOf(QLatin1String("&user:")) + 6;
+    int password_ini_pos = finalURLtoString.indexOf(QLatin1String("&password:")) + 10;
     int username_size = password_ini_pos - username_ini_pos - 10;
     QString username = finalURLtoString.mid(username_ini_pos, username_size);
     QString password = finalURLtoString.mid(password_ini_pos);
     // To replace %40 with @
-    int position = username.indexOf("%40");
-    username.replace(position, 3, "@");
+    int position = username.indexOf(QLatin1String("%40"));
+    username.replace(position, 3, QStringLiteral("@"));
 
     m_username = username;
     m_password = password;
@@ -137,7 +137,7 @@ void NextcloudController::serverCheckResult()
     url.setUserName(m_username);
     url.setPassword(m_password);
     url = url.adjusted(QUrl::StripTrailingSlash);
-    url.setPath(url.path() + '/' + "remote.php/webdav");
+    url.setPath(url.path() + QLatin1Char('/') + QLatin1String("remote.php/webdav"));
     // Send a basic PROPFIND command to test access
     const QString requestStr = QStringLiteral(
         "<d:propfind xmlns:d=\"DAV:\">"
@@ -146,14 +146,17 @@ void NextcloudController::serverCheckResult()
         "</d:prop>"
         "</d:propfind>");
 
-    KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), "1", KIO::HideProgressInfo);
+    KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), QStringLiteral("1"), KIO::HideProgressInfo);
     connect(job, &KIO::DavJob::finished, this, &NextcloudController::authCheckResult);
     connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
 
-    QVariantMap metadata{{"cookies", "none"}, {"no-cache", true}};
+    QVariantMap metadata{
+        {QStringLiteral("cookies"), QStringLiteral("none")},
+        {QStringLiteral("no-cache"), true},
+    };
 
     job->setMetaData(metadata);
-    job->setUiDelegate(0);
+    job->setUiDelegate(nullptr);
     job->start();
 
     Q_EMIT errorMessageChanged();
@@ -194,16 +197,16 @@ void NextcloudController::cancel()
 void NextcloudController::finish(const QStringList disabledServices)
 {
     QVariantMap data;
-    data.insert("server", m_server);
+    data.insert(QStringLiteral("server"), m_server);
 
     QUrl serverUrl(m_server);
 
-    data.insert("dav/host", serverUrl.host());
-    data.insert("dav/storagePath", QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
-    data.insert("dav/contactsPath", QStringLiteral("/remote.php/dav/addressbooks/users/%1").arg(m_username));
+    data.insert(QStringLiteral("dav/host"), serverUrl.host());
+    data.insert(QStringLiteral("dav/storagePath"), QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
+    data.insert(QStringLiteral("dav/contactsPath"), QStringLiteral("/remote.php/dav/addressbooks/users/%1").arg(m_username));
 
     for (const QString &service : disabledServices) {
-        data.insert("__service/" + service, false);
+        data.insert(QStringLiteral("__service/") + service, false);
     }
 
     Q_EMIT wizardFinished(m_username, m_password, data);

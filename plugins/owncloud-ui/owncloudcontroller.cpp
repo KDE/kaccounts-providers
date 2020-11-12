@@ -44,7 +44,7 @@ void OwncloudController::checkServer(const QUrl &url)
     qDebug() << "Checking for ownCloud instance at" << url;
     setWorking(true);
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
-    job->setUiDelegate(0);
+    job->setUiDelegate(nullptr);
     connect(job, SIGNAL(data(KIO::Job *, QByteArray)), SLOT(dataReceived(KIO::Job *, QByteArray)));
     connect(job, SIGNAL(finished(KJob *)), this, SLOT(fileChecked(KJob *)));
 }
@@ -62,7 +62,7 @@ void OwncloudController::figureOutServer(const QUrl &url)
     // This needs 2x up cause first it just removes the status.php
     // and only the second call actually moves up
     QUrl urlUp = KIO::upUrl(KIO::upUrl(url));
-    urlUp.setPath(urlUp.path() + '/' + "status.php");
+    urlUp.setPath(urlUp.path() + QLatin1Char('/') + QStringLiteral("status.php"));
 
     if (urlUp != url) {
         checkServer(urlUp.adjusted(QUrl::NormalizePathSegments));
@@ -89,7 +89,7 @@ void OwncloudController::fileChecked(KJob *job)
 
     QJsonDocument parser = QJsonDocument::fromJson(m_json);
     QJsonObject map = parser.object();
-    if (!map.contains("version")) {
+    if (!map.contains(QStringLiteral("version"))) {
         figureOutServer(kJob->url());
         qDebug() << "No json";
         return;
@@ -128,10 +128,10 @@ void OwncloudController::serverCheckResult(bool result)
         url.setPassword(m_password);
 
         if (!url.path().endsWith(QLatin1String("/"))) {
-            url.setPath(url.path() + '/');
+            url.setPath(url.path() + QLatin1Char('/'));
         }
 
-        url.setPath(url.path() + "remote.php/webdav");
+        url.setPath(url.path() + QLatin1String("remote.php/webdav"));
 
         // Send a basic PROPFIND command to test access
         const QString requestStr = QStringLiteral(
@@ -141,14 +141,17 @@ void OwncloudController::serverCheckResult(bool result)
             "</d:prop>"
             "</d:propfind>");
 
-        KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), "1", KIO::HideProgressInfo);
+        KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), QStringLiteral("1"), KIO::HideProgressInfo);
         connect(job, SIGNAL(finished(KJob *)), this, SLOT(authCheckResult(KJob *)));
         connect(job, SIGNAL(data(KIO::Job *, QByteArray)), SLOT(dataReceived(KIO::Job *, QByteArray)));
 
-        QVariantMap metadata{{"cookies", "none"}, {"no-cache", true}};
+        QVariantMap metadata{
+            {QStringLiteral("cookies"), QStringLiteral("none")},
+            {QStringLiteral("no-cache"), true},
+        };
 
         job->setMetaData(metadata);
-        job->setUiDelegate(0);
+        job->setUiDelegate(nullptr);
         job->start();
     }
 
@@ -194,18 +197,18 @@ QString OwncloudController::errorMessage() const
 void OwncloudController::finish(const QStringList &disabledServices)
 {
     QVariantMap data;
-    data.insert("server", m_server);
+    data.insert(QStringLiteral("server"), m_server);
 
     for (const QString &service : disabledServices) {
-        data.insert("__service/" + service, false);
+        data.insert(QStringLiteral("__service/") + service, false);
     }
 
     QUrl carddavUrl(m_server);
-    carddavUrl.setPath(carddavUrl.path() + QString("/remote.php/carddav/addressbooks/%1").arg(m_username));
+    carddavUrl.setPath(carddavUrl.path() + QStringLiteral("/remote.php/carddav/addressbooks/%1").arg(m_username));
 
-    data.insert("carddavUrl", carddavUrl);
-    data.insert("dav/host", carddavUrl.host());
-    data.insert("dav/storagePath", QStringLiteral("/remote.php/webdav"));
+    data.insert(QStringLiteral("carddavUrl"), carddavUrl);
+    data.insert(QStringLiteral("dav/host"), carddavUrl.host());
+    data.insert(QStringLiteral("dav/storagePath"), QStringLiteral("/remote.php/webdav"));
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }
