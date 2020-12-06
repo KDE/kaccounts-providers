@@ -39,14 +39,7 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
         OwncloudController *helper = new OwncloudController(m_object);
 
         connect(helper, &OwncloudController::wizardFinished, this, [this](const QString &username, const QString &password, const QVariantMap &data) {
-            QWindow *window = qobject_cast<QWindow *>(m_object->rootObject());
-
-            if (window) {
-                window->close();
-            }
-
             m_object->deleteLater();
-
             Q_EMIT success(username, password, data);
         });
 
