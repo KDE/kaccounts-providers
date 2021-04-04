@@ -16,10 +16,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
 
+include(FeatureSummary)
+
 find_package(Intltool REQUIRED)
 find_package(KAccounts REQUIRED)
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml WebEngine)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml)
+find_package(Qt5WebEngine ${QT_REQUIRED_VERSION} CONFIG)
+set_package_properties(Qt5WebEngine
+        PROPERTIES TYPE OPTIONAL
+        PURPOSE "Required for Nextcloud Accounts plugin"
+        )
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
 
 include(KDEInstallDirs)
