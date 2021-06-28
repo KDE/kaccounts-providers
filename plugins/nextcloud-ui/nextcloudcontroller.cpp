@@ -200,10 +200,16 @@ void NextcloudController::finish(const QStringList disabledServices)
     data.insert(QStringLiteral("server"), m_server);
 
     QUrl serverUrl(m_server);
+       
+    QUrl carddavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
+    carddavUrl.setPath(carddavUrl.path() + QStringLiteral("/remote.php/carddav/addressbooks/%1").arg(m_username));
+    
+    QUrl webdavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
+    webdavUrl.setPath(webdavUrl.path() + QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
 
     data.insert(QStringLiteral("dav/host"), serverUrl.host());
-    data.insert(QStringLiteral("dav/storagePath"), QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
-    data.insert(QStringLiteral("dav/contactsPath"), QStringLiteral("/remote.php/dav/addressbooks/users/%1").arg(m_username));
+    data.insert(QStringLiteral("dav/storagePath"), webdavUrl.path());
+    data.insert(QStringLiteral("dav/contactsPath"), carddavUrl.path());
 
     for (const QString &service : disabledServices) {
         data.insert(QStringLiteral("__service/") + service, false);
