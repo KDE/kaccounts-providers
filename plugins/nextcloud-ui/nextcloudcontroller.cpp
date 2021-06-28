@@ -13,6 +13,7 @@
 #include <QDesktopServices>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QUrlQuery>
 #include <kio/global.h>
 
 #include "../cloudurls.h"
@@ -100,20 +101,15 @@ void NextcloudController::wrongUrlDetected()
 // Open Webview for nextcloud login.
 
 void NextcloudController::finalUrlHandler(const QUrl &url)
-{
-    // To fetch m_username and m_password from final url
-    QString finalURLtoString = url.toString();
-    int username_ini_pos = finalURLtoString.indexOf(QLatin1String("&user:")) + 6;
-    int password_ini_pos = finalURLtoString.indexOf(QLatin1String("&password:")) + 10;
-    int username_size = password_ini_pos - username_ini_pos - 10;
-    QString username = finalURLtoString.mid(username_ini_pos, username_size);
-    QString password = finalURLtoString.mid(password_ini_pos);
-    // To replace %40 with @
-    int position = username.indexOf(QLatin1String("%40"));
-    username.replace(position, 3, QStringLiteral("@"));
-
-    m_username = username;
-    m_password = password;
+{   
+    // url is of the form: nc://login/server:<server>&user:<loginname>&password:<password>
+    
+    QUrlQuery urlQuery;
+    urlQuery.setQueryDelimiters(QLatin1Char(':'),QLatin1Char('&'));
+    urlQuery.setQuery(url.path(QUrl::FullyEncoded).mid(1));
+    
+    m_username = urlQuery.queryItemValue(QStringLiteral("user"),QUrl::FullyDecoded);
+    m_password = urlQuery.queryItemValue(QStringLiteral("password"),QUrl::FullyDecoded);
 
     serverCheckResult();
 }
