@@ -101,15 +101,15 @@ void NextcloudController::wrongUrlDetected()
 // Open Webview for nextcloud login.
 
 void NextcloudController::finalUrlHandler(const QUrl &url)
-{   
+{
     // url is of the form: nc://login/server:<server>&user:<loginname>&password:<password>
-    
+
     QUrlQuery urlQuery;
-    urlQuery.setQueryDelimiters(QLatin1Char(':'),QLatin1Char('&'));
+    urlQuery.setQueryDelimiters(QLatin1Char(':'), QLatin1Char('&'));
     urlQuery.setQuery(url.path(QUrl::FullyEncoded).mid(1));
-    
-    m_username = urlQuery.queryItemValue(QStringLiteral("user"),QUrl::FullyDecoded);
-    m_password = urlQuery.queryItemValue(QStringLiteral("password"),QUrl::FullyDecoded);
+
+    m_username = urlQuery.queryItemValue(QStringLiteral("user"), QUrl::FullyDecoded);
+    m_password = urlQuery.queryItemValue(QStringLiteral("password"), QUrl::FullyDecoded);
 
     serverCheckResult();
 }
@@ -196,10 +196,10 @@ void NextcloudController::finish(const QStringList disabledServices)
     data.insert(QStringLiteral("server"), m_server);
 
     QUrl serverUrl(m_server);
-       
+
     QUrl carddavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
     carddavUrl.setPath(carddavUrl.path() + QStringLiteral("/remote.php/carddav/addressbooks/%1").arg(m_username));
-    
+
     QUrl webdavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
     webdavUrl.setPath(webdavUrl.path() + QStringLiteral("/remote.php/dav/files/%1").arg(m_username));
 
