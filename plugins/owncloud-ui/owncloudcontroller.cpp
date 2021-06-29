@@ -203,12 +203,17 @@ void OwncloudController::finish(const QStringList &disabledServices)
         data.insert(QStringLiteral("__service/") + service, false);
     }
 
-    QUrl carddavUrl(m_server);
+    QUrl serverUrl(m_server);
+
+    QUrl carddavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
     carddavUrl.setPath(carddavUrl.path() + QStringLiteral("/remote.php/carddav/addressbooks/%1").arg(m_username));
+
+    QUrl webdavUrl(serverUrl.adjusted(QUrl::StripTrailingSlash));
+    webdavUrl.setPath(webdavUrl.path() + QStringLiteral("/remote.php/webdav"));
 
     data.insert(QStringLiteral("carddavUrl"), carddavUrl);
     data.insert(QStringLiteral("dav/host"), carddavUrl.host());
-    data.insert(QStringLiteral("dav/storagePath"), QStringLiteral("/remote.php/webdav"));
+    data.insert(QStringLiteral("dav/storagePath"), webdavUrl.path());
 
     Q_EMIT wizardFinished(m_username, m_password, data);
 }
