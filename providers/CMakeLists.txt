@@ -1,4 +1,4 @@
-kaccounts_add_provider(google.provider.in)
+kaccounts_add_provider(mastodon.provider.in)
 kaccounts_add_provider(owncloud.provider.in)
 if(Qt5WebEngine_FOUND)
     kaccounts_add_provider(nextcloud.provider.in)

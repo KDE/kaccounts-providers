@@ -1,4 +1,5 @@
 add_subdirectory(owncloud-ui)
+add_subdirectory(mastodon-ui)
 if(Qt5WebEngine_FOUND)
     add_subdirectory(nextcloud-ui)
 endif()

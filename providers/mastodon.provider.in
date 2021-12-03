@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<provider id="mastodon">
+  <_name>Mastodon</_name>
+  <_description>Log into your Mastodon account</_description>
+  <icon>mastodon_microblog</icon>
+  <translations>kaccounts-providers</translations>
+  <plugin>mastodon_plugin_kaccounts</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth2</setting>
+      <setting name="mechanism">web_server</setting>
+      <group name="oauth2">
+        <group name="web_server">
+          <setting name="AuthPath">oauth/authorize</setting>
+          <setting name="TokenPath">oauth/token</setting>
+          <setting name="RedirectUri">http://localhost/kaccountsmastodon</setting>
+          <setting name="ResponseType">code</setting>
+          <setting name="AllowedSchemes" type="as">['https']</setting>
+          <setting name="ClientId"></setting>
+          <setting name="ClientSecret"></setting>
+          <setting name="Scope" type="as">[
+              'read',
+              'write',
+              'follow'
+          ]</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>
