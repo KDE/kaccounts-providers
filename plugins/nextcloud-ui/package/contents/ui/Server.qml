@@ -45,6 +45,7 @@ Kirigami.Page {
             TextField {
                 id: serverText
                 placeholderText: "https://nextcloud.provider.com"
+                inputMethodHints: Qt.ImhUrlCharactersOnly
                 Kirigami.FormData.label: i18n("Server address:")
             }
         }
