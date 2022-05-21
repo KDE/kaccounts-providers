@@ -38,6 +38,8 @@ add_subdirectory(providers)
 add_subdirectory(webkit-options)
 add_subdirectory(plugins)
 
+ki18n_install(po)
+
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
