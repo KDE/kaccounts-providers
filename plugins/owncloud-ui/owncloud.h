@@ -8,6 +8,7 @@
 #ifndef OWNCLOUD_H
 #define OWNCLOUD_H
 
+#include <KPluginMetaData>
 #include <QHash>
 #include <QUrl>
 
@@ -37,6 +38,7 @@ public:
 private:
     QHash<QString, int> m_services;
     KDeclarative::QmlObject *m_object;
+    KPluginMetaData m_data;
 };
 
 #endif // OWNCLOUD_H

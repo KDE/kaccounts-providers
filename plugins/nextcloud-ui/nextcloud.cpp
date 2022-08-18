@@ -11,6 +11,7 @@
 
 #include <KDeclarative/QmlObject>
 #include <KLocalizedString>
+#include <KPackage/PackageLoader>
 
 #include <QIcon>
 #include <QQmlContext>
@@ -31,12 +32,14 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
         const QString packagePath(QStringLiteral("org.kde.kaccounts.nextcloud"));
-
         m_object = new KDeclarative::QmlObject();
         m_object->setTranslationDomain(packagePath);
         m_object->setInitializationDelayed(true);
-        m_object->loadPackage(packagePath);
 
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
+        package.setPath(packagePath);
+        m_object->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+        m_data = package.metadata();
         NextcloudController *helper = new NextcloudController(m_object);
 
         connect(helper, &NextcloudController::wizardFinished, this, [this](const QString &username, const QString &password, const QVariantMap &data) {
@@ -53,7 +56,7 @@ void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 
         m_object->completeInitialization();
 
-        if (!m_object->package().metadata().isValid()) {
+        if (!m_data.isValid()) {
             return;
         }
 
@@ -73,8 +76,8 @@ void NextcloudWizard::showNewAccountDialog()
         window->setTransientParent(transientParent());
         window->show();
         window->requestActivate();
-        window->setTitle(m_object->package().metadata().name());
-        window->setIcon(QIcon::fromTheme(m_object->package().metadata().iconName()));
+        window->setTitle(m_data.name());
+        window->setIcon(QIcon::fromTheme(m_data.iconName()));
     }
 }
 

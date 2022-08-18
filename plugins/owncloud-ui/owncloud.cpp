@@ -10,6 +10,7 @@
 
 #include <KDeclarative/QmlObject>
 #include <KLocalizedString>
+#include <KPackage/PackageLoader>
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -29,11 +30,14 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
         const QString packagePath(QStringLiteral("org.kde.kaccounts.owncloud"));
-
         m_object = new KDeclarative::QmlObject();
         m_object->setTranslationDomain(packagePath);
         m_object->setInitializationDelayed(true);
-        m_object->loadPackage(packagePath);
+
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
+        package.setPath(packagePath);
+        m_object->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+        m_data = package.metadata();
 
         OwncloudController *helper = new OwncloudController(m_object);
 
@@ -51,7 +55,7 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 
         m_object->completeInitialization();
 
-        if (!m_object->package().metadata().isValid()) {
+        if (!m_data.isValid()) {
             return;
         }
 
@@ -71,8 +75,8 @@ void OwnCloudWizard::showNewAccountDialog()
         window->setTransientParent(transientParent());
         window->show();
         window->requestActivate();
-        window->setTitle(m_object->package().metadata().name());
-        window->setIcon(QIcon::fromTheme(m_object->package().metadata().iconName()));
+        window->setTitle(m_data.name());
+        window->setIcon(QIcon::fromTheme(m_data.iconName()));
     }
 }
 

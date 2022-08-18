@@ -9,6 +9,7 @@
 #ifndef NEXTCLOUD_H
 #define NEXTCLOUD_H
 
+#include <KPluginMetaData>
 #include <QHash>
 #include <QUrl>
 
@@ -38,6 +39,7 @@ public:
 private:
     QHash<QString, int> m_services;
     KDeclarative::QmlObject *m_object;
+    KPluginMetaData m_data;
 };
 
 #endif // NEXTCLOUD_H

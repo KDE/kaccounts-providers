@@ -9,6 +9,7 @@ target_link_libraries(nextcloud_plugin_kaccounts
                        KF5::KIOCore
                        KF5::I18n
                        KF5::Declarative
+                       KF5::Package
                        KAccounts
 )
 
