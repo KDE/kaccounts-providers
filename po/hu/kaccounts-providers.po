@@ -1,0 +1,244 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kaccounts-providers package.
+#
+# Kristóf Kiszel <kiszel.kristof@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccounts-providers\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-19 00:43+0000\n"
+"PO-Revision-Date: 2020-11-07 13:47+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:96
+#, kde-format
+msgid ""
+"Unable to connect to Nextcloud at the given server URL. Please check the "
+"server URL."
+msgstr ""
+"Nem lehet csatlakozni a Nextcloudhoz a megadott URL-en. Ellenőrizze a "
+"kiszolgáló URL-címét."
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:166
+#: plugins/owncloud-ui/owncloudcontroller.cpp:172
+#, kde-format
+msgid "Unable to authenticate using the provided username and password"
+msgstr "Nem lehet hitelesíteni a megadott felhasználónévvel és jelszóval"
+
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: tmp/nextcloud-contacts.service.in.h:1
+#, kde-format
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#, kde-format
+msgid "Synchronize contacts"
+msgstr "Névjegyek szinkronizálása"
+
+#. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
+#: tmp/runners-storage.service.in.h:3
+#, kde-format
+msgid "Storage"
+msgstr "Tároló"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#, kde-format
+msgid "Integrate into file manager"
+msgstr "Integrálás a fájlkezelőbe"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
+#, kde-format
+msgid "Nextcloud Login"
+msgstr "Nextcloud bejelentkezés"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:49
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:60
+#, kde-format
+msgid "Server address:"
+msgstr "Kiszolgáló címe:"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:76
+#, kde-format
+msgid "Next"
+msgstr "Következő"
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#, kde-format
+msgid "Services"
+msgstr "Szolgáltatások"
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#, kde-format
+msgid "Finish"
+msgstr "Befejezés"
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:116
+#, kde-format
+msgid ""
+"Unable to connect to ownCloud at the given server URL. Please check the "
+"server URL."
+msgstr ""
+"Nem lehet csatlakozni az ownCloudhoz a megadott URL-en. Ellenőrizze a "
+"kiszolgáló URL-címét."
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#, kde-format
+msgid "Storage integration"
+msgstr "Tárolóintegráció"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:15
+#, kde-format
+msgid "ownCloud Login"
+msgstr "ownCloud bejelentkezés"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:48
+#, kde-format
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Jelszó:"
+
+#. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-contacts.service.in.h:3
+msgctxt "Facebook Contacts"
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#. "Events" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-events.service.in.h:3
+msgid "Events"
+msgstr "Események"
+
+#. "Posts Feed" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-feed.service.in.h:3
+msgid "Posts Feed"
+msgstr "Hírfolyam"
+
+#. "Notes" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notes.service.in.h:3
+msgid "Notes"
+msgstr "Jegyzetek"
+
+#. "Notifications" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notifications.service.in.h:3
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: tmp/facebook.provider.in.h:1
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/facebook.provider.in.h:3
+msgid "Includes Posts, Notes, Events, Notifications and Chat"
+msgstr "Bejegyzések, jegyzetek, események, értesítések és chat"
+
+#. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-calendar.service.in.h:3
+msgid "Calendars and Tasks"
+msgstr "Naptárak és feladatok"
+
+#. Google's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-contacts.service.in.h:3
+msgctxt "Google Contacts"
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: tmp/google.provider.in.h:1
+msgid "Google"
+msgstr "Google"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/google.provider.in.h:3
+msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgstr "GMail, Hangouts, Google Drive és YouTube"
+
+#. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/identica-microblog.service.in.h:3 tmp/identica.provider.in.h:1
+msgid "identi.ca"
+msgstr "identi.ca"
+
+#: tmp/nextcloud.provider.in.h:1
+msgid "Nextcloud"
+msgstr "Nextcloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/nextcloud.provider.in.h:3
+msgid "Nextcloud account"
+msgstr "Nextcloud fiók"
+
+#. ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-calendar.service.in.h:3 tmp/runners-calendar.service.in.h:3
+msgid "Calendar"
+msgstr "Naptár"
+
+#. ownCloud's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-contacts.service.in.h:3
+msgctxt "ownCloud Contacts"
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: tmp/owncloud.provider.in.h:1
+msgid "ownCloud"
+msgstr "ownCloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/owncloud.provider.in.h:3
+msgid "ownCloud account"
+msgstr "ownCloud fiók"
+
+#. Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-contacts.service.in.h:3
+msgctxt "Runners-ID Contacts"
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#. Runners-ID Music - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-music.service.in.h:3
+msgid "Music"
+msgstr "Zene"
+
+#. Runners ID is a service similar to ownCloud/DropBox etc
+#: tmp/runnersid.provider.in.h:2
+msgid "Runners ID"
+msgstr "Runners ID"
+
+#. Twitter's feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/twitter-microblog.service.in.h:3 tmp/twitter.provider.in.h:1
+msgid "Twitter"
+msgstr "Twitter"

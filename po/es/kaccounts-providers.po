@@ -1,0 +1,327 @@
+# Spanish translations for kaccounts-providers.po package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2014.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2017, 2019, 2020.
+# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2014.
+# Rocio Gallego <traducciones@rociogallego.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccounts-providers\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-19 00:43+0000\n"
+"PO-Revision-Date: 2020-11-02 16:47+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.2\n"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:96
+#, kde-format
+msgid ""
+"Unable to connect to Nextcloud at the given server URL. Please check the "
+"server URL."
+msgstr ""
+"No se ha podido conectar a Nextcloud en la URL especificada para el "
+"servidor. Compruebe la URL del servidor."
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:166
+#: plugins/owncloud-ui/owncloudcontroller.cpp:172
+#, kde-format
+msgid "Unable to authenticate using the provided username and password"
+msgstr ""
+"No se ha podido realizar la autenticación con el usuario y contraseña "
+"proporcionados"
+
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: tmp/nextcloud-contacts.service.in.h:1
+#, kde-format
+msgid "Contacts"
+msgstr "Contactos"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#, kde-format
+msgid "Synchronize contacts"
+msgstr "Sincronizar contactos"
+
+#. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
+#: tmp/runners-storage.service.in.h:3
+#, kde-format
+msgid "Storage"
+msgstr "Almacenamiento"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#, kde-format
+msgid "Integrate into file manager"
+msgstr "Integrar en el gestor de archivos"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
+#, kde-format
+msgid "Nextcloud Login"
+msgstr "Inicio de sesión en Nextcloud"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:49
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:60
+#, kde-format
+msgid "Server address:"
+msgstr "Dirección del servidor:"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:76
+#, kde-format
+msgid "Next"
+msgstr "Siguiente"
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#, kde-format
+msgid "Services"
+msgstr "Servicios"
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#, kde-format
+msgid "Finish"
+msgstr "Finalizar"
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:116
+#, kde-format
+msgid ""
+"Unable to connect to ownCloud at the given server URL. Please check the "
+"server URL."
+msgstr ""
+"No se ha podido conectar a ownCloud en la URL especificada para el servidor. "
+"Compruebe la URL del servidor."
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#, kde-format
+msgid "Storage integration"
+msgstr "Integración de almacenamiento"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:15
+#, kde-format
+msgid "ownCloud Login"
+msgstr "Inicio de sesión en ownCloud"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:48
+#, kde-format
+msgid "Username:"
+msgstr "Nombre de usuario:"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Contraseña:"
+
+#. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-contacts.service.in.h:3
+msgctxt "Facebook Contacts"
+msgid "Contacts"
+msgstr "Contactos"
+
+#. "Events" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-events.service.in.h:3
+msgid "Events"
+msgstr "Eventos"
+
+#. "Posts Feed" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-feed.service.in.h:3
+msgid "Posts Feed"
+msgstr "Últimas noticias"
+
+#. "Notes" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notes.service.in.h:3
+msgid "Notes"
+msgstr "Notas"
+
+#. "Notifications" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notifications.service.in.h:3
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#: tmp/facebook.provider.in.h:1
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/facebook.provider.in.h:3
+msgid "Includes Posts, Notes, Events, Notifications and Chat"
+msgstr "Incluye noticias, notas, eventos, notificaciones y chat"
+
+#. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-calendar.service.in.h:3
+msgid "Calendars and Tasks"
+msgstr "Calendarios y tareas"
+
+#. Google's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-contacts.service.in.h:3
+msgctxt "Google Contacts"
+msgid "Contacts"
+msgstr "Contactos"
+
+#: tmp/google.provider.in.h:1
+msgid "Google"
+msgstr "Google"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/google.provider.in.h:3
+msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgstr "Incluye GMail, Hangouts, Google Drive y YouTube"
+
+#. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/identica-microblog.service.in.h:3 tmp/identica.provider.in.h:1
+msgid "identi.ca"
+msgstr "identi.ca"
+
+#: tmp/nextcloud.provider.in.h:1
+msgid "Nextcloud"
+msgstr "Nextcloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/nextcloud.provider.in.h:3
+msgid "Nextcloud account"
+msgstr "Cuenta de Nextcloud"
+
+#. ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-calendar.service.in.h:3 tmp/runners-calendar.service.in.h:3
+msgid "Calendar"
+msgstr "Calendario"
+
+#. ownCloud's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-contacts.service.in.h:3
+msgctxt "ownCloud Contacts"
+msgid "Contacts"
+msgstr "Contactos"
+
+#: tmp/owncloud.provider.in.h:1
+msgid "ownCloud"
+msgstr "ownCloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/owncloud.provider.in.h:3
+msgid "ownCloud account"
+msgstr "Cuenta de ownCloud"
+
+#. Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-contacts.service.in.h:3
+msgctxt "Runners-ID Contacts"
+msgid "Contacts"
+msgstr "Contactos"
+
+#. Runners-ID Music - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-music.service.in.h:3
+msgid "Music"
+msgstr "Música"
+
+#. Runners ID is a service similar to ownCloud/DropBox etc
+#: tmp/runnersid.provider.in.h:2
+msgid "Runners ID"
+msgstr "Runners ID"
+
+#. Twitter's feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/twitter-microblog.service.in.h:3 tmp/twitter.provider.in.h:1
+msgid "Twitter"
+msgstr "Twitter"
+
+#~ msgid "org.kde.kaccounts.owncloud"
+#~ msgstr "org.kde.kaccounts.owncloud"
+
+#~ msgid "helper"
+#~ msgstr "ayudante"
+
+#~ msgid "org.kde.kaccounts.UiPlugin"
+#~ msgstr "org.kde.kaccounts.UiPlugin"
+
+#~ msgid "http://"
+#~ msgstr "http://"
+
+#~ msgid "https://"
+#~ msgstr "https://"
+
+#~ msgid "status.php"
+#~ msgstr "status.php"
+
+#~ msgid "Checking for ownCloud instance at"
+#~ msgstr "Comprobando la instancia de ownCloud en"
+
+#~ msgid "Received url to figure out:"
+#~ msgstr "Se ha recibido la URL que hay que resolver:"
+
+#~ msgid "version"
+#~ msgstr "versión"
+
+#~ msgid "No json"
+#~ msgstr "No json"
+
+#~ msgid "ownCloud appears to be running at the specified URL"
+#~ msgstr "Parece que ownCloud se está ejecutando en la URL especificada"
+
+#~ msgid "Server URL ok, checking auth..."
+#~ msgstr "URL del servidor correcta, comprobando autenticación..."
+
+#~ msgid "remote.php/webdav"
+#~ msgstr "remote.php/webdav"
+
+#~ msgid ""
+#~ "<d:propfind xmlns:d=\"DAV:\"><d:prop><d:current-user-principal /></d:"
+#~ "prop></d:propfind>"
+#~ msgstr ""
+#~ "<d:propfind xmlns:d=\"DAV:\"><d:prop><d:current-user-principal /></d:"
+#~ "prop></d:propfind>"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "cookies"
+#~ msgstr "cookies"
+
+#~ msgid "none"
+#~ msgstr "ninguno"
+
+#~ msgid "no-cache"
+#~ msgstr "no caché"
+
+#~ msgid "Auth job finished, received error page:"
+#~ msgstr ""
+#~ "Proceso de autenticación finalizado, se ha recibido una página de error:"
+
+#~ msgid "server"
+#~ msgstr "servidor"
+
+#~ msgid "__service/owncloud-contacts"
+#~ msgstr "__service/owncloud-contacts"
+
+#~ msgid "/remote.php/carddav/addressbooks/%1"
+#~ msgstr "/remote.php/carddav/addressbooks/%1"
+
+#~ msgid "carddavUrl"
+#~ msgstr "carddavUrl"
+
+#~ msgid "Includes your Timeline and Mentions"
+#~ msgstr "Incluye tu cronología y menciones"

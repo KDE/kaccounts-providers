@@ -1,0 +1,246 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin, 2015.
+# Tsung-en Hsiao <joshua841025@gmail.com>, 2015.
+# Jeff Huang <s8321414@gmail.com>, 2016, 2017.
+# pan93412 <pan93412@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-19 00:43+0000\n"
+"PO-Revision-Date: 2020-03-05 21:34+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:96
+#, kde-format
+msgid ""
+"Unable to connect to Nextcloud at the given server URL. Please check the "
+"server URL."
+msgstr "無法連線到指定伺服器 URL 的 Nextcloud。請檢查伺服器 URL。"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:166
+#: plugins/owncloud-ui/owncloudcontroller.cpp:172
+#, kde-format
+msgid "Unable to authenticate using the provided username and password"
+msgstr "無法使用提供的使用者名稱與密碼進行驗證"
+
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: tmp/nextcloud-contacts.service.in.h:1
+#, kde-format
+msgid "Contacts"
+msgstr "聯絡人"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#, kde-format
+msgid "Synchronize contacts"
+msgstr ""
+
+#. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
+#: tmp/runners-storage.service.in.h:3
+#, kde-format
+msgid "Storage"
+msgstr "儲存空間"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#, kde-format
+msgid "Integrate into file manager"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
+#, fuzzy, kde-format
+#| msgid "Nextcloud account"
+msgid "Nextcloud Login"
+msgstr "Nextcloud 帳號"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:49
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:60
+#, kde-format
+msgid "Server address:"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:76
+#, fuzzy, kde-format
+#| msgid "Nextcloud"
+msgid "Next"
+msgstr "Nextcloud"
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#, kde-format
+msgid "Services"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:116
+#, kde-format
+msgid ""
+"Unable to connect to ownCloud at the given server URL. Please check the "
+"server URL."
+msgstr "無法連線到指定伺服器 URL 的 ownCloud。請檢查伺服器 URL。"
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#, kde-format
+msgid "Storage integration"
+msgstr ""
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:15
+#, fuzzy, kde-format
+#| msgid "ownCloud account"
+msgid "ownCloud Login"
+msgstr "ownCloud 帳號"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:48
+#, kde-format
+msgid "Username:"
+msgstr ""
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:53
+#, kde-format
+msgid "Password:"
+msgstr ""
+
+#. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-contacts.service.in.h:3
+msgctxt "Facebook Contacts"
+msgid "Contacts"
+msgstr "聯絡人"
+
+#. "Events" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-events.service.in.h:3
+msgid "Events"
+msgstr "事件"
+
+#. "Posts Feed" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-feed.service.in.h:3
+msgid "Posts Feed"
+msgstr "文章來源"
+
+#. "Notes" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notes.service.in.h:3
+msgid "Notes"
+msgstr "備忘"
+
+#. "Notifications" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/facebook-notifications.service.in.h:3
+msgid "Notifications"
+msgstr "通知"
+
+#: tmp/facebook.provider.in.h:1
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/facebook.provider.in.h:3
+msgid "Includes Posts, Notes, Events, Notifications and Chat"
+msgstr "包括文章、備忘、事件、通知與聊天"
+
+#. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-calendar.service.in.h:3
+msgid "Calendars and Tasks"
+msgstr "日曆與待辦事項"
+
+#. Google's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/google-contacts.service.in.h:3
+msgctxt "Google Contacts"
+msgid "Contacts"
+msgstr "聯絡人"
+
+#: tmp/google.provider.in.h:1
+msgid "Google"
+msgstr "Google"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/google.provider.in.h:3
+msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgstr "包括 GMail，Hangouts，Google Drive 與 Youtube"
+
+#. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/identica-microblog.service.in.h:3 tmp/identica.provider.in.h:1
+msgid "identi.ca"
+msgstr "identi.ca"
+
+#: tmp/nextcloud.provider.in.h:1
+msgid "Nextcloud"
+msgstr "Nextcloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/nextcloud.provider.in.h:3
+msgid "Nextcloud account"
+msgstr "Nextcloud 帳號"
+
+#. ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-calendar.service.in.h:3 tmp/runners-calendar.service.in.h:3
+msgid "Calendar"
+msgstr "行事曆"
+
+#. ownCloud's Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/owncloud-contacts.service.in.h:3
+msgctxt "ownCloud Contacts"
+msgid "Contacts"
+msgstr "聯絡人"
+
+#: tmp/owncloud.provider.in.h:1
+msgid "ownCloud"
+msgstr "ownCloud"
+
+#. Tooltip text appearing over the button to create this type of account
+#: tmp/owncloud.provider.in.h:3
+msgid "ownCloud account"
+msgstr "ownCloud 帳號"
+
+#. Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-contacts.service.in.h:3
+msgctxt "Runners-ID Contacts"
+msgid "Contacts"
+msgstr "聯絡人"
+
+#. Runners-ID Music - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/runners-music.service.in.h:3
+msgid "Music"
+msgstr "音樂"
+
+#. Runners ID is a service similar to ownCloud/DropBox etc
+#: tmp/runnersid.provider.in.h:2
+msgid "Runners ID"
+msgstr "Runners ID"
+
+#. Twitter's feed - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#: tmp/twitter-microblog.service.in.h:3 tmp/twitter.provider.in.h:1
+msgid "Twitter"
+msgstr "Twitter"
