@@ -11,6 +11,7 @@
 #include <KIO/Job>
 #include <KLocalizedString>
 #include <QDesktopServices>
+#include <QDomDocument>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QUrlQuery>
@@ -142,7 +143,7 @@ void NextcloudController::serverCheckResult()
         "</d:prop>"
         "</d:propfind>");
 
-    KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), QStringLiteral("1"), KIO::HideProgressInfo);
+    KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr).toString(), QStringLiteral("1"), KIO::HideProgressInfo);
     connect(job, &KIO::DavJob::finished, this, &NextcloudController::authCheckResult);
     connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
 

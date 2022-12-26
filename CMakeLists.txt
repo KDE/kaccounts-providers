@@ -8,7 +8,7 @@ set(KACCOUNTS_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSIO
 project(kde-account-providers LANGUAGES CXX VERSION ${KACCOUNTS_VERSION})
 
 set(QT_REQUIRED_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.85.0")
+set(KF5_MIN_VERSION "5.92.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
@@ -21,6 +21,7 @@ include(ECMInstallIcons)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(FeatureSummary)
+include(ECMDeprecationSettings)
 
 find_package(Intltool REQUIRED)
 find_package(KAccounts REQUIRED)
@@ -32,6 +33,10 @@ set_package_properties(Qt5WebEngine
         PURPOSE "Required for Nextcloud Accounts plugin"
         )
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+     KF 5.101.0
+    )
 
 add_subdirectory(services)
 add_subdirectory(providers)

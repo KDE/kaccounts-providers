@@ -12,8 +12,10 @@
 #include <kio/global.h>
 
 #include <QDebug>
+#include <QDomDocument>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QString>
 
 #include "../cloudurls.h"
 
@@ -141,7 +143,7 @@ void OwncloudController::serverCheckResult(bool result)
             "</d:prop>"
             "</d:propfind>");
 
-        KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr), QStringLiteral("1"), KIO::HideProgressInfo);
+        KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr).toString(), QStringLiteral("1"), KIO::HideProgressInfo);
         connect(job, SIGNAL(finished(KJob *)), this, SLOT(authCheckResult(KJob *)));
         connect(job, SIGNAL(data(KIO::Job *, QByteArray)), SLOT(dataReceived(KIO::Job *, QByteArray)));
 
