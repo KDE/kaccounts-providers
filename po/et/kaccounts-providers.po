@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-19 00:43+0000\n"
+"POT-Creation-Date: 2022-12-27 00:48+0000\n"
 "PO-Revision-Date: 2020-03-05 22:49+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:96
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
@@ -26,20 +26,20 @@ msgstr ""
 "Ühendumine Nextcloudiga määratud serveri URL-il nurjus. Palun kontrolli "
 "serveri URL-i."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:166
-#: plugins/owncloud-ui/owncloudcontroller.cpp:172
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Autentimine antud kasutajanime ja parooliga nurjus."
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Kontaktid"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
 #, kde-format
 msgid "Synchronize contacts"
 msgstr ""
@@ -47,15 +47,15 @@ msgstr ""
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
-#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
 #, kde-format
 msgid "Storage"
 msgstr "Ressurss"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
 #, kde-format
 msgid "Integrate into file manager"
 msgstr ""
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Finish"
 msgstr ""
 
-#: plugins/owncloud-ui/owncloudcontroller.cpp:116
+#: plugins/owncloud-ui/owncloudcontroller.cpp:118
 #, kde-format
 msgid ""
 "Unable to connect to ownCloud at the given server URL. Please check the "
@@ -100,7 +100,7 @@ msgstr ""
 "Ühendumine ownCloudiga määratud serveri URL-il nurjus. Palun kontrolli "
 "serveri URL-i."
 
-#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #, kde-format
 msgid "Storage integration"
 msgstr ""

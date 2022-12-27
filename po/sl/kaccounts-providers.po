@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-19 00:43+0000\n"
+"POT-Creation-Date: 2022-12-27 00:48+0000\n"
 "PO-Revision-Date: 2020-11-02 10:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:96
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
@@ -30,20 +30,20 @@ msgstr ""
 "Ni se mogoče povezati s strežnikom NextCloud na podanem spletnem naslovu. "
 "Preverite spletni naslov strežnika."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:166
-#: plugins/owncloud-ui/owncloudcontroller.cpp:172
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Ni se bilo mogoče overiti z danim uporabniškim imenom in geslom"
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Stiki"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:220
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
 #, kde-format
 msgid "Synchronize contacts"
 msgstr "Uskladi stike"
@@ -51,15 +51,15 @@ msgstr "Uskladi stike"
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
-#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
 #, kde-format
 msgid "Storage"
 msgstr "Hramba"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
 #, kde-format
 msgid "Integrate into file manager"
 msgstr "Integriraj v upravljalnika datotek"
@@ -93,7 +93,7 @@ msgstr "Storitve"
 msgid "Finish"
 msgstr "Končaj"
 
-#: plugins/owncloud-ui/owncloudcontroller.cpp:116
+#: plugins/owncloud-ui/owncloudcontroller.cpp:118
 #, kde-format
 msgid ""
 "Unable to connect to ownCloud at the given server URL. Please check the "
@@ -102,7 +102,7 @@ msgstr ""
 "Ni se mogoče povezati s strežnikom ownCloud na podanem spletnem naslovu. "
 "Preverite spletni naslov strežnika."
 
-#: plugins/owncloud-ui/owncloudcontroller.cpp:229
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #, kde-format
 msgid "Storage integration"
 msgstr "Integracija hrambe"
