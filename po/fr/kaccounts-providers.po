@@ -5,20 +5,21 @@
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:48+0000\n"
-"PO-Revision-Date: 2021-01-02 16:06+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-05 18:05+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -103,7 +104,7 @@ msgid ""
 "Unable to connect to ownCloud at the given server URL. Please check the "
 "server URL."
 msgstr ""
-"Impossible de se connecter à ownCloud à l'URL donnée. Veuillez vérifier "
+"Impossible de se connecter à OwnCloud à l'URL donnée. Veuillez vérifier "
 "l'URL du serveur."
 
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
@@ -114,7 +115,7 @@ msgstr "Intégration du stockage"
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:15
 #, kde-format
 msgid "ownCloud Login"
-msgstr "Compte « ownCloud »"
+msgstr "Compte « OwnCloud »"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:48
 #, kde-format
@@ -220,12 +221,12 @@ msgstr "Contacts"
 
 #: tmp/owncloud.provider.in.h:1
 msgid "ownCloud"
-msgstr "ownCloud"
+msgstr "OwnCloud"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/owncloud.provider.in.h:3
 msgid "ownCloud account"
-msgstr "Compte ownCloud"
+msgstr "Compte pour OwnCloud"
 
 #. Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -243,7 +244,7 @@ msgstr "Musique"
 #. Runners ID is a service similar to ownCloud/DropBox etc
 #: tmp/runnersid.provider.in.h:2
 msgid "Runners ID"
-msgstr "Runners ID"
+msgstr "Identifiants des lanceurs"
 
 #. Twitter's feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
