@@ -8,12 +8,12 @@
 #include "owncloud.h"
 #include "owncloudcontroller.h"
 
-#include <KDeclarative/QmlObject>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QQmlEngine>
 #include <QWindow>
 
 OwnCloudWizard::OwnCloudWizard(QObject *parent)
@@ -30,30 +30,30 @@ void OwnCloudWizard::init(KAccountsUiPlugin::UiType type)
 {
     if (type == KAccountsUiPlugin::NewAccountDialog) {
         const QString packagePath(QStringLiteral("org.kde.kaccounts.owncloud"));
-        m_object = new KDeclarative::QmlObject();
-        m_object->setTranslationDomain(packagePath);
-        m_object->setInitializationDelayed(true);
+        m_engine = new QQmlApplicationEngine(this);
+
+        auto ctx = new KLocalizedContext(m_engine);
+        ctx->setTranslationDomain(packagePath);
+        m_engine->rootContext()->setContextObject(ctx);
 
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
         package.setPath(packagePath);
-        m_object->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
         m_data = package.metadata();
 
-        OwncloudController *helper = new OwncloudController(m_object);
+        OwncloudController *helper = new OwncloudController(m_engine);
 
         connect(helper, &OwncloudController::wizardFinished, this, [this](const QString &username, const QString &password, const QVariantMap &data) {
-            m_object->deleteLater();
+            m_engine->deleteLater();
             Q_EMIT success(username, password, data);
         });
 
         connect(helper, &OwncloudController::wizardCancelled, this, [this] {
-            m_object->deleteLater();
+            m_engine->deleteLater();
             Q_EMIT canceled();
         });
 
-        m_object->engine()->rootContext()->setContextProperty(QStringLiteral("helper"), helper);
-
-        m_object->completeInitialization();
+        m_engine->rootContext()->setContextProperty(QStringLiteral("helper"), helper);
+        m_engine->load(QUrl::fromLocalFile(package.filePath("mainscript")));
 
         if (!m_data.isValid()) {
             return;
@@ -70,7 +70,7 @@ void OwnCloudWizard::setProviderName(const QString &providerName)
 
 void OwnCloudWizard::showNewAccountDialog()
 {
-    QWindow *window = qobject_cast<QWindow *>(m_object->rootObject());
+    QWindow *window = qobject_cast<QWindow *>(m_engine->rootObjects().first());
     if (window) {
         window->setTransientParent(transientParent());
         window->show();

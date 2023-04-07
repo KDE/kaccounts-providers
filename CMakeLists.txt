@@ -7,10 +7,10 @@ set(KACCOUNTS_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSIO
 
 project(kde-account-providers LANGUAGES CXX VERSION ${KACCOUNTS_VERSION})
 
-set(QT_REQUIRED_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.92.0")
+set(QT_REQUIRED_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
@@ -24,15 +24,18 @@ include(FeatureSummary)
 include(ECMDeprecationSettings)
 
 find_package(Intltool REQUIRED)
-find_package(KAccounts REQUIRED)
+find_package(KAccounts6 REQUIRED)
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml)
-find_package(Qt5WebEngine ${QT_REQUIRED_VERSION} CONFIG)
-set_package_properties(Qt5WebEngine
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml)
+
+find_package(Qt6WebEngineQuick ${QT_REQUIRED_VERSION} CONFIG)
+set_package_properties(Qt6WebEngineQuick
         PROPERTIES TYPE OPTIONAL
         PURPOSE "Required for Nextcloud Accounts plugin"
         )
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
+set(HAVE_WEBENGINE ${Qt6WebEngineQuick_FOUND})
+
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0

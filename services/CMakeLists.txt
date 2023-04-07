@@ -1,5 +1,5 @@
 kaccounts_add_service(owncloud-storage.service.in)
-if(Qt5WebEngine_FOUND)
+if(HAVE_WEBENGINE)
     kaccounts_add_service(nextcloud-contacts.service.in)
     kaccounts_add_service(nextcloud-storage.service.in)
 endif()

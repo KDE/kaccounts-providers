@@ -9,13 +9,13 @@
 #include "nextcloud.h"
 #include "nextcloudcontroller.h"
 
-#include <KDeclarative/QmlObject>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
 #include <QIcon>
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QQmlEngine>
 #include <QWindow>
 
 NextcloudWizard::NextcloudWizard(QObject *parent)
@@ -30,31 +30,33 @@ NextcloudWizard::~NextcloudWizard()
 
 void NextcloudWizard::init(KAccountsUiPlugin::UiType type)
 {
+    QtWebEngineQuick::initialize();
+
     if (type == KAccountsUiPlugin::NewAccountDialog) {
         const QString packagePath(QStringLiteral("org.kde.kaccounts.nextcloud"));
-        m_object = new KDeclarative::QmlObject();
-        m_object->setTranslationDomain(packagePath);
-        m_object->setInitializationDelayed(true);
+        m_engine = new QQmlApplicationEngine;
+
+        auto ctx = new KLocalizedContext(m_engine);
+        ctx->setTranslationDomain(packagePath);
+        m_engine->rootContext()->setContextObject(ctx);
 
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
         package.setPath(packagePath);
-        m_object->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
         m_data = package.metadata();
-        NextcloudController *helper = new NextcloudController(m_object);
+        NextcloudController *helper = new NextcloudController(m_engine);
 
         connect(helper, &NextcloudController::wizardFinished, this, [this](const QString &username, const QString &password, const QVariantMap &data) {
-            m_object->deleteLater();
+            m_engine->deleteLater();
             Q_EMIT success(username, password, data);
         });
 
         connect(helper, &NextcloudController::wizardCancelled, this, [this] {
-            m_object->deleteLater();
+            m_engine->deleteLater();
             Q_EMIT canceled();
         });
 
-        m_object->engine()->rootContext()->setContextProperty(QStringLiteral("helper"), helper);
-
-        m_object->completeInitialization();
+        m_engine->rootContext()->setContextProperty(QStringLiteral("helper"), helper);
+        m_engine->load(QUrl::fromLocalFile(package.filePath("mainscript")));
 
         if (!m_data.isValid()) {
             return;
@@ -71,7 +73,7 @@ void NextcloudWizard::setProviderName(const QString &providerName)
 
 void NextcloudWizard::showNewAccountDialog()
 {
-    QWindow *window = qobject_cast<QWindow *>(m_object->rootObject());
+    QWindow *window = qobject_cast<QWindow *>(m_engine->rootObjects().first());
     if (window) {
         window->setTransientParent(transientParent());
         window->show();

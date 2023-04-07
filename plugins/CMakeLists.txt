@@ -1,4 +1,4 @@
 add_subdirectory(owncloud-ui)
-if(Qt5WebEngine_FOUND)
+if(HAVE_WEBENGINE)
     add_subdirectory(nextcloud-ui)
 endif()

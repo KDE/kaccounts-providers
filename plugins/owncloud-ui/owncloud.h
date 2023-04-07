@@ -12,12 +12,9 @@
 #include <QHash>
 #include <QUrl>
 
-#include <kaccountsuiplugin.h>
+#include <KAccounts/KAccountsUiPlugin>
 
-namespace KDeclarative
-{
-class QmlObject;
-}
+class QQmlApplicationEngine;
 
 class OwnCloudWizard : public KAccountsUiPlugin
 {
@@ -37,7 +34,7 @@ public:
 
 private:
     QHash<QString, int> m_services;
-    KDeclarative::QmlObject *m_object;
+    QQmlApplicationEngine *m_engine;
     KPluginMetaData m_data;
 };
 
