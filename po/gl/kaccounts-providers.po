@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:48+0000\n"
-"PO-Revision-Date: 2020-03-07 17:56+0100\n"
+"PO-Revision-Date: 2023-04-30 09:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Contactos"
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
 #, kde-format
 msgid "Synchronize contacts"
-msgstr ""
+msgstr "Sincronizar os contactos"
 
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -59,11 +59,10 @@ msgstr "Almacenamento"
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
 #, kde-format
 msgid "Integrate into file manager"
-msgstr ""
+msgstr "Integrar co xestor de ficheiros"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
-#, fuzzy, kde-format
-#| msgid "Nextcloud account"
+#, kde-format
 msgid "Nextcloud Login"
 msgstr "Conta de Nextcloud"
 
@@ -71,26 +70,25 @@ msgstr "Conta de Nextcloud"
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:60
 #, kde-format
 msgid "Server address:"
-msgstr ""
+msgstr "Enderezo do servidor:"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:76
-#, fuzzy, kde-format
-#| msgid "Nextcloud"
+#, kde-format
 msgid "Next"
-msgstr "Nextcloud"
+msgstr "Seguinte"
 
 #: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
 #: plugins/owncloud-ui/package/contents/ui/Services.qml:16
 #, kde-format
 msgid "Services"
-msgstr ""
+msgstr "Servizos"
 
 #: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
 #: plugins/owncloud-ui/package/contents/ui/Services.qml:79
 #, kde-format
 msgid "Finish"
-msgstr ""
+msgstr "Rematar"
 
 #: plugins/owncloud-ui/owncloudcontroller.cpp:118
 #, kde-format
@@ -104,23 +102,22 @@ msgstr ""
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #, kde-format
 msgid "Storage integration"
-msgstr ""
+msgstr "Integración co almacenamento"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:15
-#, fuzzy, kde-format
-#| msgid "ownCloud account"
+#, kde-format
 msgid "ownCloud Login"
 msgstr "Conta de ownCloud"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:48
 #, kde-format
 msgid "Username:"
-msgstr ""
+msgstr "Nome de usuaria:"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:53
 #, kde-format
 msgid "Password:"
-msgstr ""
+msgstr "Contrasinal:"
 
 #. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
