@@ -2,7 +2,7 @@
 <provider id="google">
   <_name>Google</_name>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Includes GMail, Hangouts, Google Drive and YouTube</_description>
+  <_description>Includes GMail, Google Drive and YouTube</_description>
   <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
