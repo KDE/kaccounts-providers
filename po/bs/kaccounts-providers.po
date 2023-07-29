@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:48+0000\n"
+"POT-Creation-Date: 2023-07-29 00:45+0000\n"
 "PO-Revision-Date: 2015-02-19 10:14+0100\n"
 "Last-Translator: Samir ribic <megaribi@localhost>\n"
 "Language-Team: Bosnian\n"
@@ -175,7 +175,7 @@ msgstr ""
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgid "Includes GMail, Google Drive and YouTube"
 msgstr ""
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service

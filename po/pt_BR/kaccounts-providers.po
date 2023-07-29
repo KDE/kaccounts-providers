@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:48+0000\n"
+"POT-Creation-Date: 2023-07-29 00:45+0000\n"
 "PO-Revision-Date: 2020-11-04 14:42-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -180,7 +180,9 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+#, fuzzy
+#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgid "Includes GMail, Google Drive and YouTube"
 msgstr "Inclui GMail, Hangouts, Google Drive e YouTube"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service

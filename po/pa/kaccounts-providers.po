@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:48+0000\n"
+"POT-Creation-Date: 2023-07-29 00:45+0000\n"
 "PO-Revision-Date: 2021-04-25 13:11-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -173,7 +173,9 @@ msgstr "ਗੂਗਲ"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+#, fuzzy
+#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgid "Includes GMail, Google Drive and YouTube"
 msgstr "ਜੀਮੇਲ, ਹੈਂਗਆਉਂਟ, ਗੂਗਲ ਡਰਾਈਵ ਤੇ ਯੂਟਿਊਬ ਸਮੇਤ"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
