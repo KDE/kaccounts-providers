@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:48+0000\n"
+"POT-Creation-Date: 2023-07-29 00:45+0000\n"
 "PO-Revision-Date: 2020-11-02 20:49+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -179,8 +179,8 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-msgid "Includes GMail, Hangouts, Google Drive and YouTube"
-msgstr "Omfattar GMail, Hangouts, Google Drive og YouTube"
+msgid "Includes GMail, Google Drive and YouTube"
+msgstr ""
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense

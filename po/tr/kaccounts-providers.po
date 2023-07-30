@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 00:45+0000\n"
-"PO-Revision-Date: 2022-03-26 13:40+0300\n"
+"PO-Revision-Date: 2023-07-29 05:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -179,10 +179,8 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-#, fuzzy
-#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
 msgid "Includes GMail, Google Drive and YouTube"
-msgstr "GMail, Hangouts, Google Drive ve YouTube dahildir"
+msgstr "Gmail, Google Drive ve YouTube dahildir"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
