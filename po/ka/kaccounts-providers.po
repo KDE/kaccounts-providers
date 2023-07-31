@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 00:45+0000\n"
-"PO-Revision-Date: 2022-05-26 06:42+0200\n"
+"PO-Revision-Date: 2023-07-30 06:02+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -176,10 +176,8 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-#, fuzzy
-#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
 msgid "Includes GMail, Google Drive and YouTube"
-msgstr "შეიცავს GMail-ს, Hangouts-ს, Google Drive-ს და YouTube-ს"
+msgstr "შეიცავს GMail-ს, Google Drive-ს და YouTube-ს"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
