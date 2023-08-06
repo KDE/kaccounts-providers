@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 00:45+0000\n"
-"PO-Revision-Date: 2023-04-30 09:56+0200\n"
+"PO-Revision-Date: 2023-08-05 10:13+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -31,7 +31,8 @@ msgstr ""
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
-msgstr "Non se pode autenticar co nome de usuario e contrasinal fornecidos."
+msgstr ""
+"Non se pode autenticar co nome de persoa usuaria e contrasinal fornecidos."
 
 #. TODO Find a way to not hardcode this
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
@@ -157,7 +158,7 @@ msgstr "Facebook"
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/facebook.provider.in.h:3
 msgid "Includes Posts, Notes, Events, Notifications and Chat"
-msgstr "Inclúe publicacións, notas, eventos, notificacións e conversas."
+msgstr "Inclúe publicacións, notas, eventos, notificacións e charlas."
 
 #. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -178,10 +179,8 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-#, fuzzy
-#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
 msgid "Includes GMail, Google Drive and YouTube"
-msgstr "Inclúe GMail, Hangouts, Google Drive e YouTube."
+msgstr "Inclúe GMail, Google Drive e YouTube."
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
