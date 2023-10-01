@@ -24,15 +24,15 @@ msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
 "server URL."
 msgstr ""
-"Non se pode conectar á instalación de Nextcloud do URL de servidor indicado. "
-"Revise o URL de servidor."
+"Non é posíbel conectar á instalación de Nextcloud do URL de servidor "
+"indicado. Revise o URL de servidor."
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr ""
-"Non se pode autenticar co nome de persoa usuaria e contrasinal fornecidos."
+"Non é posíbel autenticar co nome de persoa usuaria e contrasinal fornecidos."
 
 #. TODO Find a way to not hardcode this
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
@@ -97,8 +97,8 @@ msgid ""
 "Unable to connect to ownCloud at the given server URL. Please check the "
 "server URL."
 msgstr ""
-"Non se pode conectar á instalación de ownCloud do URL de servidor indicado. "
-"Revise o URL de servidor."
+"Non é posíbel conectar á instalación de ownCloud do URL de servidor "
+"indicado. Revise o URL de servidor."
 
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #, kde-format
