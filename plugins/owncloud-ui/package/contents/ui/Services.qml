@@ -7,7 +7,8 @@
  */
 
 import QtQuick 2.2
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami as Kirigami
+import org.kde.kirigami.delegates as KD
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.5
 
@@ -22,50 +23,22 @@ Kirigami.ScrollablePage {
 
         clip: true
 
-        // Cheap copy of Kirigami.BasicListItem with CheckBox instead of Icon
-        delegate: Kirigami.AbstractListItem {
-            id: listItem
-            highlighted: false
-            onClicked: serviceCheck.toggle()
+        delegate: KD.CheckSubtitleDelegate {
+            width: ListView.view.width
 
-            RowLayout {
-                CheckBox {
-                    id: serviceCheck
-                    Layout.alignment: Qt.AlignVCenter
-                    checked: true
-                    onCheckedChanged: {
-                        if (serviceCheck.checked) {
-                            const idx = root.disabledServices.indexOf(modelData.id);
-                            if (idx > -1) {
-                                root.disabledServices.splice(idx, 1);
-                            }
-                        } else {
-                            root.disabledServices.push(modelData.id);
-                        }
+            text: modelData.name
+            subtitle: modelData.description
+
+            highlighted: pressed || down
+
+            onToggled: {
+                if (checked) {
+                    const idx = root.disabledServices.indexOf(modelData.id);
+                    if (idx > -1) {
+                        root.disabledServices.splice(idx, 1);
                     }
-                }
-
-                ColumnLayout {
-                    spacing: 0
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignVCenter
-
-                    Label {
-                        Layout.fillWidth: true
-                        text: modelData.name
-                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
-                        elide: Text.ElideRight
-                    }
-
-                    Label {
-                        Layout.fillWidth: true
-                        text: modelData.description
-                        color: listItem.pressed ? listItem.activeTextColor : listItem.textColor
-                        elide: Text.ElideRight
-                        font: Kirigami.Theme.smallFont
-                        opacity: 0.7
-                        visible: text.length > 0
-                    }
+                } else {
+                    root.disabledServices.push(modelData.id);
                 }
             }
         }
