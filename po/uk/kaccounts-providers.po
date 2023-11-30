@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:31+0000\n"
+"POT-Creation-Date: 2023-11-30 00:41+0000\n"
 "PO-Revision-Date: 2023-07-29 07:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -82,14 +82,14 @@ msgstr "Адреса сервера:"
 msgid "Next"
 msgstr "Далі"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:17
 #, kde-format
 msgid "Services"
 msgstr "Служби"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:52
 #, kde-format
 msgid "Finish"
 msgstr "Завершити"

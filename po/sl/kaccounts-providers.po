@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:31+0000\n"
+"POT-Creation-Date: 2023-11-30 00:41+0000\n"
 "PO-Revision-Date: 2023-07-29 07:38+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -81,14 +81,14 @@ msgstr "Naslov strežnika:"
 msgid "Next"
 msgstr "Naslednji"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:17
 #, kde-format
 msgid "Services"
 msgstr "Storitve"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:52
 #, kde-format
 msgid "Finish"
 msgstr "Končaj"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:31+0000\n"
+"POT-Creation-Date: 2023-11-30 00:41+0000\n"
 "PO-Revision-Date: 2023-07-30 19:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -82,14 +82,14 @@ msgstr "Zerbitzariaren helbidea:"
 msgid "Next"
 msgstr "Hurrengoa"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:17
 #, kde-format
 msgid "Services"
 msgstr "Zerbitzuak"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:52
 #, kde-format
 msgid "Finish"
 msgstr "Amaitu"

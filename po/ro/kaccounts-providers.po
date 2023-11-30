@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:31+0000\n"
+"POT-Creation-Date: 2023-11-30 00:41+0000\n"
 "PO-Revision-Date: 2022-02-06 17:18+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -78,14 +78,14 @@ msgstr "Adresă server:"
 msgid "Next"
 msgstr "Următor"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:15
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:16
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:17
 #, kde-format
 msgid "Services"
 msgstr "Servicii"
 
-#: plugins/nextcloud-ui/package/contents/ui/Services.qml:78
-#: plugins/owncloud-ui/package/contents/ui/Services.qml:79
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:52
 #, kde-format
 msgid "Finish"
 msgstr "Finalizează"
