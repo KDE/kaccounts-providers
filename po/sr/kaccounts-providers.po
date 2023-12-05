@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-03 03:14+0100\n"
+"POT-Creation-Date: 2023-11-30 00:41+0000\n"
 "PO-Revision-Date: 2017-03-12 22:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: plugins/nextcloud-ui/qmlhelper.cpp:112
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to connect to ownCloud at the given server URL. Please check the "
@@ -29,18 +29,98 @@ msgid ""
 msgstr ""
 "Не могу да се повежем на Оунклауд на задатом УРЛ‑у сервера. Проверите УРЛ."
 
-#: plugins/nextcloud-ui/qmlhelper.cpp:215 plugins/owncloud-ui/qmlhelper.cpp:198
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Не могу да се аутентификујем са задатим корисничким именом и лозинком."
 
-#: plugins/owncloud-ui/qmlhelper.cpp:148
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: tmp/nextcloud-contacts.service.in.h:1
+#, kde-format
+msgid "Contacts"
+msgstr "Контакти"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#, kde-format
+msgid "Synchronize contacts"
+msgstr ""
+
+#. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. TODO Find a way to not hardcode this
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
+#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
+#: tmp/runners-storage.service.in.h:3
+#, kde-format
+msgid "Storage"
+msgstr "Складиште"
+
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#, kde-format
+msgid "Integrate into file manager"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
+#, fuzzy, kde-format
+#| msgid "ownCloud account"
+msgid "Nextcloud Login"
+msgstr "Налог на Оунклауду"
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:49
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:60
+#, kde-format
+msgid "Server address:"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:76
+#, kde-format
+msgid "Next"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:17
+#, kde-format
+msgid "Services"
+msgstr ""
+
+#: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
+#: plugins/owncloud-ui/package/contents/ui/Services.qml:52
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:118
 #, kde-format
 msgid ""
 "Unable to connect to ownCloud at the given server URL. Please check the "
 "server URL."
 msgstr ""
 "Не могу да се повежем на Оунклауд на задатом УРЛ‑у сервера. Проверите УРЛ."
+
+#: plugins/owncloud-ui/owncloudcontroller.cpp:231
+#, kde-format
+msgid "Storage integration"
+msgstr ""
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:15
+#, fuzzy, kde-format
+#| msgid "ownCloud account"
+msgid "ownCloud Login"
+msgstr "Налог на Оунклауду"
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:48
+#, kde-format
+msgid "Username:"
+msgstr ""
+
+#: plugins/owncloud-ui/package/contents/ui/Server.qml:53
+#, kde-format
+msgid "Password:"
+msgstr ""
 
 #. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -106,7 +186,9 @@ msgstr "Гугл"
 # skip-rule: t-drive
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+#, fuzzy
+#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
+msgid "Includes GMail, Google Drive and YouTube"
 msgstr "Г‑мејл, Гугл‑хенгаутс, Гугл‑драјв и Јутјуб"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
@@ -114,19 +196,6 @@ msgstr "Г‑мејл, Гугл‑хенгаутс, Гугл‑драјв и Ј�
 #: tmp/identica-microblog.service.in.h:3 tmp/identica.provider.in.h:1
 msgid "identi.ca"
 msgstr "Идентика"
-
-#: tmp/nextcloud-contacts.service.in.h:1
-msgid "Contacts"
-msgstr "Контакти"
-
-#. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
-#. Would be nice to use the localized name of this service if it exists/makes sense
-#. ownCloud's Storage - Service name being displayed as a checkbox label to enable/disable this service
-#. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:3
-#: tmp/runners-storage.service.in.h:3
-msgid "Storage"
-msgstr "Складиште"
 
 #: tmp/nextcloud.provider.in.h:1
 msgid "Nextcloud"
@@ -139,9 +208,9 @@ msgstr ""
 msgid "Nextcloud account"
 msgstr "Налог на Оунклауду"
 
-#. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
-#. Would be nice to use the localized name of this service if it exists/makes sense
 #. ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
+#. Would be nice to use the localized name of this service if it exists/makes sense
+#. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #: tmp/owncloud-calendar.service.in.h:3 tmp/runners-calendar.service.in.h:3
 msgid "Calendar"
