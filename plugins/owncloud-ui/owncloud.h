@@ -16,11 +16,11 @@
 
 class QQmlApplicationEngine;
 
-class OwnCloudWizard : public KAccountsUiPlugin
+class OwnCloudWizard : public KAccounts::KAccountsUiPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.kaccounts.UiPlugin")
-    Q_INTERFACES(KAccountsUiPlugin)
+    Q_INTERFACES(KAccounts::KAccountsUiPlugin)
 
 public:
     explicit OwnCloudWizard(QObject *parent = nullptr);

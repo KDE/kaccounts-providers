@@ -17,11 +17,11 @@
 
 class QQmlApplicationEngine;
 
-class NextcloudWizard : public KAccountsUiPlugin
+class NextcloudWizard : public KAccounts::KAccountsUiPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.kaccounts.UiPlugin")
-    Q_INTERFACES(KAccountsUiPlugin)
+    Q_INTERFACES(KAccounts::KAccountsUiPlugin)
 
 public:
     explicit NextcloudWizard(QObject *parent = nullptr);
