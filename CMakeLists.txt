@@ -35,7 +35,7 @@ set_package_properties(Qt6WebEngineQuick
         )
 set(HAVE_WEBENGINE ${Qt6WebEngineQuick_FOUND})
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED KIO I18n Declarative Package)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED KIO I18n Package)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0

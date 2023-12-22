@@ -7,6 +7,5 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@stable'
     'frameworks/kio': '@stable'
     'frameworks/ki18n': '@stable'
-    'frameworks/kdeclarative': '@stable'
     'frameworks/kpackage': '@stable'
     'network/kaccounts-integration': '@same'
