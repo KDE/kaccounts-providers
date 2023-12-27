@@ -1,17 +1,18 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 # Franklin, 2015.
 # Tsung-en Hsiao <joshua841025@gmail.com>, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-30 00:41+0000\n"
-"PO-Revision-Date: 2023-12-13 04:54+0900\n"
+"PO-Revision-Date: 2023-12-26 21:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.85\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -77,7 +78,7 @@ msgstr "伺服器位址："
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:76
 #, kde-format
 msgid "Next"
-msgstr "下一步Nextcloud"
+msgstr "下一步"
 
 #: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
 #: plugins/owncloud-ui/package/contents/ui/Services.qml:17
