@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2015, 2017, 2020.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-30 00:41+0000\n"
-"PO-Revision-Date: 2020-11-08 22:04+0300\n"
+"PO-Revision-Date: 2023-12-27 10:04+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.08.3\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
 #, kde-format
@@ -185,10 +185,8 @@ msgstr "Google"
 
 #. Tooltip text appearing over the button to create this type of account
 #: tmp/google.provider.in.h:3
-#, fuzzy
-#| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
 msgid "Includes GMail, Google Drive and YouTube"
-msgstr "Доступ к Gmail, Hangouts, Google Диску и YouTube"
+msgstr "Доступ к Gmail, Google Диску и YouTube"
 
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
