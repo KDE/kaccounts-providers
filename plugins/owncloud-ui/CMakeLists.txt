@@ -5,7 +5,7 @@ add_library(owncloud_plugin_kaccounts MODULE
 
 target_link_libraries(owncloud_plugin_kaccounts
                        Qt::Core
-                       Qt::Quick
+		       Qt::Qml
                        KF6::KIOCore
                        KF6::I18n
                        KF6::Package
