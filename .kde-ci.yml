@@ -9,3 +9,6 @@ Dependencies:
     'frameworks/ki18n': '@latest-kf6'
     'frameworks/kpackage': '@latest-kf6'
     'network/kaccounts-integration': '@same'
+
+Options:
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
