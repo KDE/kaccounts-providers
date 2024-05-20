@@ -8,11 +8,14 @@
 #ifndef QMLHELPER_H
 #define QMLHELPER_H
 
+#include <QNetworkAccessManager>
 #include <QObject>
 #include <QQuickWebEngineProfile>
 #include <QStringList>
 #include <QVariant>
 #include <QWebEngineUrlRequestInterceptor>
+
+#include <QCoroCore>
 
 namespace KIO
 {
@@ -77,19 +80,15 @@ Q_SIGNALS:
     void wizardCancelled();
 
 private Q_SLOTS:
-    void fileChecked(KJob *job);
-    void dataReceived(KIO::Job *job, const QByteArray &data);
-    void authCheckResult(KJob *job);
     void finalUrlHandler(const QUrl &url);
 
 private:
-    void checkServer(const QUrl &url);
+    QCoro::Task<void> checkServer(const QUrl &url);
     void figureOutServer(const QUrl &url);
     void setWorking(bool start);
-    void serverCheckResult();
+    QCoro::Task<void> serverCheckResult();
     void wrongUrlDetected();
 
-    QByteArray m_json;
     QString m_errorMessage;
     QString m_server;
     QString m_username;
@@ -100,6 +99,7 @@ private:
     QQuickWebEngineProfile *m_webengineProfile;
     NextcloudUrlIntercepter m_urlIntercepter;
     QString m_loginUrl;
+    QNetworkAccessManager m_nam;
 };
 
 #endif // QMLHELPER_H

@@ -7,15 +7,15 @@
 
 #include "nextcloudcontroller.h"
 
-#include <KIO/DavJob>
-#include <KIO/Job>
-#include <KLocalizedString>
 #include <QDesktopServices>
-#include <QDomDocument>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QUrlQuery>
-#include <kio/global.h>
+
+#include <KIO/Global>
+#include <KLocalizedString>
 
 #include "../cloudurls.h"
 
@@ -45,50 +45,42 @@ void NextcloudController::checkServer(const QString &path)
     m_errorMessage.clear();
     Q_EMIT errorMessageChanged();
 
-    m_json.clear();
-
     checkServer(createStatusUrl(path));
 }
 
 // To check if url is correct
-void NextcloudController::checkServer(const QUrl &url)
+QCoro::Task<void> NextcloudController::checkServer(const QUrl &url)
 {
     setWorking(true);
-    KIO::TransferJob *job = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
-    job->setUiDelegate(nullptr);
-    connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
-    connect(job, &KIO::DavJob::finished, this, &NextcloudController::fileChecked);
-}
 
-void NextcloudController::dataReceived(KIO::Job *job, const QByteArray &data)
-{
-    Q_UNUSED(job);
-    m_json.append(data);
-}
+    QNetworkRequest request(url);
+    request.setAttribute(QNetworkRequest::AutoDeleteReplyOnFinishAttribute, true);
 
-void NextcloudController::fileChecked(KJob *job)
-{
-    KIO::TransferJob *kJob = qobject_cast<KIO::TransferJob *>(job);
-    if (kJob->error()) {
+    QNetworkReply *reply = m_nam.get(request);
+
+    co_await qCoro(reply, &QNetworkReply::finished);
+
+    if (reply->error() || reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() != 200) {
         wrongUrlDetected();
-        return;
+        co_return;
     }
 
-    QJsonDocument parser = QJsonDocument::fromJson(m_json);
+    QJsonDocument parser = QJsonDocument::fromJson(reply->readAll());
     QJsonObject map = parser.object();
     if (!map.contains(QStringLiteral("version"))) {
         wrongUrlDetected();
-        return;
+        co_return;
     }
 
-    QUrl url = KIO::upUrl(kJob->url());
-    m_server = url.toString();
+    m_server = KIO::upUrl(request.url()).toString();
 
     m_loginUrl = m_server + QStringLiteral("/index.php/login/flow");
     Q_EMIT loginUrlChanged();
 
     m_state = WebLogin;
     Q_EMIT stateChanged();
+
+    co_return;
 }
 
 // When url entered by user is wrong
@@ -125,10 +117,9 @@ void NextcloudController::setWorking(bool start)
     Q_EMIT isWorkingChanged();
 }
 
-void NextcloudController::serverCheckResult()
+QCoro::Task<void> NextcloudController::serverCheckResult()
 {
     m_errorMessage.clear();
-    m_json.clear();
 
     QUrl url(m_server);
     url.setUserName(m_username);
@@ -136,34 +127,24 @@ void NextcloudController::serverCheckResult()
     url = url.adjusted(QUrl::StripTrailingSlash);
     url.setPath(url.path() + QLatin1Char('/') + QLatin1String("remote.php/webdav"));
     // Send a basic PROPFIND command to test access
-    const QString requestStr = QStringLiteral(
+    const QByteArray requestData =
         "<d:propfind xmlns:d=\"DAV:\">"
         "<d:prop>"
         "<d:current-user-principal />"
         "</d:prop>"
-        "</d:propfind>");
+        "</d:propfind>";
 
-    KIO::DavJob *job = KIO::davPropFind(url, QDomDocument(requestStr).toString(), QStringLiteral("1"), KIO::HideProgressInfo);
-    connect(job, &KIO::DavJob::finished, this, &NextcloudController::authCheckResult);
-    connect(job, &KIO::DavJob::data, this, &NextcloudController::dataReceived);
+    QNetworkRequest request(url);
+    request.setRawHeader("Depth", "1");
+    request.setAttribute(QNetworkRequest::AutoDeleteReplyOnFinishAttribute, true);
 
-    QVariantMap metadata{
-        {QStringLiteral("cookies"), QStringLiteral("none")},
-        {QStringLiteral("no-cache"), true},
-    };
-
-    job->setMetaData(metadata);
-    job->setUiDelegate(nullptr);
-    job->start();
+    auto reply = m_nam.sendCustomRequest(request, "PROPFIND", requestData);
 
     Q_EMIT errorMessageChanged();
-}
 
-void NextcloudController::authCheckResult(KJob *job)
-{
-    KIO::DavJob *kJob = qobject_cast<KIO::DavJob *>(job);
+    co_await qCoro(reply, &QNetworkReply::finished);
 
-    if (kJob->isErrorPage()) {
+    if (reply->error() != QNetworkReply::NoError) {
         m_errorMessage = i18n("Unable to authenticate using the provided username and password");
     } else {
         m_errorMessage.clear();
