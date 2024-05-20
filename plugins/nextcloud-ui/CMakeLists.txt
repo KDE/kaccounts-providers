@@ -8,6 +8,7 @@ target_link_libraries(nextcloud_plugin_kaccounts
                        KF6::KIOCore
                        KF6::I18n
                        KF6::Package
+                       QCoro::Core
                        KAccounts6
 )
 

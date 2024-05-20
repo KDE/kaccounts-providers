@@ -9,6 +9,8 @@ project(kde-account-providers LANGUAGES CXX VERSION ${KACCOUNTS_VERSION})
 
 set(QT_REQUIRED_VERSION "6.5.0")
 set(KF_MIN_VERSION "6.0")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
@@ -36,6 +38,10 @@ set_package_properties(Qt6WebEngineQuick
 set(HAVE_WEBENGINE ${Qt6WebEngineQuick_FOUND})
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED KIO I18n Package)
+
+find_package(QCoro6 REQUIRED COMPONENTS Core Network)
+
+qcoro_enable_coroutines()
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0
