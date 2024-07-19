@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-19 00:39+0000\n"
 "PO-Revision-Date: 2020-11-01 10:42+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-POFile-SpellExtra: Docs Picasa YouTube GMail status service contacts\n"
 "X-POFile-SpellExtra: carddavUrl JSON owncloud php Nextcloud\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
@@ -24,20 +24,20 @@ msgstr ""
 "Não foi possível ligar-se à Nextcloud no URL do servidor indicado. Verifique "
 "por favor o URL do servidor."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:148
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Não foi possível autenticar-se com o utilizador e senha indicados"
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Contactos"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
 msgstr "Sincronizar os contactos"
@@ -45,7 +45,7 @@ msgstr "Sincronizar os contactos"
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
@@ -53,7 +53,7 @@ msgstr "Sincronizar os contactos"
 msgid "Storage"
 msgstr "Armazenamento"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
 msgstr "Integrar com o gestor de ficheiros"

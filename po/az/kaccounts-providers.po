@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-19 00:39+0000\n"
 "PO-Revision-Date: 2023-10-11 18:14+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
@@ -26,20 +26,20 @@ msgstr ""
 "Verilən server ünvanında Nextcloud'a qoşulmaq mümkün deyil. Lütfən server "
 "ünvanını yoxlayın."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:148
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Təqdim edilən istifadəçi adı və şifrəsi ilə giriş mümkün olmadı"
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Əlaqələr"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
 msgstr "Əlaqələriı eyniləşdirin"
@@ -47,7 +47,7 @@ msgstr "Əlaqələriı eyniləşdirin"
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
@@ -55,7 +55,7 @@ msgstr "Əlaqələriı eyniləşdirin"
 msgid "Storage"
 msgstr "Saxlama Yaddaşı"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
 msgstr "Fayl menecerə inteqrasiya"

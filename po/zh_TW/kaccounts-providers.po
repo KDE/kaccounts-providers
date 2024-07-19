@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-19 00:39+0000\n"
 "PO-Revision-Date: 2023-12-26 21:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -22,27 +22,27 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.01.85\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
 "server URL."
 msgstr "無法連線到指定伺服器 URL 的 Nextcloud。請檢查伺服器 URL。"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:148
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "無法使用提供的使用者名稱與密碼進行驗證"
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "聯絡人"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
 msgstr "同步聯絡人"
@@ -50,7 +50,7 @@ msgstr "同步聯絡人"
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
@@ -58,7 +58,7 @@ msgstr "同步聯絡人"
 msgid "Storage"
 msgstr "儲存空間"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
 msgstr "與檔案管理員整合"

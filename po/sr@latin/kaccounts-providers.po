@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-19 00:39+0000\n"
 "PO-Revision-Date: 2017-03-12 22:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to connect to ownCloud at the given server URL. Please check the "
@@ -29,20 +29,20 @@ msgid ""
 msgstr ""
 "Ne mogu da se povežem na ownCloud na zadatom URL‑u servera. Proverite URL."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:148
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Ne mogu da se autentifikujem sa zadatim korisničkim imenom i lozinkom."
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Kontakti"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
 msgstr ""
@@ -50,7 +50,7 @@ msgstr ""
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Storage"
 msgstr "Skladište"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
 msgstr ""

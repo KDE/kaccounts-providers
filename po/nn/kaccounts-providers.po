@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-19 00:39+0000\n"
 "PO-Revision-Date: 2023-07-30 22:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:97
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, kde-format
 msgid ""
 "Unable to connect to Nextcloud at the given server URL. Please check the "
@@ -28,20 +28,20 @@ msgstr ""
 "Klarte ikkje kopla til Nextcloud på den valde tenaradressa. Sjå til at "
 "tenaradressa er rett."
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:167
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:148
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
 msgstr "Klarte ikkje autentisera med det oppgjevne brukarnamnet og passordet"
 
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #: tmp/nextcloud-contacts.service.in.h:1
 #, kde-format
 msgid "Contacts"
 msgstr "Kontaktar"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:221
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
 msgstr "Synkroniser kontaktar"
@@ -49,7 +49,7 @@ msgstr "Synkroniser kontaktar"
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. TODO Find a way to not hardcode this
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
 #: tmp/runners-storage.service.in.h:3
@@ -57,7 +57,7 @@ msgstr "Synkroniser kontaktar"
 msgid "Storage"
 msgstr "Lagring"
 
-#: plugins/nextcloud-ui/nextcloudcontroller.cpp:222
+#: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
 msgstr "Integrer med filhandsamar"
