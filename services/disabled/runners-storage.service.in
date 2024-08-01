@@ -3,7 +3,7 @@
   <type>dav-storage</type>
   <!-- Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Storage</_name>
+  <name>Storage</name>
   <icon>runnersid-storage</icon>
   <provider>runnersid</provider>
   <translations>kaccounts-providers</translations>

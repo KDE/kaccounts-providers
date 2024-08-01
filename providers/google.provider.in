@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <provider id="google">
-  <_name>Google</_name>
+  <name>Google</name>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Includes GMail, Google Drive and YouTube</_description>
+  <description>Includes GMail, Google Drive and YouTube</description>
   <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>

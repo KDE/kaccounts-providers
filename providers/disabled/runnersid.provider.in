@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="runnersid">
   <!-- Runners ID is a service similar to ownCloud/DropBox etc -->
-  <_name>Runners ID</_name>
+  <name>Runners ID</name>
   <icon>netrunnerid</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*identi\.ca</domains>

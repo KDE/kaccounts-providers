@@ -3,7 +3,7 @@
   <type>facebook-notes</type>
   <!-- "Notes" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Notes</_name>
+  <name>Notes</name>
   <icon>facebook-notes</icon>
   <provider>facebook</provider>
   <translations>kaccounts-providers</translations>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+ Based on accounts-service.its from libaccounts-glib,
+ which is copyrighted by accounts-sso project,
+ and licensed under LGPL-2.1-or-later.
+
+ The base file itself is contributed solely by:
+ Alberto Mardegan <alberto.mardegan@canonical.com>
+-->
+<its:rules xmlns:its="http://www.w3.org/2005/11/its"
+           version="2.0">
+  <its:translateRule selector="/service |
+                               /service/type |
+                               /service/icon |
+                               /service/provider |
+                               /service/translations |
+                               /service/tags |
+                               /service/template |
+                               /service/template/group |
+                               /service/template/setting"
+                     translate="no"/>
+  <its:translateRule selector="/service/name |
+                               /service/description |
+                               /service/tags/tag"
+                     translate="yes"/>
+  <its:contextRule selector="/service/name |
+                             /service/description |
+                             /service/tags/tag"
+                     contextPointer="@msgctxt" />
+</its:rules>

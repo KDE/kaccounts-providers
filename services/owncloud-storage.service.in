@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="owncloud-storage">
   <type>dav-storage</type>
-  <_name>Storage</_name>
+  <name>Storage</name>
   <icon>kaccounts-owncloud</icon>
   <provider>owncloud</provider>
   <translations>kaccounts-providers</translations>

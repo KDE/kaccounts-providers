@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="owncloud">
-  <_name>ownCloud</_name>
+  <name>ownCloud</name>
   <icon>kaccounts-owncloud</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>ownCloud account</_description>
+  <description>ownCloud account</description>
   <translations>kaccounts-providers</translations>
   <plugin>owncloud_plugin_kaccounts</plugin>
 

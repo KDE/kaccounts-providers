@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="nextcloud">
-  <_name>Nextcloud</_name>
+  <name>Nextcloud</name>
   <icon>kaccounts-nextcloud</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Nextcloud account</_description>
+  <description>Nextcloud account</description>
   <translations>kaccounts-providers</translations>
   <plugin>nextcloud_plugin_kaccounts</plugin>
 

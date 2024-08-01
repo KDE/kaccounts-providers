@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="nextcloud-contacts">
   <type>dav-contacts</type>
-  <_name>Contacts</_name>
+  <name>Contacts</name>
   <icon>view-pim-contacts</icon>
   <provider>nextcloud</provider>
   <translations>kaccounts-providers</translations>

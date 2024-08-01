@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="facebook">
-  <_name>Facebook</_name>
+  <name>Facebook</name>
   <icon>im-facebook</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <_description>Includes Posts, Notes, Events, Notifications and Chat</_description>
+  <description>Includes Posts, Notes, Events, Notifications and Chat</description>
   <translations>kaccounts-providers</translations>
   <domains>.*facebook\.com</domains>
 

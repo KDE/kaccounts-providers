@@ -25,7 +25,6 @@ include(KDEGitCommitHooks)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
 
-find_package(Intltool REQUIRED)
 find_package(KAccounts6 REQUIRED)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml)

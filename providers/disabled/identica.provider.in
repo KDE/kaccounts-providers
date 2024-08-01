@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="identica">
-  <_name>identi.ca</_name>
+  <name>identi.ca</name>
   <icon>laconica_microblog</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*identi\.ca</domains>

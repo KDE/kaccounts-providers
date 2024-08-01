@@ -3,7 +3,7 @@
   <type>dav-calendar</type>
   <!-- Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Calendar</_name>
+  <name>Calendar</name>
   <icon>runnersid-calendar</icon>
   <provider>runnersid</provider>
   <translations>kaccounts-providers</translations>

@@ -3,7 +3,7 @@
   <type>facebook-contacts</type>
   <!-- "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name msgctxt="Facebook Contacts">Contacts</_name>
+  <name msgctxt="Facebook Contacts">Contacts</name>
   <icon>facebook-contacts</icon>
   <provider>facebook</provider>
   <translations>kaccounts-providers</translations>

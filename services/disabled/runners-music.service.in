@@ -3,7 +3,7 @@
   <type>music</type>
   <!-- Runners-ID Music - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Music</_name>
+  <name>Music</name>
   <icon>runnersid-music</icon>
   <provider>runnersid</provider>
   <translations>kaccounts-providers</translations>

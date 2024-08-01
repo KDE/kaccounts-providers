@@ -1,5 +1,5 @@
-kaccounts_add_provider(google.provider.in)
-kaccounts_add_provider(owncloud.provider.in)
+kaccounts_add_provider(google.provider.in NO_INTLTOOL)
+kaccounts_add_provider(owncloud.provider.in NO_INTLTOOL)
 if(HAVE_WEBENGINE)
-    kaccounts_add_provider(nextcloud.provider.in)
+    kaccounts_add_provider(nextcloud.provider.in NO_INTLTOOL)
 endif()

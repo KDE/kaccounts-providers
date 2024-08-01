@@ -1,5 +1,5 @@
-kaccounts_add_service(owncloud-storage.service.in)
+kaccounts_add_service(owncloud-storage.service.in NO_INTLTOOL)
 if(HAVE_WEBENGINE)
-    kaccounts_add_service(nextcloud-contacts.service.in)
-    kaccounts_add_service(nextcloud-storage.service.in)
+    kaccounts_add_service(nextcloud-contacts.service.in NO_INTLTOOL)
+    kaccounts_add_service(nextcloud-storage.service.in NO_INTLTOOL)
 endif()

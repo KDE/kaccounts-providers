@@ -3,7 +3,7 @@
   <type>facebook-feed</type>
   <!-- "Posts Feed" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Posts Feed</_name>
+  <name>Posts Feed</name>
   <icon>facebook-feed</icon>
   <provider>facebook</provider>
   <translations>kaccounts-providers</translations>

@@ -3,7 +3,7 @@
   <type>google-calendar</type>
   <!-- Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
        Would be nice to use the localized name of this service if it exists/makes sense -->
-  <_name>Calendars and Tasks</_name>
+  <name>Calendars and Tasks</name>
   <icon>google-calendars</icon>
   <provider>google</provider>
   <translations>kaccounts-providers</translations>

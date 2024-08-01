@@ -1,5 +1,13 @@
 #! /usr/bin/env bash
 
-find . -name "*.provider.in" -o -name "*.service.in" -type f | xargs -n1 intltool-extract -l -type="gettext/xml"
-$XGETTEXT `find . -name "*.h" -o -name "*.cpp" -o -name "*.qml"` -c -kN_ -kC_:1c,2 -o $podir/kaccounts-providers.pot
-rm -rf ./tmp/
+# XML extraction can't use -C,
+# other attributes will be override by second invocation.
+$XGETTEXT_PROGRAM `find . -name "*.provider.in"` \
+    --force-po \
+    -o "$podir/kaccounts-providers.pot"
+$XGETTEXT_PROGRAM `find . -name "*.service.in"` \
+    --force-po -j --its=services/accounts-service.its \
+    -o "$podir/kaccounts-providers.pot"
+$XGETTEXT `find . -name "*.h" -o -name "*.cpp" -o -name "*.qml"` \
+    -j -c -kN_ -kC_:1c,2 \
+    -o "$podir/kaccounts-providers.pot"
