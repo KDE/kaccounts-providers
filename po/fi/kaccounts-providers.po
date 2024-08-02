@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-19 00:39+0000\n"
+"POT-Creation-Date: 2024-08-02 00:40+0000\n"
 "PO-Revision-Date: 2023-08-26 17:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #. TODO Find a way to not hardcode this
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
-#: tmp/nextcloud-contacts.service.in.h:1
+#: services/nextcloud-contacts.service.in:4
 #, kde-format
 msgid "Contacts"
 msgstr "Yhteystiedot"
@@ -51,8 +51,9 @@ msgstr "Synkronoi yhteystiedot"
 #. TODO Find a way to not hardcode this
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
-#: tmp/nextcloud-storage.service.in.h:1 tmp/owncloud-storage.service.in.h:1
-#: tmp/runners-storage.service.in.h:3
+#: services/disabled/runners-storage.service.in:6
+#: services/nextcloud-storage.service.in:4
+#: services/owncloud-storage.service.in:4
 #, kde-format
 msgid "Storage"
 msgstr "Tallennustila"
@@ -121,130 +122,117 @@ msgstr "Salasana:"
 
 #. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/facebook-contacts.service.in.h:3
+#: services/disabled/facebook-contacts.service.in:6
 msgctxt "Facebook Contacts"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
 #. "Events" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/facebook-events.service.in.h:3
+#: services/disabled/facebook-events.service.in:6
 msgid "Events"
 msgstr "Tapahtumat"
 
 # En ole aivan varma, mihin Fb:n ja sen osien inkarnaatioon viitataan
 #. "Posts Feed" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/facebook-feed.service.in.h:3
+#: services/disabled/facebook-feed.service.in:6
 msgid "Posts Feed"
 msgstr "Uutisvirta"
 
 #. "Notes" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/facebook-notes.service.in.h:3
+#: services/disabled/facebook-notes.service.in:6
 msgid "Notes"
 msgstr "Muistiinpanot"
 
 #. "Notifications" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/facebook-notifications.service.in.h:3
+#: services/disabled/facebook-notifications.service.in:6
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
-#: tmp/facebook.provider.in.h:1
-msgid "Facebook"
-msgstr "Facebook"
-
-#. Tooltip text appearing over the button to create this type of account
-#: tmp/facebook.provider.in.h:3
-msgid "Includes Posts, Notes, Events, Notifications and Chat"
-msgstr ""
-"Sisältää viestit, muistiinpanot, tapahtumat, ilmoitukset ja keskustelun"
-
 #. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/google-calendar.service.in.h:3
+#: services/disabled/google-calendar.service.in:6
 msgid "Calendars and Tasks"
 msgstr "Kalenteri ja tehtävät"
 
 #. Google's Contacts - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/google-contacts.service.in.h:3
+#: services/disabled/google-contacts.service.in:6
 msgctxt "Google Contacts"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: tmp/google.provider.in.h:1
-msgid "Google"
-msgstr "Google"
-
-#. Tooltip text appearing over the button to create this type of account
-#: tmp/google.provider.in.h:3
-msgid "Includes GMail, Google Drive and YouTube"
-msgstr "Sisältää GMailin, Google Driven ja YouTuben"
-
 #. identi.ca microblog feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/identica-microblog.service.in.h:3 tmp/identica.provider.in.h:1
+#: services/disabled/identica-microblog.service.in:6
 msgid "identi.ca"
 msgstr "Identi.ca"
-
-#: tmp/nextcloud.provider.in.h:1
-msgid "Nextcloud"
-msgstr "Nextcloud"
-
-#. Tooltip text appearing over the button to create this type of account
-#: tmp/nextcloud.provider.in.h:3
-msgid "Nextcloud account"
-msgstr "Nextcloud-tili"
 
 #. ownCloud's Calendar - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #. Runners-ID Calendar - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/owncloud-calendar.service.in.h:3 tmp/runners-calendar.service.in.h:3
+#: services/disabled/owncloud-calendar.service.in:6
+#: services/disabled/runners-calendar.service.in:6
 msgid "Calendar"
 msgstr "Kalenteri"
 
 #. ownCloud's Contacts - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/owncloud-contacts.service.in.h:3
+#: services/disabled/owncloud-contacts.service.in:6
 msgctxt "ownCloud Contacts"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: tmp/owncloud.provider.in.h:1
-msgid "ownCloud"
-msgstr "ownCloud"
-
-#. Tooltip text appearing over the button to create this type of account
-#: tmp/owncloud.provider.in.h:3
-msgid "ownCloud account"
-msgstr "ownCloud-tili"
-
 #. Runners-ID Contacts - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/runners-contacts.service.in.h:3
+#: services/disabled/runners-contacts.service.in:6
 msgctxt "Runners-ID Contacts"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
 #. Runners-ID Music - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/runners-music.service.in.h:3
+#: services/disabled/runners-music.service.in:6
 msgid "Music"
 msgstr "Musiikki"
 
-#. Runners ID is a service similar to ownCloud/DropBox etc
-#: tmp/runnersid.provider.in.h:2
-msgid "Runners ID"
-msgstr "Runners ID"
-
 #. Twitter's feed - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
-#: tmp/twitter-microblog.service.in.h:3 tmp/twitter.provider.in.h:1
+#: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Includes Posts, Notes, Events, Notifications and Chat"
+#~ msgstr ""
+#~ "Sisältää viestit, muistiinpanot, tapahtumat, ilmoitukset ja keskustelun"
+
+#~ msgid "Google"
+#~ msgstr "Google"
+
+#~ msgid "Includes GMail, Google Drive and YouTube"
+#~ msgstr "Sisältää GMailin, Google Driven ja YouTuben"
+
+#~ msgid "Nextcloud"
+#~ msgstr "Nextcloud"
+
+#~ msgid "Nextcloud account"
+#~ msgstr "Nextcloud-tili"
+
+#~ msgid "ownCloud"
+#~ msgstr "ownCloud"
+
+#~ msgid "ownCloud account"
+#~ msgstr "ownCloud-tili"
+
+#~ msgid "Runners ID"
+#~ msgstr "Runners ID"
 
 #~ msgid "Includes your Timeline and Mentions"
 #~ msgstr "Aikajana ja maininnat kuuluvat mukaan"
