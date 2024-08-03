@@ -200,30 +200,3 @@ msgstr "音乐"
 #: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "Includes Posts, Notes, Events, Notifications and Chat"
-#~ msgstr "包括动态，网志，活动，通知和聊天"
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Includes GMail, Google Drive and YouTube"
-#~ msgstr "包括 GMail、Google Drive 和 YouTube"
-
-#~ msgid "Nextcloud"
-#~ msgstr "Nextcloud"
-
-#~ msgid "Nextcloud account"
-#~ msgstr "Nextcloud 账户"
-
-#~ msgid "ownCloud"
-#~ msgstr "ownCloud"
-
-#~ msgid "ownCloud account"
-#~ msgstr "ownCloud 账户"
-
-#~ msgid "Runners ID"
-#~ msgstr "Runners ID"
