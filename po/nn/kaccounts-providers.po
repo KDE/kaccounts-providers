@@ -205,30 +205,3 @@ msgstr "Musikk"
 #: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "Includes Posts, Notes, Events, Notifications and Chat"
-#~ msgstr "Omfattar innlegg, notat, hendingar, varslingar og prat"
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Includes GMail, Google Drive and YouTube"
-#~ msgstr "Omfattar GMail, Google Drive og YouTube"
-
-#~ msgid "Nextcloud"
-#~ msgstr "Nextcloud"
-
-#~ msgid "Nextcloud account"
-#~ msgstr "Nextcloud-konto"
-
-#~ msgid "ownCloud"
-#~ msgstr "ownCloud"
-
-#~ msgid "ownCloud account"
-#~ msgstr "ownCloud-konto"
-
-#~ msgid "Runners ID"
-#~ msgstr "Runners ID"
