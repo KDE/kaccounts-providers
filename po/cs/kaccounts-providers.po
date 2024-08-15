@@ -202,24 +202,3 @@ msgstr "Hudba"
 #: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Includes GMail, Google Drive and YouTube"
-#~ msgstr "Zahrnuje GMail, Google Drive a YouTube"
-
-#~ msgid "Nextcloud"
-#~ msgstr "NextCloud"
-
-#~ msgid "Nextcloud account"
-#~ msgstr "Účet na NextCloud"
-
-#~ msgid "ownCloud"
-#~ msgstr "ownCloud"
-
-#~ msgid "ownCloud account"
-#~ msgstr "Účet na ownCloud"
