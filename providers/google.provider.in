@@ -2,7 +2,7 @@
 <provider id="google">
   <name>Google</name>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <description>Includes GMail, Google Drive and YouTube</description>
+  <description>Includes GMail and YouTube</description>
   <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
@@ -26,7 +26,6 @@
               'https://www.googleapis.com/auth/calendar',
               'https://www.googleapis.com/auth/tasks',
               'https://www.google.com/m8/feeds/',
-              'https://www.googleapis.com/auth/drive',
               'https://www.googleapis.com/auth/youtube.upload'
           ]</setting>
           <setting name="AllowedSchemes" type="as">['https']</setting>
