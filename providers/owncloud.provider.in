@@ -3,7 +3,7 @@
   <name>ownCloud</name>
   <icon>kaccounts-owncloud</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <description>ownCloud account</description>
+  <description>Access ownCloud files in KDE apps and file dialogs</description>
   <translations>kaccounts-providers</translations>
   <plugin>owncloud_plugin_kaccounts</plugin>
 

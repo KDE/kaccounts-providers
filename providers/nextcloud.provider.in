@@ -3,7 +3,7 @@
   <name>Nextcloud</name>
   <icon>kaccounts-nextcloud</icon>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <description>Nextcloud account</description>
+  <description>Access Nextcloud files in KDE apps and file dialogs; sync contacts and calendars in supported apps</description>
   <translations>kaccounts-providers</translations>
   <plugin>nextcloud_plugin_kaccounts</plugin>
 

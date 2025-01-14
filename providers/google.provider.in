@@ -2,7 +2,7 @@
 <provider id="google">
   <name>Google</name>
   <!-- Tooltip text appearing over the button to create this type of account -->
-  <description>Includes GMail and YouTube</description>
+  <description>Sync calendars, contacts, and tasks, and upload videos to YouTube in supported apps</description>
   <icon>im-google</icon>
   <translations>kaccounts-providers</translations>
   <domains>.*google\.com</domains>
