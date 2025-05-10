@@ -1,17 +1,17 @@
 # Spanish translations for kaccounts-providers.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the kaccounts-providers package.
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2017, 2019, 2020, 2023.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2014.
-# Rocio Gallego <traducciones@rociogallego.com>, 2015.
+#
+# SPDX-FileCopyrightText: 2014, 2017, 2019, 2020, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2015 Rocio Gallego <traducciones@rociogallego.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccounts-providers\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-02 00:40+0000\n"
-"PO-Revision-Date: 2023-07-30 19:24+0200\n"
+"PO-Revision-Date: 2025-05-10 01:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -209,107 +209,3 @@ msgstr "Música"
 #: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "Includes Posts, Notes, Events, Notifications and Chat"
-#~ msgstr "Incluye noticias, notas, eventos, notificaciones y chat"
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Includes GMail, Google Drive and YouTube"
-#~ msgstr "Incluye GMail, Google Drive y YouTube"
-
-#~ msgid "Nextcloud"
-#~ msgstr "Nextcloud"
-
-#~ msgid "Nextcloud account"
-#~ msgstr "Cuenta de Nextcloud"
-
-#~ msgid "ownCloud"
-#~ msgstr "ownCloud"
-
-#~ msgid "ownCloud account"
-#~ msgstr "Cuenta de ownCloud"
-
-#~ msgid "Runners ID"
-#~ msgstr "Runners ID"
-
-#~ msgid "org.kde.kaccounts.owncloud"
-#~ msgstr "org.kde.kaccounts.owncloud"
-
-#~ msgid "helper"
-#~ msgstr "ayudante"
-
-#~ msgid "org.kde.kaccounts.UiPlugin"
-#~ msgstr "org.kde.kaccounts.UiPlugin"
-
-#~ msgid "http://"
-#~ msgstr "http://"
-
-#~ msgid "https://"
-#~ msgstr "https://"
-
-#~ msgid "status.php"
-#~ msgstr "status.php"
-
-#~ msgid "Checking for ownCloud instance at"
-#~ msgstr "Comprobando la instancia de ownCloud en"
-
-#~ msgid "Received url to figure out:"
-#~ msgstr "Se ha recibido la URL que hay que resolver:"
-
-#~ msgid "version"
-#~ msgstr "versión"
-
-#~ msgid "No json"
-#~ msgstr "No json"
-
-#~ msgid "ownCloud appears to be running at the specified URL"
-#~ msgstr "Parece que ownCloud se está ejecutando en la URL especificada"
-
-#~ msgid "Server URL ok, checking auth..."
-#~ msgstr "URL del servidor correcta, comprobando autenticación..."
-
-#~ msgid "remote.php/webdav"
-#~ msgstr "remote.php/webdav"
-
-#~ msgid ""
-#~ "<d:propfind xmlns:d=\"DAV:\"><d:prop><d:current-user-principal /></d:"
-#~ "prop></d:propfind>"
-#~ msgstr ""
-#~ "<d:propfind xmlns:d=\"DAV:\"><d:prop><d:current-user-principal /></d:"
-#~ "prop></d:propfind>"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "cookies"
-#~ msgstr "cookies"
-
-#~ msgid "none"
-#~ msgstr "ninguno"
-
-#~ msgid "no-cache"
-#~ msgstr "no caché"
-
-#~ msgid "Auth job finished, received error page:"
-#~ msgstr ""
-#~ "Proceso de autenticación finalizado, se ha recibido una página de error:"
-
-#~ msgid "server"
-#~ msgstr "servidor"
-
-#~ msgid "__service/owncloud-contacts"
-#~ msgstr "__service/owncloud-contacts"
-
-#~ msgid "/remote.php/carddav/addressbooks/%1"
-#~ msgstr "/remote.php/carddav/addressbooks/%1"
-
-#~ msgid "carddavUrl"
-#~ msgstr "carddavUrl"
-
-#~ msgid "Includes your Timeline and Mentions"
-#~ msgstr "Incluye tu cronología y menciones"
