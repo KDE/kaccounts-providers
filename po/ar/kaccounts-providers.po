@@ -31,7 +31,7 @@ msgstr ""
 #: plugins/owncloud-ui/owncloudcontroller.cpp:174
 #, kde-format
 msgid "Unable to authenticate using the provided username and password"
-msgstr "غير قادر على الاستيثاق باستخدام اسم المستخدم وكلمة المرور المقدمين"
+msgstr "غير قادر على الاستيثاق باستخدام اسم المستخدم وكلمة السر المقدمين"
 
 #. TODO Find a way to not hardcode this
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
@@ -117,7 +117,7 @@ msgstr "اسم المستخدم:"
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:53
 #, kde-format
 msgid "Password:"
-msgstr "كلمة المرور:"
+msgstr "كلمة السر:"
 
 #. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
