@@ -148,7 +148,7 @@ msgstr "الملاحظات"
 #. Would be nice to use the localized name of this service if it exists/makes sense
 #: services/disabled/facebook-notifications.service.in:6
 msgid "Notifications"
-msgstr "الإخطارات"
+msgstr "الإشعارات"
 
 #. Google's Calendars - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
