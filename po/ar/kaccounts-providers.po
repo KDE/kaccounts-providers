@@ -71,7 +71,7 @@ msgstr "ولوج نِكست‌كلاود"
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:60
 #, kde-format
 msgid "Server address:"
-msgstr "عنوان الخادوم:"
+msgstr "عنوان الخادم:"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:76
