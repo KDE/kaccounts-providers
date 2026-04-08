@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:89
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Kontakty"
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:202
 #, kde-format
 msgid "Synchronize contacts"
-msgstr ""
+msgstr "Synchronizovať kontakty"
 
 #. Runners-ID Storage - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -58,38 +58,36 @@ msgstr "Úložisko"
 #: plugins/nextcloud-ui/nextcloudcontroller.cpp:203
 #, kde-format
 msgid "Integrate into file manager"
-msgstr ""
+msgstr "Integrovať do správcu súborov"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:14
-#, fuzzy, kde-format
-#| msgid "Nextcloud account"
+#, kde-format
 msgid "Nextcloud Login"
-msgstr "Účet Nextcloud"
+msgstr "Prihlásenie do Nextcloud"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:49
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:60
 #, kde-format
 msgid "Server address:"
-msgstr ""
+msgstr "Adresa servera:"
 
 #: plugins/nextcloud-ui/package/contents/ui/Server.qml:65
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:76
-#, fuzzy, kde-format
-#| msgid "Nextcloud"
+#, kde-format
 msgid "Next"
-msgstr "Nextcloud"
+msgstr "Ďalej"
 
 #: plugins/nextcloud-ui/package/contents/ui/Services.qml:16
 #: plugins/owncloud-ui/package/contents/ui/Services.qml:17
 #, kde-format
 msgid "Services"
-msgstr ""
+msgstr "Služby"
 
 #: plugins/nextcloud-ui/package/contents/ui/Services.qml:50
 #: plugins/owncloud-ui/package/contents/ui/Services.qml:52
 #, kde-format
 msgid "Finish"
-msgstr ""
+msgstr "Dokončiť"
 
 #: plugins/owncloud-ui/owncloudcontroller.cpp:118
 #, kde-format
@@ -103,23 +101,22 @@ msgstr ""
 #: plugins/owncloud-ui/owncloudcontroller.cpp:231
 #, kde-format
 msgid "Storage integration"
-msgstr ""
+msgstr "Integrácia úložiska"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:15
-#, fuzzy, kde-format
-#| msgid "ownCloud account"
+#, kde-format
 msgid "ownCloud Login"
-msgstr "Účet ownCloud"
+msgstr "Prihlásenie do ownCloud"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:48
 #, kde-format
 msgid "Username:"
-msgstr ""
+msgstr "Používateľské meno:"
 
 #: plugins/owncloud-ui/package/contents/ui/Server.qml:53
 #, kde-format
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #. "Contacts" on Facebook - Service name being displayed as a checkbox label to enable/disable this service
 #. Would be nice to use the localized name of this service if it exists/makes sense
@@ -216,7 +213,6 @@ msgstr "Twitter"
 #~ msgstr "Google"
 
 #, fuzzy
-#~| msgid "Includes GMail, Hangouts, Google Drive and YouTube"
 #~ msgid "Includes GMail, Google Drive and YouTube"
 #~ msgstr "Zahŕňa GMail, Hangouts, Google Drive a YouTube"
 
