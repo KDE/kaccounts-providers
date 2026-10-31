@@ -208,30 +208,3 @@ msgstr "Música"
 #: services/disabled/twitter-microblog.service.in:6
 msgid "Twitter"
 msgstr "Twitter"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "Includes Posts, Notes, Events, Notifications and Chat"
-#~ msgstr "Inclou articles, notes, esdeveniments, notificacions i xat"
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Includes GMail, Google Drive and YouTube"
-#~ msgstr "Inclou GMail, Google Drive i YouTube"
-
-#~ msgid "Nextcloud"
-#~ msgstr "Nextcloud"
-
-#~ msgid "Nextcloud account"
-#~ msgstr "Compte de Nextcloud"
-
-#~ msgid "ownCloud"
-#~ msgstr "ownCloud"
-
-#~ msgid "ownCloud account"
-#~ msgstr "Compte d'ownCloud"
-
-#~ msgid "Runners ID"
-#~ msgstr "Runners ID"
